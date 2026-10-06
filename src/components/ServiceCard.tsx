@@ -28,7 +28,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
       className="bg-white rounded-2xl border border-[#EAD7C5] overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group cursor-pointer"
     >
       {/* Complete Image Container (Full visibility without cropping) */}
-      <div className="h-36 sm:h-44 w-full relative bg-[#F9F6F0] p-2 flex items-center justify-center border-b border-[#EAD7C5]/40 overflow-hidden">
+      <div className="h-44 sm:h-52 lg:h-56 w-full relative bg-[#F9F6F0] p-3 flex items-center justify-center border-b border-[#EAD7C5]/40 overflow-hidden">
         <img
           src={service.image}
           alt={service.name}
