@@ -1,5 +1,4 @@
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import { Service } from '../data/services';
 
 interface ServiceCardProps {
@@ -7,29 +6,45 @@ interface ServiceCardProps {
   onClick: (service: Service) => void;
 }
 
-export const ServiceCard: React.FC<ServiceCardProps> = ({ service, onClick }) => {
+export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
+  const handleExploreClick = () => {
+    const inputEl = document.getElementById('hero-full-name-input');
+    const formContainer = document.getElementById('consultation-form');
+    
+    if (formContainer) {
+      formContainer.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    setTimeout(() => {
+      if (inputEl) {
+        inputEl.focus();
+      }
+    }, 400);
+  };
+
   return (
-    <div
-      onClick={() => onClick(service)}
-      className="bg-white rounded-xl border border-[#EAD7C5]/70 overflow-hidden flex flex-col hover:shadow-md transition-all duration-300 cursor-pointer group"
-    >
-      {/* Image */}
-      <div className="h-28 sm:h-32 w-full overflow-hidden relative bg-[#F3EDE2]">
+    <div className="bg-white rounded-2xl border border-[#EAD7C5]/80 overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group">
+      {/* Complete Image Container (Full visibility without cropping) */}
+      <div className="h-36 sm:h-44 w-full relative bg-[#F9F6F0] p-2 flex items-center justify-center border-b border-[#EAD7C5]/40 overflow-hidden">
         <img
           src={service.image}
           alt={service.name}
-          className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-500 rounded-lg"
         />
       </div>
 
-      {/* Label + Arrow */}
-      <div className="flex items-center justify-between px-3 py-2.5">
-        <span className="font-serif text-[12px] sm:text-[13px] font-semibold text-[#2C1B18] leading-tight group-hover:text-[#4A151B] transition-colors flex-grow">
+      {/* Title & Explore More Button */}
+      <div className="p-3.5 flex flex-col items-center text-center space-y-3 flex-grow justify-between">
+        <h3 className="font-serif text-sm sm:text-base font-semibold text-[#2C1B18] leading-snug group-hover:text-[#4A151B] transition-colors">
           {service.name}
-        </span>
-        <div className="w-6 h-6 rounded-full bg-[#F3EDE2] text-[#4A151B] flex items-center justify-center shrink-0 ml-1.5 group-hover:bg-[#4A151B] group-hover:text-white transition-colors duration-300">
-          <ArrowUpRight className="w-3 h-3" />
-        </div>
+        </h3>
+
+        <button
+          onClick={handleExploreClick}
+          className="w-full bg-[#F3EDE2] hover:bg-[#4A151B] text-[#4A151B] hover:text-white border border-[#EAD7C5] hover:border-[#4A151B] text-xs font-semibold py-2 px-3 rounded-full transition-all duration-300 shadow-2xs cursor-pointer"
+        >
+          Explore More
+        </button>
       </div>
     </div>
   );

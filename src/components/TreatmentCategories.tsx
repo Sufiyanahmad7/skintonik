@@ -15,16 +15,16 @@ import {
 
 export const TreatmentCategories: React.FC = () => {
   const categories = [
-    { icon: Sparkles, name: 'Facials', target: '#consultation-form' },
-    { icon: Flame, name: 'Peels', target: '#consultation-form' },
-    { icon: ShieldAlert, name: 'Advanced\nSkin Treatments', target: '#consultation-form' },
-    { icon: Zap, name: 'Skin Tightening\n& Anti-Ageing', target: '#consultation-form' },
-    { icon: Scissors, name: 'Hair & Scalp\nTreatments', target: '#consultation-form' },
-    { icon: Sun, name: 'Laser Hair\nReduction', target: '#consultation-form' },
-    { icon: Activity, name: 'Body Treatments', target: '#consultation-form' },
-    { icon: Droplet, name: 'IV Drips &\nWeight Mgmt', target: '#consultation-form' },
-    { icon: HeartHandshake, name: 'Wellness &\nMental Health', target: '#consultation-form' },
-    { icon: Scan, name: 'Skin & Hair\nAnalysis', target: '#consultation-form' },
+    { icon: Sparkles, name: 'Facials', target: '#services' },
+    { icon: Flame, name: 'Peels', target: '#services' },
+    { icon: ShieldAlert, name: 'Advanced\nSkin Treatments', target: '#services' },
+    { icon: Zap, name: 'Skin Tightening\n& Anti-Ageing', target: '#services' },
+    { icon: Scissors, name: 'Hair & Scalp\nTreatments', target: '#services' },
+    { icon: Sun, name: 'Laser Hair\nReduction', target: '#services' },
+    { icon: Activity, name: 'Body Treatments', target: '#services' },
+    { icon: Droplet, name: 'IV Drips &\nWeight Mgmt', target: '#services' },
+    { icon: HeartHandshake, name: 'Wellness &\nMental Health', target: '#services' },
+    { icon: Scan, name: 'Skin & Hair\nAnalysis', target: '#services' },
   ];
 
   const handleScroll = (targetId: string) => {
