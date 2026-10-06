@@ -25,9 +25,7 @@ export const Hero: React.FC = () => {
               {/* <MapPin className="w-2.5 h-2.5" /> */}
               <span>BANGALORE</span>
             </span>
-            <span className="text-[14px] font-bold tracking-[0.15em] text-[#8C7A75] uppercase mt-0.5">
-              THE FESTIVE GLOW EDIT
-            </span>
+
           </div>
 
           {/* Main Heading */}
@@ -94,7 +92,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* ── RIGHT CONSULTATION FORM ── */}
-        <div className="lg:col-span-4 flex justify-center lg:justify-end items-stretch h-full">
+        <div id="consultation-form" className="lg:col-span-4 flex justify-center lg:justify-end items-stretch h-full">
           <ConsultationForm />
         </div>
 

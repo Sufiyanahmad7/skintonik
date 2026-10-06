@@ -25,7 +25,7 @@ export const Home: React.FC = () => {
         {/* 2. HERO SECTION */}
         <Hero />
 
-        {/* 3. TREATMENT CATEGORY ICON BAR */}
+        {/* 3. QUICK SERVICE NAVIGATION / TREATMENT CATEGORIES */}
         <TreatmentCategories />
 
         {/* 4. FESTIVE OFFER BANNER */}
