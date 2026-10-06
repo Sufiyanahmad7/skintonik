@@ -115,7 +115,7 @@ export const WhySkintonik: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="pt-2">
+          <div className="pt-2 flex justify-center lg:justify-start">
             <button
               onClick={handleScrollToFormInput}
               className="inline-flex items-center justify-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
