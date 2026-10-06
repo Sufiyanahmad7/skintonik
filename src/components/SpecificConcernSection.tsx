@@ -56,12 +56,11 @@ export const SpecificConcernSection: React.FC = () => {
   return (
     <section id="specific-concerns" className="bg-[#F9F6F0] py-12 px-4 lg:px-10 border-b border-[#EAD7C5]/40">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#F3EDE2] text-[#4A151B] text-[10px] font-semibold tracking-wider uppercase mb-2 border border-[#EAD7C5]/60">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>Targeted Care</span>
           </div>
           <h2 className="font-serif text-[28px] lg:text-[34px] font-normal text-[#2C1B18] mb-2">
             Looking for a Treatment for a Specific Concern?

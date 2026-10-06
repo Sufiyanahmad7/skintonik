@@ -35,13 +35,20 @@ export const Navbar: React.FC = () => {
     <header className="sticky top-0 z-50 bg-[#FBF8F3]/97 backdrop-blur-sm border-b border-[#EAD7C5]/60 transition-all duration-300">
       <div className="max-w-7xl mx-auto px-4 lg:px-10 py-2.5 flex items-center justify-between">
         {/* Logo & Tagline */}
-        <a href="#" className="flex flex-col items-start group shrink-0">
-          <span className="font-serif text-xl lg:text-2xl tracking-[0.18em] font-bold text-[#2C1B18] leading-tight">
-            SKINTONIK
-          </span>
-          <span className="text-[8px] lg:text-[9px] tracking-[0.22em] text-[#8C7A75] font-medium uppercase mt-0.5">
-            SKIN | HAIR | BODY | WELLNESS
-          </span>
+        <a href="#" className="flex items-center gap-2.5 group shrink-0">
+          <img 
+            src="/images/skintonik.png" 
+            alt="Skintonik Logo" 
+            className="h-8 lg:h-10 w-auto object-contain shrink-0" 
+          />
+          <div className="flex flex-col items-start">
+            <span className="font-serif text-xl lg:text-2xl tracking-[0.18em] font-bold text-[#2C1B18] leading-tight">
+              SKINTONIK
+            </span>
+            <span className="text-[8px] lg:text-[9px] tracking-[0.22em] text-[#8C7A75] font-medium uppercase mt-0.5">
+              SKIN | HAIR | BODY | WELLNESS
+            </span>
+          </div>
         </a>
 
         {/* Desktop Navigation */}
@@ -58,13 +65,13 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Right CTA */}
-        <div className="hidden lg:block shrink-0">
+        <div className="hidden lg:flex items-center shrink-0">
           <button
             onClick={handleScrollToForm}
-            className="inline-flex items-center gap-1.5 bg-[#4A151B] hover:bg-[#3A0D12] text-white text-[11px] font-medium px-4 py-2 rounded-full transition-all duration-200 shadow-sm hover:shadow"
+            className="h-8 lg:h-10 inline-flex items-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white text-xs lg:text-sm font-semibold px-5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
           >
             <span>Book a Consultation</span>
-            <ArrowRight className="w-3 h-3" />
+            <ArrowRight className="w-4 h-4" />
           </button>
         </div>
 
