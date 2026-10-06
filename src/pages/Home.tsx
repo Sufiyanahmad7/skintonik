@@ -9,6 +9,7 @@ import { WhySkintonik } from '../components/WhySkintonik';
 import { ResultsSection } from '../components/ResultsSection';
 import { JourneySection } from '../components/JourneySection';
 import { ClinicSection } from '../components/ClinicSection';
+import { FAQSection } from '../components/FAQSection';
 import { FinalCTA } from '../components/FinalCTA';
 import { PopularSearches } from '../components/PopularSearches';
 
@@ -46,11 +47,14 @@ export const Home: React.FC = () => {
         {/* 10. BANGALORE CLINIC */}
         <ClinicSection />
 
-        {/* 11. FINAL CTA */}
+        {/* 11. FREQUENTLY ASKED QUESTIONS */}
+        <FAQSection />
+
+        {/* 12. FINAL CTA */}
         <FinalCTA />
       </main>
 
-      {/* 12. POPULAR SEARCHES */}
+      {/* 13. POPULAR SEARCHES */}
       <PopularSearches />
     </div>
   );

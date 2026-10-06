@@ -390,8 +390,8 @@ export const PopularTreatments: React.FC = () => {
               key={sec.id}
               onClick={() => handleSelectTab(idx)}
               className={`flex-shrink-0 px-3 py-1 rounded-full text-xs transition-all cursor-pointer ${activeSlideIndex === idx
-                  ? 'bg-[#4A151B] text-white font-semibold shadow-xs'
-                  : 'bg-white text-[#66534E] border border-[#EAD7C5]/60 hover:bg-[#F3EDE2] hover:text-[#4A151B]'
+                ? 'bg-[#4A151B] text-white font-semibold shadow-xs'
+                : 'bg-white text-[#66534E] border border-[#EAD7C5]/60 hover:bg-[#F3EDE2] hover:text-[#4A151B]'
                 }`}
             >
               {sec.categoryTag}
@@ -450,13 +450,12 @@ export const PopularTreatments: React.FC = () => {
                 Featured Packages
               </span>
               <div
-                className={`grid grid-cols-1 ${
-                  currentSec.packages.length === 1
+                className={`grid grid-cols-1 ${currentSec.packages.length === 1
                     ? 'max-w-md mx-auto'
                     : currentSec.packages.length === 2
-                    ? 'sm:grid-cols-2 max-w-2xl mx-auto'
-                    : 'sm:grid-cols-2 lg:grid-cols-3'
-                } gap-3`}
+                      ? 'sm:grid-cols-2 max-w-2xl mx-auto'
+                      : 'sm:grid-cols-2 lg:grid-cols-3'
+                  } gap-3`}
               >
                 {currentSec.packages.map((pkg, idx) => (
                   <div

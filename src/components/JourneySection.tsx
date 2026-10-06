@@ -67,12 +67,6 @@ export const JourneySection: React.FC = () => {
                 {item.desc}
               </p>
 
-              {/* Centered Arrow Connector (Desktop) */}
-              {idx < steps.length - 1 && (
-                <div className="hidden lg:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#FBF8F3] border border-[#EAD7C5] items-center justify-center text-[#4A151B] shadow-sm">
-                  <ChevronRight className="w-4 h-4" />
-                </div>
-              )}
             </div>
           ))}
         </div>
