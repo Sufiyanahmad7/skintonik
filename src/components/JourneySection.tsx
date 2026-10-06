@@ -30,10 +30,10 @@ export const JourneySection: React.FC = () => {
   ];
 
   return (
-    <section className="bg-[#FBF8F3] py-14 px-4 lg:px-12 border-b border-[#EAD7C5]/40">
+    <section className="bg-[#FBF8F3] py-12 px-4 lg:px-10 border-b border-[#EAD7C5]/40">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="font-serif text-3xl lg:text-4xl font-normal text-[#2C1B18] mb-2">
+          <h2 className="font-serif text-[28px] lg:text-[34px] font-normal text-[#2C1B18] mb-1.5">
             Your Skintonik Journey
           </h2>
           <p className="text-xs sm:text-sm text-[#66534E]">
@@ -41,17 +41,24 @@ export const JourneySection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-4 relative">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
           {steps.map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center text-center relative group p-4 bg-white/50 rounded-2xl border border-[#EAD7C5]/40">
-              
-              {/* Top Circular Indicator */}
-              <div className="w-12 h-12 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center text-[#4A151B] font-serif font-bold text-base mb-3 group-hover:bg-[#4A151B] group-hover:text-white transition-colors duration-300">
-                {item.step}
+            <div key={idx} className="flex flex-col items-center text-center relative group p-6 bg-white/70 rounded-2xl border border-[#EAD7C5]/60 hover:border-[#EAD7C5] hover:shadow-md transition-all duration-300">
+
+              {/* Step Icon Circle */}
+              <div className="w-12 h-12 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center mb-3 group-hover:bg-[#4A151B] group-hover:border-[#4A151B] transition-colors duration-300 shadow-sm">
+                <span className="font-serif font-bold text-base text-[#4A151B] group-hover:text-white transition-colors duration-300">
+                  {item.step}
+                </span>
+              </div>
+
+              {/* Icon */}
+              <div className="mb-2 text-[#4A151B]">
+                <item.icon className="w-5 h-5" />
               </div>
 
               {/* Title */}
-              <h4 className="font-serif text-lg font-semibold text-[#2C1B18] leading-tight mb-2 whitespace-pre-line">
+              <h4 className="font-serif text-[16px] font-semibold text-[#2C1B18] leading-tight mb-2 whitespace-pre-line">
                 {item.title}
               </h4>
 
@@ -60,10 +67,10 @@ export const JourneySection: React.FC = () => {
                 {item.desc}
               </p>
 
-              {/* Arrow Separator for Desktop */}
+              {/* Centered Arrow Connector (Desktop) */}
               {idx < steps.length - 1 && (
-                <div className="hidden lg:block absolute -right-3 top-1/2 -translate-y-1/2 text-[#D9BEA7] z-10">
-                  <ChevronRight className="w-6 h-6" />
+                <div className="hidden lg:flex absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full bg-[#FBF8F3] border border-[#EAD7C5] items-center justify-center text-[#4A151B] shadow-sm">
+                  <ChevronRight className="w-4 h-4" />
                 </div>
               )}
             </div>
@@ -73,3 +80,4 @@ export const JourneySection: React.FC = () => {
     </section>
   );
 };
+

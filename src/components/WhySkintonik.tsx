@@ -31,35 +31,40 @@ export const WhySkintonik: React.FC = () => {
   ];
 
   return (
-    <section id="why-skintonik" className="bg-[#FBF8F3] py-14 px-4 lg:px-12 border-b border-[#EAD7C5]/40">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        
-        {/* Left Clinic Interior Image */}
+    <section id="why-skintonik" className="bg-[#FBF8F3] py-12 px-4 lg:px-10 border-b border-[#EAD7C5]/40 overflow-hidden">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+
+        {/* Left Clinic Image with SKINTONIK watermark */}
         <div className="lg:col-span-6">
-          <div className="relative rounded-2xl overflow-hidden border border-[#EAD7C5] shadow-sm aspect-[4/3]">
+          <div className="relative rounded-2xl overflow-hidden shadow-md aspect-[4/3]">
             <img
               src={IMAGES.clinic.reception}
               alt="Skintonik Bangalore Clinic Interior"
               className="w-full h-full object-cover object-center"
             />
+            {/* Skintonik brand overlay */}
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+              <span className="font-serif text-2xl lg:text-3xl tracking-[0.2em] font-semibold text-white block">SKINTONIK</span>
+              <span className="text-[9px] tracking-[0.2em] text-white/70 font-medium uppercase">SKIN | HAIR | BODY | WELLNESS</span>
+            </div>
           </div>
         </div>
 
         {/* Right Content */}
-        <div className="lg:col-span-6 space-y-6">
-          <h2 className="font-serif text-3xl lg:text-4xl font-normal text-[#2C1B18]">
+        <div className="lg:col-span-6 space-y-5">
+          <h2 className="font-serif text-[26px] lg:text-[32px] font-normal text-[#2C1B18]">
             Why Skintonik, Bangalore?
           </h2>
 
-          <div className="grid grid-cols-2 gap-4 lg:gap-6 pt-2">
+          <div className="grid grid-cols-2 gap-4 lg:gap-5">
             {features.map((feat, idx) => (
-              <div key={idx} className="flex flex-col items-start space-y-2 group">
-                <div className="w-10 h-10 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center text-[#4A151B] transition-transform duration-200 group-hover:scale-105">
-                  <feat.icon className="w-5 h-5" />
+              <div key={idx} className="flex flex-col items-start gap-2 group">
+                <div className="w-9 h-9 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center text-[#4A151B] transition-transform duration-200 group-hover:scale-105 shrink-0">
+                  <feat.icon className="w-4 h-4" />
                 </div>
-                <h4 className="text-xs sm:text-sm font-medium text-[#2C1B18] leading-tight">
+                <p className="text-[11px] sm:text-xs font-medium text-[#2C1B18] leading-snug">
                   {feat.title}
-                </h4>
+                </p>
               </div>
             ))}
           </div>
