@@ -61,27 +61,27 @@ export const ConsultationForm: React.FC = () => {
   };
 
   return (
-    <div id="consultation-form" className="bg-white p-5 lg:p-6 rounded-xl border border-[#DEC9B0] shadow-md max-w-[280px] w-full relative">
-      <h3 className="font-serif text-xl lg:text-[22px] font-semibold text-[#2C1B18] leading-tight mb-0.5">
+    <div id="consultation-form" className="bg-white p-5 lg:p-6 rounded-xl border border-[#EAD7C5] shadow-xl max-w-[280px] w-full relative text-[#271446]">
+      <h3 className="font-serif text-xl lg:text-[22px] font-semibold text-[#271446] leading-tight mb-0.5">
         Book Your<br />Consultation
       </h3>
-      <p className="text-[11px] text-[#66534E] mb-4 leading-snug">
+      <p className="text-[11px] text-[#52413E] mb-4 leading-snug">
         Get expert guidance for your skin, hair, body or wellness goals.
       </p>
 
       {isSubmitted ? (
         <div className="py-6 text-center space-y-3 bg-[#FBF8F3] rounded-xl p-4 border border-[#EAD7C5]">
-          <CheckCircle2 className="w-10 h-10 text-[#4A151B] mx-auto" />
-          <h4 className="font-serif text-lg font-semibold text-[#2C1B18]">Thank You, {formData.fullName}!</h4>
-          <p className="text-[11px] text-[#66534E]">
-            Your consultation request for <span className="font-semibold text-[#4A151B]">{formData.concern}</span> in Bangalore has been received. Our expert care team will contact you shortly at {formData.mobileNumber}.
+          <CheckCircle2 className="w-10 h-10 text-[#271446] mx-auto" />
+          <h4 className="font-serif text-lg font-semibold text-[#271446]">Thank You, {formData.fullName}!</h4>
+          <p className="text-[11px] text-[#52413E]">
+            Your consultation request for <span className="font-semibold text-[#271446]">{formData.concern}</span> in Bangalore has been received. Our expert care team will contact you shortly at {formData.mobileNumber}.
           </p>
           <button
             onClick={() => {
               setIsSubmitted(false);
               setFormData({ fullName: '', mobileNumber: '', concern: '', location: 'Bangalore' });
             }}
-            className="mt-1 text-[11px] font-semibold text-[#4A151B] underline hover:text-[#3A0D12]"
+            className="mt-1 text-[11px] font-semibold text-[#271446] underline hover:text-[#341b5c]"
           >
             Book Another Consultation
           </button>
@@ -96,8 +96,8 @@ export const ConsultationForm: React.FC = () => {
               placeholder="Full Name*"
               value={formData.fullName}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.fullName ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
-                } focus:outline-none focus:border-[#4A151B] text-[#2C1B18] placeholder-[#9C8A85] transition-colors`}
+              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.fullName ? 'border-red-400 bg-red-50 text-[#271446]' : 'border-[#EAD7C5] bg-[#FBF8F3] text-[#271446]'
+                } focus:outline-none focus:border-[#271446] placeholder-[#52413E]/70 transition-colors`}
             />
             {errors.fullName && <span className="text-[10px] text-red-500 mt-0.5 block">{errors.fullName}</span>}
           </div>
@@ -109,8 +109,8 @@ export const ConsultationForm: React.FC = () => {
               placeholder="Mobile Number*"
               value={formData.mobileNumber}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.mobileNumber ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
-                } focus:outline-none focus:border-[#4A151B] text-[#2C1B18] placeholder-[#9C8A85] transition-colors`}
+              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.mobileNumber ? 'border-red-400 bg-red-50 text-[#271446]' : 'border-[#EAD7C5] bg-[#FBF8F3] text-[#271446]'
+                } focus:outline-none focus:border-[#271446] placeholder-[#52413E]/70 transition-colors`}
             />
             {errors.mobileNumber && <span className="text-[10px] text-red-500 mt-0.5 block">{errors.mobileNumber}</span>}
           </div>
@@ -120,13 +120,13 @@ export const ConsultationForm: React.FC = () => {
               name="concern"
               value={formData.concern}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.concern ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
-                } focus:outline-none focus:border-[#4A151B] transition-colors ${!formData.concern ? 'text-[#9C8A85]' : 'text-[#2C1B18]'
+              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.concern ? 'border-red-400 bg-red-50 text-[#271446]' : 'border-[#EAD7C5] bg-[#FBF8F3] text-[#271446]'
+                } focus:outline-none focus:border-[#271446] transition-colors ${!formData.concern ? 'text-[#52413E]/70' : 'text-[#271446]'
                 }`}
             >
-              <option value="">Select Your Concern</option>
+              <option value="" className="bg-white text-[#271446]">Select Your Concern</option>
               {concernsList.map((item) => (
-                <option key={item} value={item} className="text-[#2C1B18]">
+                <option key={item} value={item} className="bg-white text-[#271446]">
                   {item}
                 </option>
               ))}
@@ -139,31 +139,31 @@ export const ConsultationForm: React.FC = () => {
               name="location"
               value={formData.location}
               onChange={handleChange}
-              className="w-full px-3 py-2 text-[12px] rounded-lg border border-[#D9BEA7] bg-[#FBF8F3] focus:outline-none text-[#2C1B18] font-medium"
+              className="w-full px-3 py-2 text-[12px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] focus:outline-none text-[#271446] font-medium"
             >
-              <option value="Bangalore">Bangalore</option>
+              <option value="Bangalore" className="bg-white text-[#271446]">Bangalore</option>
             </select>
           </div>
 
           <button
             type="submit"
-            className="w-full mt-1.5 bg-[#4A151B] hover:bg-[#3A0D12] text-white font-semibold text-[12px] py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-sm"
+            className="w-full mt-1.5 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] font-semibold text-[12px] py-2.5 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-sm cursor-pointer"
           >
             <span>Book Now</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#F8DB66]" />
           </button>
 
-          <div className="pt-2 border-t border-[#F0E8DE] space-y-1.5 text-[10px] text-[#66534E]">
+          <div className="pt-2 border-t border-[#EAD7C5] space-y-1.5 text-[10px] text-[#52413E]">
             <div className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-3 h-3 text-[#4A151B] shrink-0" />
+              <CheckCircle2 className="w-3 h-3 text-[#271446] shrink-0" />
               <span>Free Consultation</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <ShieldCheck className="w-3 h-3 text-[#4A151B] shrink-0" />
+              <ShieldCheck className="w-3 h-3 text-[#271446] shrink-0" />
               <span>Personalised Treatment Plan</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <CreditCard className="w-3 h-3 text-[#4A151B] shrink-0" />
+              <CreditCard className="w-3 h-3 text-[#271446] shrink-0" />
               <span>No-Cost EMI Available*</span>
             </div>
           </div>

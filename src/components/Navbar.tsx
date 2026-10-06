@@ -50,22 +50,25 @@ export const Navbar: React.FC = () => {
             className="h-8 lg:h-10 w-auto object-contain shrink-0" 
           />
           <div className="flex flex-col items-start">
-            <span className="font-serif text-xl lg:text-2xl tracking-[0.18em] font-bold text-[#2C1B18] leading-tight">
+            <span 
+              className="font-serif text-xl lg:text-2xl tracking-[0.18em] font-bold text-[#F8DB66] leading-tight"
+              style={{ textShadow: '0 1px 2px rgba(39,20,70,0.6)' }}
+            >
               SKINTONIK
             </span>
-            <span className="text-[8px] lg:text-[9px] tracking-[0.22em] text-[#8C7A75] font-medium uppercase mt-0.5">
+            <span className="text-[8px] lg:text-[9px] tracking-[0.22em] text-[#271446]/80 font-medium uppercase mt-0.5">
               SKIN | HAIR | BODY | WELLNESS
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-[11px] font-medium text-[#2C1B18]/75">
+        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-[11px] font-semibold text-[#271446]">
           {navItems.map((item) => (
             <button
               key={item.label}
               onClick={() => handleNavClick(item.href)}
-              className="hover:text-[#4A151B] transition-colors duration-200 whitespace-nowrap"
+              className="hover:text-[#271446] transition-colors duration-200 whitespace-nowrap cursor-pointer"
             >
               {item.label}
             </button>
@@ -76,17 +79,17 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center shrink-0">
           <button
             onClick={handleScrollToForm}
-            className="h-8 lg:h-10 inline-flex items-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white text-xs lg:text-sm font-semibold px-5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
+            className="h-8 lg:h-10 inline-flex items-center gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] text-xs lg:text-sm font-semibold px-5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
           >
             <span>Book a Consultation</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-[#F8DB66]" />
           </button>
         </div>
 
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-1.5 text-[#2C1B18] focus:outline-none"
+          className="lg:hidden p-1.5 text-[#271446] focus:outline-none"
           aria-label="Toggle Menu"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -100,7 +103,7 @@ export const Navbar: React.FC = () => {
             <button
               key={item.label}
               onClick={() => handleNavClick(item.href)}
-              className="block w-full text-left px-3 py-2.5 text-sm text-[#2C1B18] hover:bg-[#F3EDE2] rounded-lg transition-colors"
+              className="block w-full text-left px-3 py-2.5 text-sm text-[#271446] hover:bg-[#F3EDE2] rounded-lg transition-colors"
             >
               {item.label}
             </button>
@@ -108,10 +111,10 @@ export const Navbar: React.FC = () => {
           <div className="pt-2">
             <button
               onClick={handleScrollToForm}
-              className="w-full flex items-center justify-center gap-2 bg-[#4A151B] text-white text-sm font-medium py-3 rounded-full shadow"
+              className="w-full flex items-center justify-center gap-2 bg-[#271446] text-[#F8DB66] text-sm font-semibold py-3 rounded-full shadow"
             >
               <span>Book a Consultation</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-[#F8DB66]" />
             </button>
           </div>
         </div>

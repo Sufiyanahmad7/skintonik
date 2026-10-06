@@ -360,10 +360,12 @@ export const PopularTreatments: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         {/* CENTERED SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-6 relative">
-          <span className="text-xs font-bold tracking-[0.2em] text-[#8C7A75] uppercase block mb-1.5">
+          <span className="text-xs font-bold tracking-[0.2em] text-[#271446] uppercase block mb-1.5">
             POPULAR TREATMENTS IN BANGALORE
           </span>
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2C1B18] leading-tight">
+          <h2 
+            className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#271446] leading-tight"
+          >
             Our Most Popular Treatment Options
           </h2>
 
@@ -372,17 +374,17 @@ export const PopularTreatments: React.FC = () => {
             <button
               onClick={handlePrev}
               aria-label="Previous treatment"
-              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#4A151B] hover:bg-[#4A151B] hover:text-white transition-all cursor-pointer"
+              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-[#F8DB66] transition-all cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
-            <span className="text-xs text-[#66534E] font-medium px-2">
-              <strong className="text-[#4A151B]">{activeSlideIndex + 1}</strong> / {POPULAR_SECTIONS_DATA.length}
+            <span className="text-xs text-[#271446] font-medium px-2">
+              <strong className="text-[#271446]">{activeSlideIndex + 1}</strong> / {POPULAR_SECTIONS_DATA.length}
             </span>
             <button
               onClick={handleNext}
               aria-label="Next treatment"
-              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#4A151B] hover:bg-[#4A151B] hover:text-white transition-all cursor-pointer"
+              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-[#F8DB66] transition-all cursor-pointer"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -396,8 +398,8 @@ export const PopularTreatments: React.FC = () => {
               key={sec.id}
               onClick={() => handleSelectTab(idx)}
               className={`flex-shrink-0 px-3 py-1 rounded-full text-xs transition-all cursor-pointer ${activeSlideIndex === idx
-                ? 'bg-[#4A151B] text-white font-semibold shadow-xs'
-                : 'bg-white text-[#66534E] border border-[#EAD7C5]/60 hover:bg-[#F3EDE2] hover:text-[#4A151B]'
+                ? 'bg-[#271446] text-[#F8DB66] font-bold shadow-xs'
+                : 'bg-white text-[#271446] border border-[#EAD7C5]/60 hover:bg-[#271446] hover:text-[#F8DB66]'
                 }`}
             >
               {sec.categoryTag}
@@ -406,21 +408,21 @@ export const PopularTreatments: React.FC = () => {
         </div>
 
         {/* COMPACT CARD CONTAINER */}
-        <div className="bg-white rounded-xl border border-[#EAD7C5]/80 shadow-sm p-4 sm:p-5 lg:p-6 transition-all duration-300">
+        <div className="bg-white rounded-xl border border-[#EAD7C5]/80 shadow-md p-4 sm:p-5 lg:p-6 transition-all duration-300">
           {/* TOP GRID: LEFT CONTENT + RIGHT IMAGE & PACKAGES */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
             {/* LEFT DETAILS (7 COLS) */}
             <div className="lg:col-span-7 space-y-3">
               <div>
-                <span className="inline-block px-2.5 py-0.5 rounded-md bg-[#F3EDE2] text-[#4A151B] text-[10px] font-semibold tracking-wider uppercase mb-1.5">
+                <span className="inline-block px-2.5 py-0.5 rounded-md bg-[#271446] text-[#F8DB66] text-[10px] font-bold tracking-wider uppercase mb-1.5">
                   {currentSec.categoryTag}
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-semibold text-[#2C1B18] leading-tight">
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#271446] leading-tight">
                   {currentSec.mainTitle}
                 </h3>
               </div>
 
-              <p className="text-xs text-[#66534E] leading-relaxed">
+              <p className="text-xs text-[#271446] leading-relaxed font-normal">
                 {currentSec.description}
               </p>
 
@@ -429,7 +431,7 @@ export const PopularTreatments: React.FC = () => {
                 {currentSec.keywords.map((kw, i) => (
                   <span
                     key={i}
-                    className="bg-[#FBF8F3] border border-[#EAD7C5]/50 text-[#66534E] text-[10px] px-2 py-0.5 rounded"
+                    className="bg-[#FBF8F3] border border-[#EAD7C5] text-[#271446] text-[10px] px-2 py-0.5 rounded font-medium"
                   >
                     {kw}
                   </span>
@@ -439,7 +441,7 @@ export const PopularTreatments: React.FC = () => {
 
             {/* RIGHT COMPACT IMAGE (5 COLS) */}
             <div className="lg:col-span-5">
-              <div className="relative rounded-lg overflow-hidden border border-[#EAD7C5]/60 shadow-2xs h-48 sm:h-56 lg:h-52 w-full bg-[#F3EDE2] flex items-center justify-center p-1">
+              <div className="relative rounded-lg overflow-hidden border border-[#EAD7C5] shadow-2xs h-48 sm:h-56 lg:h-52 w-full bg-[#F3EDE2] flex items-center justify-center p-1">
                 <img
                   src={currentSec.image}
                   alt={currentSec.mainTitle}
@@ -451,8 +453,8 @@ export const PopularTreatments: React.FC = () => {
 
           {/* COMPACT FEATURED PACKAGES GRID */}
           {currentSec.packages.length > 0 && (
-            <div className="mt-4 pt-4 border-t border-[#EAD7C5]/40">
-              <span className="text-[10px] font-bold tracking-wider text-[#4A151B] uppercase mb-2 block">
+            <div className="mt-4 pt-4 border-t border-[#EAD7C5]/60">
+              <span className="text-[10px] font-bold tracking-wider text-[#271446] uppercase mb-2 block">
                 Featured Packages
               </span>
               <div
@@ -466,32 +468,32 @@ export const PopularTreatments: React.FC = () => {
                 {currentSec.packages.map((pkg, idx) => (
                   <div
                     key={idx}
-                    className="bg-[#FBF8F3] border border-[#EAD7C5]/70 rounded-lg p-3 flex flex-col justify-between"
+                    className="bg-[#FBF8F3] border border-[#EAD7C5] rounded-lg p-3 flex flex-col justify-between"
                   >
                     <div>
                       <div className="flex justify-between items-center mb-1">
-                        <span className="text-[9px] font-bold text-[#4A151B]/70 tracking-wider uppercase">
+                        <span className="text-[9px] font-bold text-[#271446]/80 tracking-wider uppercase">
                           {pkg.code}
                         </span>
                         {pkg.badge && (
-                          <span className="bg-[#4A151B] text-white text-[9px] font-medium px-1.5 py-0.2 rounded">
+                          <span className="bg-[#271446] text-[#F8DB66] text-[9px] font-bold px-1.5 py-0.2 rounded">
                             {pkg.badge}
                           </span>
                         )}
                       </div>
-                      <h5 className="font-serif text-sm font-bold text-[#2C1B18] leading-tight">
+                      <h5 className="font-serif text-sm font-bold text-[#271446] leading-tight">
                         {pkg.name}
                       </h5>
-                      <p className="text-[11px] text-[#66534E] mb-2 line-clamp-1">
+                      <p className="text-[11px] text-[#52413E] mb-2 line-clamp-1">
                         {pkg.details}
                       </p>
 
-                      <div className="flex items-baseline justify-between bg-white px-2 py-1.5 rounded border border-[#EAD7C5]/40 mb-2 text-xs">
+                      <div className="flex items-baseline justify-between bg-white px-2 py-1.5 rounded border border-[#EAD7C5] mb-2 text-xs">
                         {pkg.listPrice && (
-                          <span className="line-through text-[10px] text-[#66534E]">{pkg.listPrice}</span>
+                          <span className="line-through text-[10px] text-[#52413E]/70">{pkg.listPrice}</span>
                         )}
                         {pkg.festivePrice && (
-                          <span className="font-bold text-[#4A151B] text-sm">{pkg.festivePrice}</span>
+                          <span className="font-bold text-[#271446] text-sm">{pkg.festivePrice}</span>
                         )}
                         {pkg.save && (
                           <span className="text-[10px] text-emerald-700 font-semibold">Save {pkg.save}</span>
@@ -501,10 +503,10 @@ export const PopularTreatments: React.FC = () => {
 
                     <button
                       onClick={handleBookClick}
-                      className="w-full inline-flex items-center justify-center space-x-1 bg-[#4A151B] hover:bg-[#3A0D12] text-white font-medium text-[11px] py-1.5 px-3 rounded transition-colors cursor-pointer"
+                      className="w-full inline-flex items-center justify-center space-x-1 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] font-semibold text-[11px] py-1.5 px-3 rounded transition-colors cursor-pointer"
                     >
                       <span>Choose Package</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <ArrowRight className="w-3 h-3 text-[#F8DB66]" />
                     </button>
                   </div>
                 ))}
@@ -513,18 +515,18 @@ export const PopularTreatments: React.FC = () => {
           )}
 
           {/* COMPACT PRICE TABLE TOGGLE */}
-          <div className="mt-4 pt-3 border-t border-[#EAD7C5]/40">
+          <div className="mt-4 pt-3 border-t border-[#EAD7C5]/60">
             <button
               onClick={() => setExpandedTable(!expandedTable)}
               className="w-full flex items-center justify-between text-left group cursor-pointer py-1"
             >
               <div className="flex items-center space-x-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#4A151B]" />
-                <span className="font-serif text-sm font-semibold text-[#2C1B18] group-hover:text-[#4A151B] transition-colors">
+                <Sparkles className="w-3.5 h-3.5 text-[#271446]" />
+                <span className="font-serif text-sm font-bold text-[#271446] group-hover:text-[#271446] transition-colors">
                   {currentSec.tableHeading}
                 </span>
               </div>
-              <div className="flex items-center space-x-1 text-xs font-semibold text-[#4A151B]">
+              <div className="flex items-center space-x-1 text-xs font-semibold text-[#271446]">
                 <span>{expandedTable ? 'Hide Prices' : 'View Full Price List'}</span>
                 <ChevronDown
                   className={`w-3.5 h-3.5 transition-transform duration-200 ${expandedTable ? 'rotate-180' : ''
@@ -534,23 +536,23 @@ export const PopularTreatments: React.FC = () => {
             </button>
 
             {expandedTable && (
-              <div className="mt-3 pt-2 border-t border-[#EAD7C5]/30">
-                <div className="overflow-x-auto rounded-lg border border-[#EAD7C5]/60">
+              <div className="mt-3 pt-2 border-t border-[#EAD7C5]/40">
+                <div className="overflow-x-auto rounded-lg border border-[#EAD7C5]">
                   <table className="w-full text-left text-xs">
-                    <thead className="bg-[#F3EDE2] text-[#2C1B18] font-serif font-semibold border-b border-[#EAD7C5]">
+                    <thead className="bg-[#271446] text-[#F8DB66] font-serif font-bold border-b border-[#EAD7C5]">
                       <tr>
                         <th className="py-2 px-3">{currentSec.tableHeaders[0]}</th>
                         <th className="py-2 px-3">{currentSec.tableHeaders[1]}</th>
                         {currentSec.tableHeaders[2] && <th className="py-2 px-3">{currentSec.tableHeaders[2]}</th>}
                       </tr>
                     </thead>
-                    <tbody className="divide-y divide-[#EAD7C5]/30 bg-white">
+                    <tbody className="divide-y divide-[#EAD7C5] bg-white">
                       {currentSec.tableRows.map((row, idx) => (
                         <tr key={idx} className="hover:bg-[#FBF8F3]">
-                          <td className="py-2 px-3 font-medium text-[#2C1B18]">{row.col1}</td>
-                          <td className="py-2 px-3 text-[#66534E]">{row.col2}</td>
+                          <td className="py-2 px-3 font-semibold text-[#271446]">{row.col1}</td>
+                          <td className="py-2 px-3 text-[#52413E]">{row.col2}</td>
                           {row.col3 && (
-                            <td className="py-2 px-3 font-semibold text-[#4A151B] whitespace-nowrap">
+                            <td className="py-2 px-3 font-bold text-[#271446] whitespace-nowrap">
                               {row.col3}
                             </td>
                           )}
@@ -561,8 +563,8 @@ export const PopularTreatments: React.FC = () => {
                 </div>
 
                 {currentSec.note && (
-                  <div className="mt-2 flex items-start space-x-1.5 text-[11px] text-[#66534E] bg-[#FBF8F3] p-2 rounded border border-[#EAD7C5]/30">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#4A151B] flex-shrink-0 mt-0.5" />
+                  <div className="mt-2 flex items-start space-x-1.5 text-[11px] text-[#52413E] bg-[#FBF8F3] p-2 rounded border border-[#EAD7C5]">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#271446] flex-shrink-0 mt-0.5" />
                     <span>{currentSec.note}</span>
                   </div>
                 )}

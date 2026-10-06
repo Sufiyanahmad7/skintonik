@@ -80,11 +80,11 @@ export const QuickServiceNavigation: React.FC = () => {
   };
 
   return (
-    <section className="bg-[#FBF8F3] py-12 px-4 lg:px-10 border-b border-[#EAD7C5]/50">
+    <section className="bg-[#271446] py-12 px-4 lg:px-10 border-b border-[#F8DB66]/20">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2C1B18] leading-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#F8DB66] leading-tight">
             Find the Treatment Category You’re Looking For
           </h2>
         </div>
@@ -95,7 +95,7 @@ export const QuickServiceNavigation: React.FC = () => {
             <div
               key={index}
               onClick={() => handleScroll(item.targetId)}
-              className="group relative h-48 sm:h-52 rounded-2xl overflow-hidden border border-[#EAD7C5]/70 hover:border-[#4A151B] transition-all duration-300 shadow-sm hover:shadow-lg cursor-pointer flex flex-col justify-end"
+              className="group relative h-48 sm:h-52 rounded-2xl overflow-hidden border border-[#F8DB66]/30 hover:border-[#F8DB66] transition-all duration-300 shadow-sm hover:shadow-lg cursor-pointer flex flex-col justify-end"
             >
               {/* Background Image */}
               <img
@@ -105,14 +105,14 @@ export const QuickServiceNavigation: React.FC = () => {
               />
 
               {/* Gradient Overlay for text readability */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#2C1B18]/90 via-[#2C1B18]/40 to-transparent group-hover:from-[#4A151B]/95 transition-colors duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#271446]/95 via-[#271446]/50 to-transparent group-hover:from-[#341b5c]/95 transition-colors duration-300" />
 
               {/* Text Content Overlay */}
               <div className="relative z-10 p-3.5 text-white">
-                <h3 className="font-serif text-base sm:text-lg font-medium leading-tight mb-1 group-hover:translate-x-0.5 transition-transform">
+                <h3 className="font-serif text-base sm:text-lg font-semibold text-[#F8DB66] leading-tight mb-1 group-hover:translate-x-0.5 transition-transform">
                   {item.title}
                 </h3>
-                <p className="text-[11px] sm:text-xs text-white/80 leading-snug line-clamp-2">
+                <p className="text-[11px] sm:text-xs text-white/90 leading-snug line-clamp-2">
                   {item.description}
                 </p>
               </div>
@@ -124,10 +124,10 @@ export const QuickServiceNavigation: React.FC = () => {
         <div className="text-center mt-10">
           <button
             onClick={() => handleScroll('#services')}
-            className="inline-flex items-center justify-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white px-8 py-3 rounded-full text-sm font-semibold tracking-wide shadow-sm hover:shadow transition-all duration-200"
+            className="inline-flex items-center justify-center gap-2 bg-[#F8DB66] hover:bg-[#e0c453] text-[#271446] px-8 py-3 rounded-full text-sm font-semibold tracking-wide shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
           >
             <span>Explore All Treatments</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-[#271446]" />
           </button>
         </div>
       </div>

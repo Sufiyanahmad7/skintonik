@@ -74,14 +74,16 @@ export const FAQSection: React.FC = () => {
     <section id="faqs" className="bg-[#FBF8F3] py-12 px-4 lg:px-10 border-b border-[#EAD7C5]/40">
       <div className="max-w-4xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <div className="inline-flex items-center justify-center space-x-1.5 px-3 py-1 rounded-full bg-[#F3EDE2] text-[#4A151B] text-[10px] font-semibold tracking-wider uppercase mb-2">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center justify-center space-x-1.5 px-3 py-1 rounded-full bg-[#F3EDE2] text-[#271446] text-[10px] font-semibold tracking-wider uppercase mb-2 border border-[#EAD7C5]">
+            <HelpCircle className="w-3.5 h-3.5 text-[#271446]" />
             <span>Got Questions?</span>
           </div>
-          <h2 className="font-serif text-[28px] lg:text-[34px] font-normal text-[#2C1B18] mb-2">
+          <h2 
+            className="font-serif text-[28px] lg:text-[34px] font-bold text-[#271446] mb-2"
+          >
             Frequently Asked Questions
           </h2>
-          <p className="text-xs sm:text-sm text-[#66534E]">
+          <p className="text-xs sm:text-sm text-[#271446] font-medium">
             Find quick answers to common queries regarding pricing, treatments, and bookings at Skintonik.
           </p>
         </div>
@@ -92,23 +94,25 @@ export const FAQSection: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-white rounded-xl border border-[#EAD7C5]/70 overflow-hidden shadow-2xs transition-all"
+                className="bg-white rounded-xl border border-[#EAD7C5] overflow-hidden shadow-xs transition-all"
               >
                 <button
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex items-center justify-between p-4 sm:p-5 text-left group cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-sm sm:text-base font-semibold text-[#2C1B18] group-hover:text-[#4A151B] transition-colors pr-4">
+                  <span 
+                    className="font-serif text-sm sm:text-base font-bold text-[#271446] transition-colors pr-4"
+                  >
                     {faq.question}
                   </span>
-                  <div className={`w-7 h-7 rounded-full bg-[#FBF8F3] border border-[#EAD7C5]/60 flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-[#4A151B] text-white border-[#4A151B]' : 'text-[#4A151B]'}`}>
+                  <div className={`w-7 h-7 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 bg-[#271446] text-[#F8DB66] border-[#271446]' : 'text-[#271446]'}`}>
                     <ChevronDown className="w-4 h-4" />
                   </div>
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-5 pt-0 sm:px-5 text-xs sm:text-sm text-[#66534E] leading-relaxed border-t border-[#EAD7C5]/30">
+                  <div className="px-4 pb-5 pt-0 sm:px-5 text-xs sm:text-sm text-[#271446] leading-relaxed border-t border-[#EAD7C5]/40 font-normal">
                     <div className="pt-3">{faq.answer}</div>
                   </div>
                 )}

@@ -13,7 +13,7 @@
 
   body {
     background-color: #FBF8F3;
-    color: #2C1B18;
+    color: #271446;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -22,6 +22,8 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+    font-weight: 700 !important;
+    color: #271446;
   }
 }
 

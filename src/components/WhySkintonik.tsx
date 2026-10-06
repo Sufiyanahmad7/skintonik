@@ -78,9 +78,9 @@ export const WhySkintonik: React.FC = () => {
               className="w-full h-full object-cover object-[80%_center] absolute inset-0"
             />
             {/* Skintonik brand overlay */}
-            <div className="relative z-10 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-6 pt-16">
-              <span className="font-serif text-2xl lg:text-3xl tracking-[0.2em] font-semibold text-white block">SKINTONIK</span>
-              <span className="text-[10px] tracking-[0.2em] text-white/80 font-medium uppercase">SKIN | HAIR | BODY | WELLNESS</span>
+            <div className="relative z-10 bg-gradient-to-t from-[#271446]/90 via-[#271446]/50 to-transparent p-6 pt-16">
+              <span className="font-serif text-2xl lg:text-3xl tracking-[0.2em] font-bold text-[#F8DB66] block">SKINTONIK</span>
+              <span className="text-[10px] tracking-[0.2em] text-white/90 font-medium uppercase">SKIN | HAIR | BODY | WELLNESS</span>
             </div>
           </div>
         </div>
@@ -88,25 +88,27 @@ export const WhySkintonik: React.FC = () => {
         {/* Right Content */}
         <div className="lg:col-span-7 space-y-6">
           <div>
-            <span className="text-xs font-bold tracking-[0.2em] text-[#8C7A75] uppercase block mb-1">
+            <span className="text-xs font-bold tracking-[0.2em] text-[#271446] uppercase block mb-1">
               WHY SKINTONIK
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2C1B18] leading-tight">
+            <h2 
+              className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#271446] leading-tight"
+            >
               Why Choose Skintonik, Bangalore?
             </h2>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4.5">
             {whyFeatures.map((item, idx) => (
-              <div key={idx} className="bg-white p-3.5 rounded-xl border border-[#EAD7C5]/70 hover:border-[#4A151B] transition-all duration-200 shadow-2xs flex items-start gap-3 group">
-                <div className="w-9 h-9 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center text-[#4A151B] group-hover:bg-[#4A151B] group-hover:text-white transition-colors duration-200 shrink-0 mt-0.5">
+              <div key={idx} className="bg-white p-3.5 rounded-xl border border-[#EAD7C5] hover:border-[#271446] transition-all duration-200 shadow-2xs flex items-start gap-3 group">
+                <div className="w-9 h-9 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center text-[#271446] group-hover:bg-[#271446] group-hover:text-[#F8DB66] transition-colors duration-200 shrink-0 mt-0.5">
                   <item.icon className="w-4 h-4" />
                 </div>
                 <div>
-                  <h3 className="font-serif text-sm font-semibold text-[#2C1B18] group-hover:text-[#4A151B] leading-tight mb-1">
+                  <h3 className="font-serif text-sm font-bold text-[#271446] leading-tight mb-1">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-[#66534E] leading-relaxed">
+                  <p className="text-xs text-[#271446] leading-relaxed font-normal">
                     {item.description}
                   </p>
                 </div>
@@ -118,10 +120,10 @@ export const WhySkintonik: React.FC = () => {
           <div className="pt-2 flex justify-center lg:justify-start">
             <button
               onClick={handleScrollToFormInput}
-              className="inline-flex items-center justify-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
             >
               <span>Book Your Consultation</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 text-[#F8DB66]" />
             </button>
           </div>
         </div>

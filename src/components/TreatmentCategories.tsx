@@ -39,7 +39,9 @@ export const TreatmentCategories: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center max-w-3xl mx-auto mb-8">
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2C1B18] leading-tight">
+          <h2 
+            className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#271446] leading-tight"
+          >
             Find the Treatment Category You’re Looking For
           </h2>
         </div>
@@ -52,10 +54,10 @@ export const TreatmentCategories: React.FC = () => {
               onClick={() => handleScroll(cat.target)}
               className="flex-shrink-0 flex flex-col items-center group cursor-pointer text-center px-2 lg:px-1 min-w-[80px] lg:min-w-0 lg:flex-1 transition-all duration-200 hover:-translate-y-0.5"
             >
-              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] shadow-sm flex items-center justify-center text-[#4A151B] mb-2 group-hover:bg-[#4A151B] group-hover:text-white group-hover:border-[#4A151B] transition-all">
+              <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] shadow-sm flex items-center justify-center text-[#271446] mb-2 group-hover:bg-[#271446] group-hover:text-[#F8DB66] group-hover:border-[#271446] transition-all">
                 <cat.icon className="w-5 h-5 lg:w-6 lg:h-6" />
               </div>
-              <span className="text-[11px] lg:text-[12px] font-medium text-[#2C1B18] leading-tight whitespace-pre-line group-hover:text-[#4A151B]">
+              <span className="text-[11px] lg:text-[12px] font-semibold text-[#271446] leading-tight whitespace-pre-line group-hover:text-[#271446]">
                 {cat.name}
               </span>
             </button>
@@ -66,10 +68,10 @@ export const TreatmentCategories: React.FC = () => {
         <div className="text-center mt-8">
           <button
             onClick={() => handleScroll('#consultation-form')}
-            className="inline-flex items-center justify-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
+            className="inline-flex items-center justify-center gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
           >
             <span>Explore All Treatments</span>
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 text-[#F8DB66]" />
           </button>
         </div>
       </div>

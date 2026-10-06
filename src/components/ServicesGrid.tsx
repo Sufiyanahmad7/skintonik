@@ -11,13 +11,15 @@ export const ServicesGrid: React.FC = () => {
   };
 
   return (
-    <section id="services" className="bg-[#F9F6F0] py-10 px-4 lg:px-10 border-b border-[#EAD7C5]/40">
+    <section id="services" className="bg-[#FBF8F3] py-10 px-4 lg:px-10 border-b border-[#EAD7C5]/40">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-7">
-          <h2 className="font-serif text-[26px] lg:text-[32px] font-normal text-[#2C1B18] mb-1.5">
+          <h2 
+            className="font-serif text-[26px] lg:text-[32px] font-bold text-[#271446] mb-1.5"
+          >
             Explore All Our Services
           </h2>
-          <p className="text-[11px] sm:text-xs text-[#66534E]">
+          <p className="text-[11px] sm:text-xs text-[#271446] font-medium">
             Comprehensive aesthetic and wellness solutions for every stage of your journey.
           </p>
         </div>

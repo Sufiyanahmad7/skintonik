@@ -66,25 +66,19 @@ export const ResultsSection: React.FC = () => {
   };
 
   return (
-    <section id="results" className="bg-[#F9F6F0] py-12 px-4 lg:px-10 border-b border-[#EAD7C5]/40 relative">
+    <section id="results" className="bg-[#FBF8F3] py-12 px-4 lg:px-10 border-b border-[#EAD7C5]/40 relative">
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-8">
-          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2C1B18] leading-tight mb-1">
+          <h2 
+            className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#271446] leading-tight mb-1"
+          >
             Real People. Real Results.
           </h2>
-          <p className="text-xs sm:text-sm text-[#66534E] mb-5">
+          <p className="text-xs sm:text-sm text-[#271446] mb-5 font-medium">
             Visible improvements. Happier, more confident you.
           </p>
-
-          {/* <button
-            onClick={handleScrollToFormInput}
-            className="inline-flex items-center justify-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
-          >
-            <span>Book Your Consultation</span>
-            <ArrowRight className="w-4 h-4" />
-          </button> */}
         </div>
 
         {/* GOOGLE REVIEWS CAROUSEL */}
@@ -92,7 +86,7 @@ export const ResultsSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-3">
             <div className="flex items-center space-x-3 text-center sm:text-left">
               {/* Google G Logo SVG */}
-              <div className="w-9 h-9 rounded-full bg-white border border-[#EAD7C5]/80 flex items-center justify-center p-1.5 shadow-2xs">
+              <div className="w-9 h-9 rounded-full bg-white border border-[#EAD7C5] flex items-center justify-center p-1.5 shadow-2xs">
                 <svg viewBox="0 0 24 24" className="w-full h-full">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
                   <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
@@ -101,13 +95,13 @@ export const ResultsSection: React.FC = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-serif text-lg sm:text-xl font-semibold text-[#2C1B18]">
+                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#271446]">
                   Verified Google Reviews
                 </h3>
-                <div className="flex items-center space-x-1 text-xs text-[#66534E]">
-                  <span className="font-bold text-[#4A151B]">4.9</span>
+                <div className="flex items-center space-x-1 text-xs text-[#271446]">
+                  <span className="font-bold text-[#271446]">4.9</span>
                   <div className="flex text-amber-500 text-xs">★★★★★</div>
-                  <span>(86+ reviews on Google)</span>
+                  <span className="text-[#52413E]">(86+ reviews on Google)</span>
                 </div>
               </div>
             </div>
@@ -116,14 +110,14 @@ export const ResultsSection: React.FC = () => {
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => handleReviewScroll('left')}
-                className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-2xs flex items-center justify-center text-[#4A151B] hover:bg-[#4A151B] hover:text-white transition-all cursor-pointer"
+                className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-2xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-[#F8DB66] transition-all cursor-pointer"
                 aria-label="Previous Google Review"
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
               <button
                 onClick={() => handleReviewScroll('right')}
-                className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-2xs flex items-center justify-center text-[#4A151B] hover:bg-[#4A151B] hover:text-white transition-all cursor-pointer"
+                className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-2xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-[#F8DB66] transition-all cursor-pointer"
                 aria-label="Next Google Review"
               >
                 <ChevronRight className="w-4 h-4" />
@@ -139,38 +133,38 @@ export const ResultsSection: React.FC = () => {
             {googleReviews.map((rev, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-[280px] sm:w-[320px] bg-white rounded-xl border border-[#EAD7C5]/70 p-4 shadow-2xs flex flex-col justify-between"
+                className="flex-shrink-0 w-[280px] sm:w-[320px] bg-white rounded-xl border border-[#EAD7C5] p-4 shadow-sm flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center space-x-2">
-                      <div className="w-7 h-7 rounded-full bg-[#F3EDE2] text-[#4A151B] font-bold text-xs flex items-center justify-center border border-[#EAD7C5]">
+                      <div className="w-7 h-7 rounded-full bg-[#F3EDE2] text-[#271446] font-bold text-xs flex items-center justify-center border border-[#EAD7C5]">
                         {rev.author[0]}
                       </div>
                       <div>
-                        <h5 className="font-semibold text-xs text-[#2C1B18] leading-tight">
+                        <h5 className="font-bold text-xs text-[#271446] leading-tight">
                           {rev.author}
                         </h5>
-                        <span className="text-[10px] text-[#66534E] block">{rev.time}</span>
+                        <span className="text-[10px] text-[#52413E] block">{rev.time}</span>
                       </div>
                     </div>
                     <div className="text-amber-500 text-xs">★★★★★</div>
                   </div>
 
-                  <p className="text-xs text-[#66534E] leading-relaxed line-clamp-4 italic">
+                  <p className="text-xs text-[#271446] leading-relaxed line-clamp-4 italic font-normal">
                     "{rev.text}"
                   </p>
                 </div>
 
-                <div className="mt-3 pt-2 border-t border-[#EAD7C5]/30 flex items-center justify-between text-[10px] text-[#66534E]">
-                  <span className="bg-[#F3EDE2] text-[#4A151B] px-1.5 py-0.5 rounded font-medium">
+                <div className="mt-3 pt-2 border-t border-[#EAD7C5] flex items-center justify-between text-[10px] text-[#271446]">
+                  <span className="bg-[#F3EDE2] text-[#271446] px-1.5 py-0.5 rounded font-semibold border border-[#EAD7C5]">
                     {rev.treatment}
                   </span>
                   <a
                     href="https://maps.app.goo.gl/n3v827McWbMcsvHn9"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-[#4A151B] font-semibold hover:underline"
+                    className="text-[#271446] font-bold hover:underline"
                   >
                     Google Review ↗
                   </a>
