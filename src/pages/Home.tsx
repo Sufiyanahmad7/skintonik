@@ -8,6 +8,8 @@ import { ServicesGrid } from '../components/ServicesGrid';
 import { WhySkintonik } from '../components/WhySkintonik';
 import { ResultsSection } from '../components/ResultsSection';
 import { JourneySection } from '../components/JourneySection';
+import { SpecificConcernSection } from '../components/SpecificConcernSection';
+import { PriceComparisonCTA } from '../components/PriceComparisonCTA';
 import { ClinicSection } from '../components/ClinicSection';
 import { FAQSection } from '../components/FAQSection';
 import { FinalCTA } from '../components/FinalCTA';
@@ -44,17 +46,23 @@ export const Home: React.FC = () => {
         {/* 9. SKINTONIK JOURNEY */}
         <JourneySection />
 
-        {/* 10. BANGALORE CLINIC */}
+        {/* 10. SPECIFIC CONCERNS GRID */}
+        <SpecificConcernSection />
+
+        {/* 11. OFFER / PRICE COMPARISON CTA */}
+        <PriceComparisonCTA />
+
+        {/* 12. BANGALORE CLINIC */}
         <ClinicSection />
 
-        {/* 11. FREQUENTLY ASKED QUESTIONS */}
+        {/* 13. FREQUENTLY ASKED QUESTIONS */}
         <FAQSection />
 
-        {/* 12. FINAL CTA */}
+        {/* 14. FINAL CTA */}
         <FinalCTA />
       </main>
 
-      {/* 13. POPULAR SEARCHES */}
+      {/* 15. POPULAR SEARCHES */}
       <PopularSearches />
     </div>
   );

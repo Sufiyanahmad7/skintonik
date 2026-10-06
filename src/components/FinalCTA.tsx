@@ -28,38 +28,48 @@ export const FinalCTA: React.FC = () => {
             </div>
 
             {/* Right Content */}
-            <div className="lg:col-span-8 p-7 lg:p-10 space-y-5">
-              <h2 className="font-serif text-[28px] sm:text-[36px] lg:text-[40px] font-normal leading-tight text-white">
-                Ready to Feel Your Best?
+            <div className="lg:col-span-8 p-6 sm:p-8 lg:p-10 space-y-4">
+              {/* Category Pills */}
+              <div className="flex flex-wrap gap-1.5 text-[10px] font-semibold text-[#EAD7C5] tracking-wider uppercase">
+                <span className="bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Skin</span>
+                <span className="bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Hair</span>
+                <span className="bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Body</span>
+                <span className="bg-white/10 px-2.5 py-0.5 rounded-full border border-white/10">Wellness</span>
+              </div>
+
+              <h2 className="font-serif text-[26px] sm:text-[34px] lg:text-[38px] font-normal leading-tight text-white">
+                Ready to Start With the Right Treatment?
               </h2>
 
-              <p className="text-[11px] sm:text-xs text-white/80 max-w-md leading-relaxed">
-                Book your consultation at Skintonik, Bangalore and take the first step towards healthier skin, stronger hair and a more confident you.
+              <p className="text-xs sm:text-sm text-white/90 max-w-xl leading-relaxed">
+                Tell us your concern and get guidance on suitable Skintonik treatment options.
               </p>
 
-              <div className="flex flex-wrap items-center gap-3">
+              {/* October Benefits Card */}
+              <div className="bg-white/10 border border-white/15 rounded-xl p-3.5 sm:p-4 max-w-lg space-y-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-[#EAD7C5] block">
+                  October Benefits
+                </span>
+                <div className="space-y-1.5 text-xs text-white">
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#EAD7C5] shrink-0" />
+                    <span>Save 10–15% on Selected Packages</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CreditCard className="w-4 h-4 text-[#EAD7C5] shrink-0" />
+                    <span>No-Cost EMI Available on Eligible Treatments*</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="pt-2">
                 <button
                   onClick={handleScrollToForm}
-                  className="inline-flex items-center gap-2 bg-[#FBF8F3] hover:bg-[#F3EDE2] text-[#4A151B] text-xs sm:text-sm font-medium px-6 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2 bg-[#FBF8F3] hover:bg-[#F3EDE2] text-[#4A151B] text-xs sm:text-sm font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 cursor-pointer"
                 >
                   <span>Book a Consultation</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
-              </div>
-
-              <div className="pt-4 border-t border-white/15 flex flex-wrap items-center gap-4 text-[11px] text-white/75">
-                <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#EAD7C5]" />
-                  <span>Free Consultation</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#EAD7C5]" />
-                  <span>Personalised Plan</span>
-                </div>
-                <div className="flex items-center gap-1.5">
-                  <CreditCard className="w-3.5 h-3.5 text-[#EAD7C5]" />
-                  <span>No-Cost EMI Available*</span>
-                </div>
               </div>
             </div>
 
