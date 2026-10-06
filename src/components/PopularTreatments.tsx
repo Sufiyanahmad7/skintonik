@@ -326,10 +326,18 @@ export const PopularTreatments: React.FC = () => {
   const currentSec = POPULAR_SECTIONS_DATA[activeSlideIndex];
 
   const handleBookClick = () => {
-    const formEl = document.getElementById('consultation-form');
-    if (formEl) {
-      formEl.scrollIntoView({ behavior: 'smooth' });
+    const inputEl = document.getElementById('hero-full-name-input');
+    const formContainer = document.getElementById('consultation-form');
+    
+    if (formContainer) {
+      formContainer.scrollIntoView({ behavior: 'smooth' });
     }
+    
+    setTimeout(() => {
+      if (inputEl) {
+        inputEl.focus();
+      }
+    }, 400);
   };
 
   const handlePrev = () => {

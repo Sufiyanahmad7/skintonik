@@ -3,14 +3,22 @@ import { ArrowRight, MessageCircle, Percent, CreditCard } from 'lucide-react';
 
 export const OfferBanner: React.FC = () => {
   const handleScrollToForm = () => {
-    const formEl = document.getElementById('consultation-form');
-    if (formEl) {
-      formEl.scrollIntoView({ behavior: 'smooth' });
+    const inputEl = document.getElementById('hero-full-name-input');
+    const formContainer = document.getElementById('consultation-form');
+    
+    if (formContainer) {
+      formContainer.scrollIntoView({ behavior: 'smooth' });
     }
+    
+    setTimeout(() => {
+      if (inputEl) {
+        inputEl.focus();
+      }
+    }, 400);
   };
 
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919999999999?text=Hi%20Skintonik,%20I%20want%20to%20know%20more%20about%20your%20Festive%20Offers.', '_blank');
+    handleScrollToForm();
   };
 
   return (

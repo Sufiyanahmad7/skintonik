@@ -43,7 +43,17 @@ export const PopularSearches: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-8 pt-5 border-t border-[#EAD7C5]/50 flex flex-col sm:flex-row items-center justify-between text-[10px] text-[#8C7A75] gap-3">
+        {/* FOOTER DISCLAIMER */}
+        <div className="mt-8 pt-5 border-t border-[#EAD7C5]/60">
+          <h5 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C7A75] mb-1.5">
+            FOOTER DISCLAIMER
+          </h5>
+          <p className="text-[11px] text-[#66534E] leading-relaxed font-normal">
+            Treatment suitability, treatment plan, number of sessions and expected outcomes vary by individual and are determined after consultation. Prices shown are based on the current Skintonik treatment list and may vary where treatment scope or areas differ. Package discounts and No-Cost EMI are available only on eligible treatments. Terms apply.
+          </p>
+        </div>
+
+        <div className="mt-6 pt-5 border-t border-[#EAD7C5]/50 flex flex-col sm:flex-row items-center justify-between text-[10px] text-[#8C7A75] gap-3">
           <p>© {new Date().getFullYear()} SKINTONIK Bangalore. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#consultation-form" className="hover:text-[#4A151B] transition-colors">Privacy Policy</a>

@@ -3,14 +3,22 @@ import { ArrowRight, Sparkles, MessageCircle, CheckCircle2, Shield, Percent, Cre
 
 export const PriceComparisonCTA: React.FC = () => {
   const handleScrollToForm = () => {
-    const formEl = document.getElementById('consultation-form');
-    if (formEl) {
-      formEl.scrollIntoView({ behavior: 'smooth' });
+    const inputEl = document.getElementById('hero-full-name-input');
+    const formContainer = document.getElementById('consultation-form');
+    
+    if (formContainer) {
+      formContainer.scrollIntoView({ behavior: 'smooth' });
     }
+    
+    setTimeout(() => {
+      if (inputEl) {
+        inputEl.focus();
+      }
+    }, 400);
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/919900000000?text=Hi%20Skintonik,%20I%20would%20like%20guidance%20on%20choosing%20the%20right%20treatment.', '_blank');
+    handleScrollToForm();
   };
 
   return (

@@ -78,13 +78,13 @@ export const ResultsSection: React.FC = () => {
             Visible improvements. Happier, more confident you.
           </p>
 
-          <button
+          {/* <button
             onClick={handleScrollToFormInput}
             className="inline-flex items-center justify-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
           >
             <span>Book Your Consultation</span>
             <ArrowRight className="w-4 h-4" />
-          </button>
+          </button> */}
         </div>
 
         {/* GOOGLE REVIEWS CAROUSEL */}

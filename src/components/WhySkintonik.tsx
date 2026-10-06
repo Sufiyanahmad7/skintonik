@@ -75,7 +75,7 @@ export const WhySkintonik: React.FC = () => {
             <img
               src={IMAGES.clinic.reception}
               alt="Skintonik Bangalore Clinic Interior"
-              className="w-full h-full object-cover object-left-center absolute inset-0"
+              className="w-full h-full object-cover object-[80%_center] absolute inset-0"
             />
             {/* Skintonik brand overlay */}
             <div className="relative z-10 bg-gradient-to-t from-black/85 via-black/40 to-transparent p-6 pt-16">

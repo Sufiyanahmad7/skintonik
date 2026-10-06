@@ -16,10 +16,18 @@ export const Navbar: React.FC = () => {
 
   const handleScrollToForm = (e: React.MouseEvent) => {
     e.preventDefault();
-    const formEl = document.getElementById('consultation-form');
-    if (formEl) {
-      formEl.scrollIntoView({ behavior: 'smooth' });
+    const inputEl = document.getElementById('hero-full-name-input');
+    const formContainer = document.getElementById('consultation-form');
+    
+    if (formContainer) {
+      formContainer.scrollIntoView({ behavior: 'smooth' });
     }
+    
+    setTimeout(() => {
+      if (inputEl) {
+        inputEl.focus();
+      }
+    }, 400);
     setMobileMenuOpen(false);
   };
 
