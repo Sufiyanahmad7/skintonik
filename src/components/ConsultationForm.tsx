@@ -13,12 +13,20 @@ export const ConsultationForm: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const concernsList = [
-    'Skin Pigmentation & Acne',
-    'Anti-Ageing & Wrinkles',
-    'Hair Fall & Scalp Issues',
+    'Skin Concern',
+    'Acne / Acne Marks  ',
+    'Pigmentation / Tanning',
+    'Dull / Uneven-Looking Skin',
+    'Facial / Glow Treatment',
+    'Anti-Ageing / Skin Tightening',
+    'Hair Fall / Scalp Concern',
     'Laser Hair Reduction',
-    'Body Contouring & Slimming',
-    'IV Drips & Wellness',
+    'Body Pigmentation',
+    'Weight Management',
+    'IV Wellness',
+    'Mental / Emotional Wellness',
+    'Not Sure – Need Guidance',
+
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -87,9 +95,8 @@ export const ConsultationForm: React.FC = () => {
               placeholder="Full Name*"
               value={formData.fullName}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${
-                errors.fullName ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
-              } focus:outline-none focus:border-[#4A151B] text-[#2C1B18] placeholder-[#9C8A85] transition-colors`}
+              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.fullName ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
+                } focus:outline-none focus:border-[#4A151B] text-[#2C1B18] placeholder-[#9C8A85] transition-colors`}
             />
             {errors.fullName && <span className="text-[10px] text-red-500 mt-0.5 block">{errors.fullName}</span>}
           </div>
@@ -101,9 +108,8 @@ export const ConsultationForm: React.FC = () => {
               placeholder="Mobile Number*"
               value={formData.mobileNumber}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${
-                errors.mobileNumber ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
-              } focus:outline-none focus:border-[#4A151B] text-[#2C1B18] placeholder-[#9C8A85] transition-colors`}
+              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.mobileNumber ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
+                } focus:outline-none focus:border-[#4A151B] text-[#2C1B18] placeholder-[#9C8A85] transition-colors`}
             />
             {errors.mobileNumber && <span className="text-[10px] text-red-500 mt-0.5 block">{errors.mobileNumber}</span>}
           </div>
@@ -113,11 +119,9 @@ export const ConsultationForm: React.FC = () => {
               name="concern"
               value={formData.concern}
               onChange={handleChange}
-              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${
-                errors.concern ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
-              } focus:outline-none focus:border-[#4A151B] transition-colors ${
-                !formData.concern ? 'text-[#9C8A85]' : 'text-[#2C1B18]'
-              }`}
+              className={`w-full px-3 py-2 text-[12px] rounded-lg border ${errors.concern ? 'border-red-400 bg-red-50/30' : 'border-[#D9BEA7] bg-white'
+                } focus:outline-none focus:border-[#4A151B] transition-colors ${!formData.concern ? 'text-[#9C8A85]' : 'text-[#2C1B18]'
+                }`}
             >
               <option value="">Select Your Concern</option>
               {concernsList.map((item) => (

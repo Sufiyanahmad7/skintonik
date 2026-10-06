@@ -14,10 +14,10 @@ export const Hero: React.FC = () => {
 
   return (
     <section className="bg-[#FBF8F3] pt-5 pb-8 px-4 lg:px-10 border-b border-[#EAD7C5]/40 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-6 items-stretch">
 
         {/* ── LEFT COLUMN ── */}
-        <div className="lg:col-span-4 flex flex-col justify-between space-y-4 pt-2 h-full">
+        <div className="lg:col-span-4 flex flex-col justify-between space-y-4 pt-2 h-full pr-1">
 
           {/* Location Badge – stacked vertically */}
           <div className="flex flex-col items-start gap-1">
@@ -31,17 +31,20 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-serif text-[42px] sm:text-[44px] lg:text-[50px] leading-[1.07] font-normal text-[#2C1B18]">
-            Expert Aesthetic<br />
-            Care for a More<br />
-            Confident You
+          <h1 className="font-serif text-[38px] sm:text-[42px] lg:text-[46px] leading-[1.1] font-normal text-[#2C1B18]">
+            Expert Aesthetic Care<br />
+            for a More Confident You
           </h1>
 
           {/* Supporting Text */}
-          <p className="text-sm text-[#66534E] leading-relaxed">
-            Skin. Hair. Body. Wellness. All Under One Roof <br /> at Skintonik, Bangalore.
-          </p>
-
+          <div className="space-y-3">
+            <p className="text-[15px] font-semibold text-[#2C1B18] leading-snug">
+              Skin. Hair. Body. Wellness. All Under One Roof at Skintonik, Bangalore.
+            </p>
+            <p className="text-xs sm:text-sm text-[#66534E] leading-relaxed">
+              Laser hair removal, HydraFacial, pigmentation, acne and hair fall treatment on Sarjapur Road. Every price shown in full: up to 15% off list price, plus a free AI skin analysis worth ₹700.
+            </p>
+          </div>
           {/* Feature Badges – pushed to bottom */}
           <div className="mt-auto pt-4 border-t border-[#EAD7C5]/70">
             <div className="grid grid-cols-5 gap-1 sm:gap-2">
@@ -60,19 +63,21 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* ── CENTER IMAGE ── */}
-        <div className="lg:col-span-4 relative flex justify-center items-stretch h-full">
-          <div className="relative w-full max-w-[280px] lg:max-w-none h-full flex flex-col">
-            <div className="relative w-full h-full min-h-[420px] overflow-hidden rounded-2xl flex-1">
+        <div className="lg:col-span-4 relative flex justify-center items-stretch h-full -mx-2 lg:mx-0">
+          <div className="relative w-full h-full flex flex-col">
+            <div className="relative w-full h-full min-h-[420px] overflow-hidden rounded-2xl flex-1 bg-[#FBF8F3]">
               <img
                 src={IMAGES.heroModel}
                 alt="Skintonik Aesthetic Beauty Model"
-                className="w-full h-full object-cover object-top absolute inset-0"
+                className="w-full h-full object-cover object-top absolute inset-0 scale-105"
               />
-              {/* Bottom gradient blend */}
-              <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#FBF8F3] to-transparent pointer-events-none" />
+              {/* Gradient edge blending overlays */}
+              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#FBF8F3] via-[#FBF8F3]/60 to-transparent pointer-events-none z-10" />
+              <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#FBF8F3] to-transparent pointer-events-none z-10" />
+              <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#FBF8F3] to-transparent pointer-events-none z-10" />
 
               {/* Script Text – LEFT side of image with high visibility overlay */}
-              <div className="absolute bottom-6 left-5 text-left select-none pointer-events-none z-10">
+              <div className="absolute bottom-6 left-5 text-left select-none pointer-events-none z-20">
                 <span
                   className="font-script text-[28px] lg:text-[34px] text-[#4A151B] leading-tight block font-bold"
                   style={{
