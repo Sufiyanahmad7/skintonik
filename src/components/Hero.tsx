@@ -1,14 +1,15 @@
 import React from 'react';
-import { MapPin, Cpu, Sparkles, UserCheck, ShieldCheck, CreditCard } from 'lucide-react';
+import { Sparkles, Scan, Cpu, Layers, Tag, CreditCard } from 'lucide-react';
 import { ConsultationForm } from './ConsultationForm';
 import { IMAGES } from '../data/images';
 
 export const Hero: React.FC = () => {
   const heroFeatures = [
-    { icon: Cpu, label: 'Advanced\nTechnology' },
     { icon: Sparkles, label: 'Personalised\nTreatment Plans' },
-    { icon: UserCheck, label: 'Experienced\nDermatologists' },
-    { icon: ShieldCheck, label: 'Safe &\nHygienic' },
+    { icon: Scan, label: 'Skin & Hair\nAnalysis' },
+    { icon: Cpu, label: 'Advanced\nAesthetic Care' },
+    { icon: Layers, label: 'Multiple\nCategories' },
+    { icon: Tag, label: 'Package\nOptions' },
     { icon: CreditCard, label: 'No-Cost EMI\nAvailable*' },
   ];
 
@@ -45,13 +46,13 @@ export const Hero: React.FC = () => {
           </div>
           {/* Feature Badges – pushed to bottom */}
           <div className="mt-auto pt-4 border-t border-[#EAD7C5]/70">
-            <div className="grid grid-cols-5 gap-1 sm:gap-2">
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5 sm:gap-2">
               {heroFeatures.map((feat, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center group">
-                  <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center text-[#4A151B] mb-1 transition-transform duration-200 group-hover:scale-105">
-                    <feat.icon className="w-4 h-4" />
+                  <div className="w-8 h-8 lg:w-9 lg:h-9 rounded-full bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center text-[#4A151B] mb-1 transition-transform duration-200 group-hover:scale-105">
+                    <feat.icon className="w-3.5 h-3.5" />
                   </div>
-                  <span className="text-[9px] lg:text-[10px] leading-tight text-[#66534E] font-medium whitespace-pre-line text-center">
+                  <span className="text-[8.5px] lg:text-[9.5px] leading-tight text-[#66534E] font-medium whitespace-pre-line text-center">
                     {feat.label}
                   </span>
                 </div>

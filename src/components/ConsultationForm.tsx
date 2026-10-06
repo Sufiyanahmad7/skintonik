@@ -90,6 +90,7 @@ export const ConsultationForm: React.FC = () => {
         <form onSubmit={handleSubmit} className="space-y-2.5">
           <div>
             <input
+              id="hero-full-name-input"
               type="text"
               name="fullName"
               placeholder="Full Name*"

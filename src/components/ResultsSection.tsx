@@ -1,18 +1,8 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
-import { ResultCard } from './ResultCard';
-import { IMAGES } from '../data/images';
 
 export const ResultsSection: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
   const reviewScrollRef = useRef<HTMLDivElement>(null);
-
-  const results = [
-    { title: 'Acne & Acne Scars Treatment', image: IMAGES.results.acne },
-    { title: 'Pigmentation Reduction', image: IMAGES.results.pigmentation },
-    { title: 'Laser Hair Reduction', image: IMAGES.results.laser },
-    { title: 'Skin Rejuvenation', image: IMAGES.results.rejuvenation },
-  ];
 
   const googleReviews = [
     {
@@ -53,13 +43,6 @@ export const ResultsSection: React.FC = () => {
     },
   ];
 
-  const handleScroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = direction === 'left' ? -280 : 280;
-      scrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
   const handleReviewScroll = (direction: 'left' | 'right') => {
     if (reviewScrollRef.current) {
       const scrollAmount = direction === 'left' ? -320 : 320;
@@ -67,11 +50,19 @@ export const ResultsSection: React.FC = () => {
     }
   };
 
-  const handleScrollToForm = () => {
-    const formEl = document.getElementById('consultation-form');
-    if (formEl) {
-      formEl.scrollIntoView({ behavior: 'smooth' });
+  const handleScrollToFormInput = () => {
+    const inputEl = document.getElementById('hero-full-name-input');
+    const formContainer = document.getElementById('consultation-form');
+
+    if (formContainer) {
+      formContainer.scrollIntoView({ behavior: 'smooth' });
     }
+
+    setTimeout(() => {
+      if (inputEl) {
+        inputEl.focus();
+      }
+    }, 400);
   };
 
   return (
@@ -79,72 +70,29 @@ export const ResultsSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-3 text-center sm:text-left">
-          <div>
-            <h2 className="font-serif text-[28px] lg:text-[34px] font-normal text-[#2C1B18] mb-1">
-              Real People. Real Results.
-            </h2>
-            <p className="text-xs sm:text-sm text-[#66534E]">
-              Visible improvements. Happier, more confident you.
-            </p>
-          </div>
+        <div className="text-center max-w-3xl mx-auto mb-8">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2C1B18] leading-tight mb-1">
+            Real People. Real Results.
+          </h2>
+          <p className="text-xs sm:text-sm text-[#66534E] mb-5">
+            Visible improvements. Happier, more confident you.
+          </p>
 
           <button
-            onClick={handleScrollToForm}
-            className="inline-flex items-center justify-center gap-1.5 bg-[#3A0D12] hover:bg-[#4A151B] text-white text-xs font-medium px-4 py-2.5 rounded-lg transition-colors self-center sm:self-auto shrink-0"
+            onClick={handleScrollToFormInput}
+            className="inline-flex items-center justify-center gap-2 bg-[#4A151B] hover:bg-[#381014] text-white text-xs sm:text-sm font-semibold px-6 py-3 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
           >
-            <span>View More Results</span>
+            <span>Book Your Consultation</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Grid/Carousel Container: Grid centered on md+ screens, scrollable on small mobile */}
-        <div className="relative">
-          {/* Left Arrow (visible on mobile scroll) */}
-          <button
-            onClick={() => handleScroll('left')}
-            className="md:hidden absolute -left-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-md flex items-center justify-center text-[#2C1B18] hover:bg-[#F3EDE2] transition-colors"
-            aria-label="Previous Result"
-          >
-            <ChevronLeft className="w-4 h-4" />
-          </button>
-
-          {/* Centered Cards Container */}
-          <div
-            ref={scrollRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 justify-items-center items-stretch overflow-x-auto no-scrollbar py-2 px-1 scroll-smooth"
-          >
-            {results.map((item, idx) => (
-              <div key={idx} className="w-full max-w-[280px]">
-                <ResultCard title={item.title} image={item.image} />
-              </div>
-            ))}
-          </div>
-
-          {/* Right Arrow (visible on mobile scroll) */}
-          <button
-            onClick={() => handleScroll('right')}
-            className="md:hidden absolute -right-2 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-md flex items-center justify-center text-[#2C1B18] hover:bg-[#F3EDE2] transition-colors"
-            aria-label="Next Result"
-          >
-            <ChevronRight className="w-4 h-4" />
-          </button>
-        </div>
-
-        {/* Dots */}
-        <div className="flex justify-center items-center gap-1.5 mt-6 mb-10">
-          <div className="w-6 h-1.5 rounded-full bg-[#4A151B]" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#D9BEA7]" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#D9BEA7]" />
-          <div className="w-1.5 h-1.5 rounded-full bg-[#D9BEA7]" />
-        </div>
-
-        {/* GOOGLE REVIEWS SLIDER */}
-        <div className="mt-8 pt-8 border-t border-[#EAD7C5]/60">
+        {/* GOOGLE REVIEWS CAROUSEL */}
+        <div>
           <div className="flex flex-col sm:flex-row items-center justify-between mb-6 gap-3">
             <div className="flex items-center space-x-3 text-center sm:text-left">
               {/* Google G Logo SVG */}
-              <div className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5]/80 flex items-center justify-center p-1.5 shadow-2xs">
+              <div className="w-9 h-9 rounded-full bg-white border border-[#EAD7C5]/80 flex items-center justify-center p-1.5 shadow-2xs">
                 <svg viewBox="0 0 24 24" className="w-full h-full">
                   <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
                   <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />

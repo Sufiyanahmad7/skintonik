@@ -350,22 +350,17 @@ export const PopularTreatments: React.FC = () => {
   return (
     <section id="popular-treatments" className="bg-[#FBF8F3] py-7 px-3 sm:px-6 lg:px-10 border-b border-[#EAD7C5]/40">
       <div className="max-w-6xl mx-auto">
-        {/* COMPACT SECTION HEADER WITH ARROWS */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
-          <div>
-            <span className="text-[10px] font-semibold tracking-[0.2em] text-[#4A151B] uppercase block">
-              POPULAR TREATMENTS IN BANGALORE
-            </span>
-            <h2 className="font-serif text-2xl sm:text-3xl font-normal text-[#2C1B18]">
-              Our Most Popular Treatment Options
-            </h2>
-          </div>
+        {/* CENTERED SECTION HEADER */}
+        <div className="text-center max-w-3xl mx-auto mb-6 relative">
+          <span className="text-xs font-bold tracking-[0.2em] text-[#8C7A75] uppercase block mb-1.5">
+            POPULAR TREATMENTS IN BANGALORE
+          </span>
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-normal text-[#2C1B18] leading-tight">
+            Our Most Popular Treatment Options
+          </h2>
 
-          {/* ARROW NAV BUTTONS AT TOP RIGHT */}
-          <div className="flex items-center space-x-2 self-end md:self-auto">
-            <span className="text-xs text-[#66534E] font-medium mr-1">
-              <strong className="text-[#4A151B]">{activeSlideIndex + 1}</strong> / {POPULAR_SECTIONS_DATA.length}
-            </span>
+          {/* ARROW NAV BUTTONS & COUNTER */}
+          <div className="flex items-center justify-center space-x-3 mt-3">
             <button
               onClick={handlePrev}
               aria-label="Previous treatment"
@@ -373,6 +368,9 @@ export const PopularTreatments: React.FC = () => {
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
+            <span className="text-xs text-[#66534E] font-medium px-2">
+              <strong className="text-[#4A151B]">{activeSlideIndex + 1}</strong> / {POPULAR_SECTIONS_DATA.length}
+            </span>
             <button
               onClick={handleNext}
               aria-label="Next treatment"
