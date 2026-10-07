@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 
+          <h1
             className="font-serif text-[28px] sm:text-[34px] md:text-[36px] lg:text-[46px] leading-[1.1] font-bold text-[#271446]"
           >
             Expert Aesthetic Care<br />
