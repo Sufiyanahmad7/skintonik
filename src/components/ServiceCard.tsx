@@ -25,10 +25,10 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
   return (
     <div 
       onClick={handleExploreClick}
-      className="bg-white rounded-[20px] border border-[#D8C4B0] p-4 sm:p-5 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(39,20,70,0.12)] transition-all duration-300 group cursor-pointer w-full"
+      className="bg-white rounded-[20px] border border-[#D8C4B0] p-4 sm:p-5 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_30px_rgba(39,20,70,0.12)] transition-all duration-300 group cursor-pointer w-full h-full"
     >
       {/* 1. Large Treatment Image */}
-      <div className="w-full aspect-[16/10] sm:aspect-[16/9.5] rounded-xl overflow-hidden bg-[#F5EFE6] mb-5 border border-[#EADBCE]/60">
+      <div className="w-full aspect-[16/10] sm:aspect-[16/9.5] rounded-xl overflow-hidden bg-[#F5EFE6] mb-5 border border-[#EADBCE]/60 shrink-0">
         <img
           src={service.image}
           alt={service.name}
@@ -50,14 +50,14 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({ service }) => {
           </p>
         </div>
 
-        {/* 4. Gold Outlined "Explore More" Button */}
+        {/* 4. Deep Purple Button (Same as Choose Package styling) */}
         <div className="pt-2">
           <button
             onClick={(e) => {
               e.stopPropagation();
               handleExploreClick();
             }}
-            className="w-full bg-white hover:bg-[#FAF6ED] text-[#271446] border-2 border-[#C9A35D] text-xs sm:text-sm font-semibold py-2.5 px-4 rounded-full transition-all duration-300 shadow-sm cursor-pointer"
+            className="w-full bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] border border-[#271446] text-xs sm:text-sm font-bold py-2.5 px-4 rounded-full transition-all duration-300 shadow-sm cursor-pointer"
           >
             Explore More
           </button>
