@@ -9,6 +9,7 @@ export const JourneySection: React.FC = () => {
       desc: 'Tell us your concern and treatment goals. For skin concerns, you may begin with an AI-Based Skin Analysis where suitable.',
       icon: Stethoscope,
       image: '/images/concern_acne_skin.jpg',
+      imagePosition: 'object-[center_25%]',
       isHighlight: false,
     },
     {
@@ -17,6 +18,7 @@ export const JourneySection: React.FC = () => {
       desc: 'Understand suitable treatment options, expected session requirements and pricing.',
       icon: FileText,
       image: '/images/concern_hairfall_fresh.jpg',
+      imagePosition: 'object-[center_15%]',
       isHighlight: true,
     },
     {
@@ -25,6 +27,7 @@ export const JourneySection: React.FC = () => {
       desc: 'Proceed with the selected treatment after consultation and suitability assessment.',
       icon: UserCheck,
       image: '/images/result_rejuvenation.jpg',
+      imagePosition: 'object-center',
       isHighlight: false,
     },
     {
@@ -33,6 +36,7 @@ export const JourneySection: React.FC = () => {
       desc: 'Receive guidance regarding your treatment plan and follow-up requirements.',
       icon: HeartHandshake,
       image: '/images/clinic_interior_skintonik.jpg',
+      imagePosition: 'object-top',
       isHighlight: false,
     },
   ];
@@ -70,10 +74,10 @@ export const JourneySection: React.FC = () => {
         <div className="relative mb-14">
 
           {/* Timeline Connector Line through middle of card bottoms (Desktop) */}
-          <div className="hidden lg:block absolute bottom-[110px] left-[12%] right-[12%] h-[2px] bg-[#EAD7C5]/70 z-0" />
+          <div className="hidden xl:block absolute bottom-[110px] left-[12%] right-[12%] h-[2px] bg-[#EAD7C5]/70 z-0" />
 
           {/* 4 Cards Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch relative z-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 items-stretch relative z-10">
             {steps.map((item, idx) => (
               <div
                 key={idx}
@@ -85,11 +89,11 @@ export const JourneySection: React.FC = () => {
               >
                 <div className="flex flex-col h-full">
                   {/* Top Media Container */}
-                  <div className="w-full h-44 sm:h-48 overflow-hidden bg-[#F5EFE6] relative border-b border-[#EAD7C5]/40 shrink-0">
+                  <div className="w-full aspect-[16/10] overflow-hidden bg-[#F5EFE6] relative border-b border-[#EAD7C5]/40 shrink-0">
                     <img
                       src={item.image}
                       alt={item.title}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full object-cover ${item.imagePosition || 'object-center'} group-hover:scale-105 transition-transform duration-500`}
                     />
                   </div>
 
