@@ -502,17 +502,24 @@ export const PopularTreatments: React.FC = () => {
                     </p>
 
                     {/* Price Row - BOLDER */}
-                    <div className="flex items-baseline gap-2.5 mb-4 pt-2.5 border-t border-[#EAD7C5]/60">
-                      {pkg.listPrice && (
-                        <span className="line-through text-xs sm:text-sm text-[#8C7A75] font-semibold">{pkg.listPrice}</span>
-                      )}
-                      {pkg.festivePrice && (
-                        <span className="text-2xl sm:text-3xl font-black text-[#271446]">{pkg.festivePrice}</span>
-                      )}
-                      {pkg.save && (
-                        <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-300 ml-auto shadow-2xs">
-                          Save {pkg.save}
-                        </span>
+                    <div className="mb-4 pt-2.5 border-t border-[#EAD7C5]/60 space-y-1">
+                      <div className="flex items-baseline gap-2.5">
+                        {pkg.listPrice && (
+                          <span className="line-through text-xs sm:text-sm text-[#8C7A75] font-semibold">{pkg.listPrice}</span>
+                        )}
+                        {pkg.festivePrice && (
+                          <span className="text-2xl sm:text-3xl font-black text-[#271446]">{pkg.festivePrice}</span>
+                        )}
+                        {pkg.save && (
+                          <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-300 ml-auto shadow-2xs">
+                            Save {pkg.save}
+                          </span>
+                        )}
+                      </div>
+                      {pkg.emi && (
+                        <div className="text-[11px] sm:text-xs font-bold text-[#271446] bg-[#F3EDE2] px-2.5 py-1 rounded-md border border-[#EAD7C5] inline-block">
+                          {pkg.emi}
+                        </div>
                       )}
                     </div>
                   </div>

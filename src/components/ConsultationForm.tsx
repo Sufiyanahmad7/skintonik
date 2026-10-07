@@ -10,6 +10,7 @@ export const ConsultationForm: React.FC = () => {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const concernsList = [
@@ -26,7 +27,6 @@ export const ConsultationForm: React.FC = () => {
     'IV Wellness',
     'Mental / Emotional Wellness',
     'Not Sure – Need Guidance',
-
   ];
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -36,7 +36,7 @@ export const ConsultationForm: React.FC = () => {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors: Record<string, string> = {};
 
@@ -57,7 +57,40 @@ export const ConsultationForm: React.FC = () => {
       return;
     }
 
-    setIsSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/ahmadsufiyan470@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: 'New Skintonik Consultation Lead',
+          _captcha: 'false',
+          _template: 'table',
+          name: formData.fullName,
+          phone: formData.mobileNumber,
+          concern: formData.concern,
+          location: formData.location,
+        })
+      });
+
+      if (response.ok) {
+        setIsSubmitted(true);
+      } else {
+        // Fallback to submitting standard HTML form if AJAX is restricted
+        const form = e.target as HTMLFormElement;
+        form.submit();
+      }
+    } catch (err) {
+      // In case of network error or CORS issue, submit traditional form
+      const form = e.target as HTMLFormElement;
+      form.submit();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -88,15 +121,29 @@ export const ConsultationForm: React.FC = () => {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form 
+            action="https://formsubmit.co/ahmadsufiyan470@gmail.com" 
+            method="POST" 
+            onSubmit={handleSubmit} 
+            className="space-y-3"
+          >
+            {/* FormSubmit Configuration Hidden Inputs */}
+            <input type="hidden" name="_subject" value="New Skintonik Consultation Lead" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
             <div>
               <input
                 id="hero-full-name-input"
                 type="text"
-                name="fullName"
+                name="name"
                 placeholder="Full Name*"
                 value={formData.fullName}
-                onChange={handleChange}
+                onChange={(e) => {
+                  setFormData({ ...formData, fullName: e.target.value });
+                  if (errors.fullName) setErrors({ ...errors, fullName: '' });
+                }}
+                required
                 className={`w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border ${errors.fullName ? 'border-red-400 bg-red-50 text-[#271446]' : 'border-[#EAD7C5] bg-[#FBF8F3] text-[#271446]'
                   } focus:outline-none focus:border-[#271446] placeholder-[#52413E]/70 transition-colors`}
               />
@@ -106,10 +153,14 @@ export const ConsultationForm: React.FC = () => {
             <div>
               <input
                 type="tel"
-                name="mobileNumber"
+                name="phone"
                 placeholder="Mobile Number*"
                 value={formData.mobileNumber}
-                onChange={handleChange}
+                onChange={(e) => {
+                  setFormData({ ...formData, mobileNumber: e.target.value });
+                  if (errors.mobileNumber) setErrors({ ...errors, mobileNumber: '' });
+                }}
+                required
                 className={`w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border ${errors.mobileNumber ? 'border-red-400 bg-red-50 text-[#271446]' : 'border-[#EAD7C5] bg-[#FBF8F3] text-[#271446]'
                   } focus:outline-none focus:border-[#271446] placeholder-[#52413E]/70 transition-colors`}
               />
@@ -120,7 +171,11 @@ export const ConsultationForm: React.FC = () => {
               <select
                 name="concern"
                 value={formData.concern}
-                onChange={handleChange}
+                onChange={(e) => {
+                  setFormData({ ...formData, concern: e.target.value });
+                  if (errors.concern) setErrors({ ...errors, concern: '' });
+                }}
+                required
                 className={`w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border ${errors.concern ? 'border-red-400 bg-red-50 text-[#271446]' : 'border-[#EAD7C5] bg-[#FBF8F3] text-[#271446]'
                   } focus:outline-none focus:border-[#271446] transition-colors ${!formData.concern ? 'text-[#52413E]/70' : 'text-[#271446]'
                   }`}
@@ -139,7 +194,8 @@ export const ConsultationForm: React.FC = () => {
               <select
                 name="location"
                 value={formData.location}
-                onChange={handleChange}
+                onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+                required
                 className="w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] focus:outline-none text-[#271446] font-medium"
               >
                 <option value="Bangalore" className="bg-white text-[#271446]">Bangalore</option>
@@ -148,9 +204,10 @@ export const ConsultationForm: React.FC = () => {
 
             <button
               type="submit"
-              className="w-full mt-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] font-semibold text-[13px] py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-sm cursor-pointer"
+              disabled={isSubmitting}
+              className="w-full mt-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] font-semibold text-[13px] py-2.5 sm:py-3 rounded-lg flex items-center justify-center gap-2 transition-colors shadow-sm cursor-pointer disabled:opacity-70"
             >
-              <span>Book Now</span>
+              <span>{isSubmitting ? 'Submitting...' : 'Book Now'}</span>
               <ArrowRight className="w-3.5 h-3.5 text-[#F8DB66]" />
             </button>
 
