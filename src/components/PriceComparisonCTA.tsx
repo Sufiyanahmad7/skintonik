@@ -5,11 +5,11 @@ export const PriceComparisonCTA: React.FC = () => {
   const handleScrollToForm = () => {
     const inputEl = document.getElementById('hero-full-name-input');
     const formContainer = document.getElementById('consultation-form');
-    
+
     if (formContainer) {
       formContainer.scrollIntoView({ behavior: 'smooth' });
     }
-    
+
     setTimeout(() => {
       if (inputEl) {
         inputEl.focus();
@@ -32,7 +32,7 @@ export const PriceComparisonCTA: React.FC = () => {
           <div className="relative z-10 max-w-4xl mx-auto text-center space-y-6">
 
             {/* Main Title */}
-            <h2 
+            <h2
               className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold leading-tight text-[#F8DB66]"
               style={{ textShadow: '0 2px 4px rgba(0,0,0,0.6)' }}
             >

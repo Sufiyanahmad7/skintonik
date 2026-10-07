@@ -57,7 +57,7 @@ export const SpecificConcernSection: React.FC = () => {
     {
       title: 'Dandruff / Scalp Concerns',
       desc: 'Explore Anti-Dandruff Therapy and Scalp Therapy.',
-      image: '/images/treatment_hair.jpg',
+      image: '/images/concern_dandruff_scalp.jpg',
     },
     {
       title: 'Unwanted Hair',
@@ -81,7 +81,7 @@ export const SpecificConcernSection: React.FC = () => {
             <Sparkles className="w-3.5 h-3.5 text-[#271446]" />
           </div>
           <h2 
-            className="font-serif text-[28px] lg:text-[34px] font-bold text-[#271446] mb-2"
+            className="font-serif text-[28px] lg:text-[36px] font-extrabold text-[#271446] mb-2 tracking-tight"
           >
             Looking for a Treatment for a Specific Concern?
           </h2>
