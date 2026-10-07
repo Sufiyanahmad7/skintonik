@@ -26,7 +26,7 @@ export const FAQSection: React.FC = () => {
     },
     {
       question: 'What is the price of AI Skin Analysis?',
-      answer: 'AI-Based Skin Analysis is ₹700.',
+      answer: 'AI-Based Skin Analysis is ₹299.',
     },
     {
       question: 'What is the price of laser hair reduction?',
@@ -78,7 +78,7 @@ export const FAQSection: React.FC = () => {
             <HelpCircle className="w-3.5 h-3.5 text-[#271446]" />
             <span>Got Questions?</span>
           </div>
-          <h2 
+          <h2
             className="font-serif text-[28px] lg:text-[34px] font-bold text-[#271446] mb-2"
           >
             Frequently Asked Questions
@@ -101,7 +101,7 @@ export const FAQSection: React.FC = () => {
                   className="w-full flex items-center justify-between p-4 sm:p-5 text-left group cursor-pointer focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span 
+                  <span
                     className="font-serif text-sm sm:text-base font-bold text-[#271446] transition-colors pr-4"
                   >
                     {faq.question}

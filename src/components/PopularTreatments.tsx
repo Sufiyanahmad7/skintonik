@@ -39,8 +39,8 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'hydrafacial',
     categoryTag: 'Facials',
-    mainTitle: 'HydraFacial in bengaluru: Festive Glow Duo ₹4,250',
-    description: 'A HydraFacial at Skintonik is ₹3,000. This festive season the Glow Duo adds a Party Peel for ₹4,250 in total, couples can book side-by-side HydraFacials, and the 3-session Deepavali Radiance series builds glow over 2–3 weeks. Book 3–5 days before a function so skin has time to settle.',
+    mainTitle: 'HydraFacial in bengaluru: Festive Glow Duo ₹4,250/-',
+    description: 'A HydraFacial at Skintonik is ₹3,000/-. This festive season the Glow Duo adds a Party Peel for ₹4,250/- in total, couples can book side-by-side HydraFacials, and the 3-session Deepavali Radiance series builds glow over 2–3 weeks. Book 3–5 days before a function so skin has time to settle.',
     keywords: [
       'HydraFacial price bengaluru',
       'medi facial',
@@ -54,45 +54,45 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
         code: 'O1 · HydraFacial + Party Peel',
         name: 'Dasara Glow Duo',
         details: 'HydraFacial + Party Peel, one visit',
-        listPrice: '₹5,000',
-        festivePrice: '₹4,250',
-        save: '₹750',
+        listPrice: '₹5,000/-',
+        festivePrice: '₹4,250/-',
+        save: '₹750/-',
         badge: '+ free AI skin analysis'
       },
       {
         code: 'O2 · Couple facial',
         name: 'Couple Glow',
         details: '2 HydraFacials, booked together, side by side',
-        listPrice: '₹6,000',
-        festivePrice: '₹5,100',
-        save: '₹900',
+        listPrice: '₹6,000/-',
+        festivePrice: '₹5,100/-',
+        save: '₹900/-',
         badge: '+ AI analysis for both'
       },
       {
         code: 'O3 · 3-session series',
         name: 'Deepavali Radiance',
         details: 'Signature Facial + Vitamin C Peel + HydraFacial over 2–3 weeks',
-        listPrice: '₹18,000',
-        festivePrice: '₹15,300',
-        save: '₹2,700',
+        listPrice: '₹18,000/-',
+        festivePrice: '₹15,300/-',
+        save: '₹2,700/-',
         emi: 'No-cost EMI ₹2,550/month × 6'
       }
     ],
     tableHeading: 'Medi facial menu and prices',
     tableHeaders: ['Facial', 'Price per session', ''],
     tableRows: [
-      { col1: 'Party Peel', col2: '₹2,000' },
-      { col1: 'HydraFacial', col2: '₹3,000' },
-      { col1: 'Vampire Facial', col2: '₹7,000' },
-      { col1: 'Celebrity Glow Facial', col2: '₹10,000' },
-      { col1: 'Signature Skintonik Facial', col2: '₹10,000' }
+      { col1: 'Party Peel', col2: '₹2,000/-' },
+      { col1: 'HydraFacial', col2: '₹3,000/-' },
+      { col1: 'Vampire Facial', col2: '₹7,000/-' },
+      { col1: 'Celebrity Glow Facial', col2: '₹10,000/-' },
+      { col1: 'Signature Skintonik Facial', col2: '₹10,000/-' }
     ],
     note: 'Packages of 3 or more sessions: 10–15% off.'
   },
   {
     id: 'acne',
     categoryTag: 'Acne and acne scars',
-    mainTitle: 'Acne Treatment in bengaluru: Clear-Skin Reset ₹8,500',
+    mainTitle: 'Acne Treatment in bengaluru: Clear-Skin Reset ₹8,500/-',
     description: "Active acne and acne marks are two different jobs. Salicylic peels calm oily, breakout-prone skin first. Then MNRF, Dermapen microneedling or a TCA peel work on the scars left behind. Your AI skin analysis decides the order, so you don't pay twice.",
     keywords: [
       'acne scar treatment bengaluru',
@@ -107,29 +107,29 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
         code: 'O4 · Pimple treatment',
         name: 'Clear-Skin Reset',
         details: '4 Salicylic Acid peels for active acne and oily skin',
-        listPrice: '₹10,000',
-        festivePrice: '₹8,500',
-        save: '₹1,500',
+        listPrice: '₹10,000/-',
+        festivePrice: '₹8,500/-',
+        save: '₹1,500/-',
         badge: '+ free AI skin analysis'
       }
     ],
     tableHeading: 'Acne scar treatment prices: MNRF, Dermapen, TCA',
     tableHeaders: ['Treatment', 'For', 'Price per session'],
     tableRows: [
-      { col1: 'Salicylic Acid Peel', col2: 'Active acne, oily skin, blackheads', col3: '₹2,500' },
-      { col1: 'TCA Peel', col2: 'Acne scars, deeper texture', col3: '₹2,500' },
-      { col1: 'Mandelic Acid Peel', col2: 'Acne-prone, sensitive skin', col3: '₹3,000' },
-      { col1: 'Retinol Peel', col2: 'Acne and renewal', col3: '₹3,000' },
-      { col1: 'Azelaic Acid Peel', col2: 'Post-acne marks', col3: '₹5,000' },
-      { col1: 'Dermapen (microneedling)', col2: 'Scars and texture', col3: '₹7,000' },
-      { col1: 'MNRF', col2: 'Scars and texture', col3: '₹7,000' },
-      { col1: 'PRP (skin)', col2: 'Rejuvenation, often with microneedling', col3: '₹8,000' }
+      { col1: 'Salicylic Acid Peel', col2: 'Active acne, oily skin, blackheads', col3: '₹2,500/-' },
+      { col1: 'TCA Peel', col2: 'Acne scars, deeper texture', col3: '₹2,500/-' },
+      { col1: 'Mandelic Acid Peel', col2: 'Acne-prone, sensitive skin', col3: '₹3,000/-' },
+      { col1: 'Retinol Peel', col2: 'Acne and renewal', col3: '₹3,000/-' },
+      { col1: 'Azelaic Acid Peel', col2: 'Post-acne marks', col3: '₹5,000/-' },
+      { col1: 'Dermapen (microneedling)', col2: 'Scars and texture', col3: '₹7,000/-' },
+      { col1: 'MNRF', col2: 'Scars and texture', col3: '₹7,000/-' },
+      { col1: 'PRP (skin)', col2: 'Rejuvenation, often with microneedling', col3: '₹8,000/-' }
     ]
   },
   {
     id: 'pigmentation',
     categoryTag: 'Even tone, never "fairness"',
-    mainTitle: 'Pigmentation Treatment in bengaluru: 4-Peel Even-Tone Series ₹13,600',
+    mainTitle: 'Pigmentation Treatment in bengaluru: 4-Peel Even-Tone Series ₹13,600/-',
     description: "Tan, post-acne marks, melasma and dark underarms or neck look alike but respond to different chemical peels. Skintonik's pigmentation treatment starts with an AI skin analysis, then a peel plan spaced by how your skin responds, with the total price in writing.",
     keywords: [
       'chemical peel price bengaluru',
@@ -144,33 +144,33 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
         code: 'O5 · Chemical peel series',
         name: 'Even-Tone Peel Series',
         details: '2 Glycolic + 2 Vitamin C peels for tan, dullness and uneven tone',
-        listPrice: '₹16,000',
-        festivePrice: '₹13,600',
-        save: '₹2,400',
+        listPrice: '₹16,000/-',
+        festivePrice: '₹13,600/-',
+        save: '₹2,400/-',
         emi: 'No-cost EMI ₹2,267/month × 6'
       }
     ],
     tableHeading: 'Chemical peel menu and prices',
     tableHeaders: ['Peel', 'Best for', 'Price'],
     tableRows: [
-      { col1: 'Lactic Acid', col2: 'Dry, sensitive, dull skin', col3: '₹2,500' },
-      { col1: 'TCA (medium)', col2: 'Acne scars, deeper texture, pigmentation', col3: '₹2,500' },
-      { col1: 'Glycolic Acid', col2: 'Dullness, tan, fine lines', col3: '₹3,000' },
-      { col1: 'Mandelic Acid', col2: 'Acne-prone or sensitive skin with pigmentation', col3: '₹3,000' },
-      { col1: 'Retinol', col2: 'Acne, pigmentation, renewal', col3: '₹3,000' },
-      { col1: 'Azelaic Acid', col2: 'Post-acne marks, pigmentation', col3: '₹5,000' },
-      { col1: 'Vitamin C', col2: 'Dullness, tan, uneven tone', col3: '₹5,000' },
-      { col1: 'Ferulic Acid', col2: 'Dullness, sun-related ageing', col3: '₹5,000' },
-      { col1: 'Individual body part peel', col2: 'Underarms, neck or knees', col3: '₹7,000' },
-      { col1: 'Combination peel', col2: 'Two concerns at once', col3: '₹10,000' },
-      { col1: 'Full body tanning / pigmentation peel', col2: 'Body tan and uneven tone', col3: '₹15,000' },
-      { col1: 'Meline / Cosmelan', col2: 'Advanced pigmentation, doctor-assessed', col3: '₹75,000 / ₹80,000' }
+      { col1: 'Lactic Acid', col2: 'Dry, sensitive, dull skin', col3: '₹2,500/-' },
+      { col1: 'TCA (medium)', col2: 'Acne scars, deeper texture, pigmentation', col3: '₹2,500/-' },
+      { col1: 'Glycolic Acid', col2: 'Dullness, tan, fine lines', col3: '₹3,000/-' },
+      { col1: 'Mandelic Acid', col2: 'Acne-prone or sensitive skin with pigmentation', col3: '₹3,000/-' },
+      { col1: 'Retinol', col2: 'Acne, pigmentation, renewal', col3: '₹3,000/-' },
+      { col1: 'Azelaic Acid', col2: 'Post-acne marks, pigmentation', col3: '₹5,000/-' },
+      { col1: 'Vitamin C', col2: 'Dullness, tan, uneven tone', col3: '₹5,000/-' },
+      { col1: 'Ferulic Acid', col2: 'Dullness, sun-related ageing', col3: '₹5,000/-' },
+      { col1: 'Individual body part peel', col2: 'Underarms, neck or knees', col3: '₹7,000/-' },
+      { col1: 'Combination peel', col2: 'Two concerns at once', col3: '₹10,000/-' },
+      { col1: 'Full body tanning / pigmentation peel', col2: 'Body tan and uneven tone', col3: '₹15,000/-' },
+      { col1: 'Meline / Cosmelan', col2: 'Advanced pigmentation, doctor-assessed', col3: '₹75,000/- / ₹80,000/-' }
     ]
   },
   {
     id: 'laser',
     categoryTag: 'Laser hair reduction',
-    mainTitle: 'Laser Hair Removal in bengaluru: 6-Session Packages from ₹15,299',
+    mainTitle: 'Laser Hair Removal in bengaluru: 6-Session Packages from ₹15,299/-',
     description: "Looking for laser hair removal in bengaluru with the price shown up front? Skintonik's laser hair reduction packages on Sarjapur Road include 6 sessions, a patch test before your first session and a free AI skin analysis. Fewer waxing appointments, fewer ingrown hairs, and one price you know on day one.",
     keywords: [
       'laser hair removal price bengaluru',
@@ -186,26 +186,26 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
         code: 'O6 · Underarm laser hair removal',
         name: 'Smooth Starter',
         details: 'Underarms + upper lip + chin · 6 sessions',
-        listPrice: '₹17,999',
-        festivePrice: '₹15,299',
-        save: '₹2,700',
+        listPrice: '₹17,999/-',
+        festivePrice: '₹15,299/-',
+        save: '₹2,700/-',
         emi: 'No-cost EMI ₹2,550/month × 6'
       },
       {
         code: 'O7 · Full body laser hair removal price',
         name: 'Full Body Laser',
         details: 'Full body · 6 sessions',
-        listPrice: '₹60,000',
-        festivePrice: '₹51,000',
-        save: '₹9,000',
+        listPrice: '₹60,000/-',
+        festivePrice: '₹51,000/-',
+        save: '₹9,000/-',
         emi: 'No-cost EMI ₹8,500/month × 6'
       }
     ],
     tableHeading: 'Is laser hair removal safe for Indian skin? Areas and prices',
     tableHeaders: ['Area', 'Sessions', 'Price'],
     tableRows: [
-      { col1: 'Underarms + upper lip + chin', col2: '6', col3: '₹15,299 festive (₹17,999)' },
-      { col1: 'Full body', col2: '6', col3: '₹51,000 festive (₹60,000)' },
+      { col1: 'Underarms + upper lip + chin', col2: '6', col3: '₹15,299/- festive (₹17,999/-)' },
+      { col1: 'Full body', col2: '6', col3: '₹51,000/- festive (₹60,000/-)' },
       { col1: 'Face, arms, legs, back, chest, bikini, beard line (men)', col2: 'As planned', col3: 'Priced in writing at consultation' }
     ],
     note: "Indian skin needs laser settings chosen for skin type and hair type, so every course starts with an assessment and a patch test. If laser isn't suitable for you, we'll say so before you pay."
@@ -213,7 +213,7 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'hair',
     categoryTag: 'Hair fall and thinning',
-    mainTitle: 'Hair Fall Treatment in bengaluru: 4 GFC Sessions ₹27,200',
+    mainTitle: 'Hair Fall Treatment in bengaluru: 4 GFC Sessions ₹27,200/-',
     description: "Start with data, not guesswork. An AI hair analysis reads scalp condition and density, then your doctor recommends GFC, PRP, QR678 or exosomes, with every option priced side by side. Results vary from person to person, and you'll hear a realistic timeline before you pay.",
     keywords: [
       'GFC hair treatment cost',
@@ -229,22 +229,22 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
         code: 'O8 · GFC hair treatment',
         name: 'Dhanteras Hair Plan',
         details: 'AI hair analysis, then 4 GFC sessions',
-        listPrice: '₹32,000',
-        festivePrice: '₹27,200',
-        save: '₹4,800',
+        listPrice: '₹32,000/-',
+        festivePrice: '₹27,200/-',
+        save: '₹4,800/-',
         emi: 'No-cost EMI ₹4,533/month × 6'
       }
     ],
     tableHeading: 'GFC vs PRP vs QR678: hair treatment prices',
     tableHeaders: ['Treatment', 'What it is', 'Price per session'],
     tableRows: [
-      { col1: 'Scalp Therapy', col2: 'Cleansing and scalp care', col3: '₹2,000' },
-      { col1: 'Anti-Dandruff Therapy', col2: 'Dandruff and flaky scalp', col3: '₹3,000' },
-      { col1: 'PRP', col2: 'Platelet-rich plasma from your own blood', col3: '₹7,000' },
-      { col1: 'GFC', col2: 'Growth factor concentrate from your own blood', col3: '₹8,000' },
-      { col1: 'Exosomes', col2: 'Regenerative scalp treatment', col3: '₹10,000' },
-      { col1: 'QR678', col2: 'Peptide-based scalp injections', col3: '₹12,000' },
-      { col1: 'Peptide-Based Hair Filler', col2: 'Advanced peptide treatment', col3: '₹45,000' }
+      { col1: 'Scalp Therapy', col2: 'Cleansing and scalp care', col3: '₹2,000/-' },
+      { col1: 'Anti-Dandruff Therapy', col2: 'Dandruff and flaky scalp', col3: '₹3,000/-' },
+      { col1: 'PRP', col2: 'Platelet-rich plasma from your own blood', col3: '₹7,000/-' },
+      { col1: 'GFC', col2: 'Growth factor concentrate from your own blood', col3: '₹8,000/-' },
+      { col1: 'Exosomes', col2: 'Regenerative scalp treatment', col3: '₹10,000/-' },
+      { col1: 'QR678', col2: 'Peptide-based scalp injections', col3: '₹12,000/-' },
+      { col1: 'Peptide-Based Hair Filler', col2: 'Advanced peptide treatment', col3: '₹45,000/-' }
     ]
   },
   {
@@ -264,18 +264,18 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
         code: "O9 · Groom skin package",
         name: "Groom's Grooming Kit",
         details: 'HydraFacial + Salicylic Peel + Scalp Therapy, in 2 visits',
-        listPrice: '₹7,500',
-        festivePrice: '₹6,375',
-        save: '₹1,125',
+        listPrice: '₹7,500/-',
+        festivePrice: '₹6,375/-',
+        save: '₹1,125/-',
         badge: '+ free AI skin analysis'
       },
       {
         code: '10 · Bridal glow series',
         name: 'Deepavali Radiance',
         details: 'Signature Facial + Vitamin C Peel + HydraFacial over 2–3 weeks',
-        listPrice: '₹18,000',
-        festivePrice: '₹15,300',
-        save: '₹2,700',
+        listPrice: '₹18,000/-',
+        festivePrice: '₹15,300/-',
+        save: '₹2,700/-',
         emi: 'No-cost EMI ₹2,550/month × 6'
       }
     ],
@@ -305,15 +305,15 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
     tableHeading: 'Anti-ageing price guide (final price after assessment)',
     tableHeaders: ['Treatment', 'Price guide', ''],
     tableRows: [
-      { col1: 'RF skin tightening', col2: '₹5,000 per session' },
-      { col1: 'Anti-wrinkle injections', col2: '₹5,000–₹1,00,000' },
-      { col1: 'PDRN', col2: '₹10,000 per session' },
-      { col1: 'Exosomes (skin)', col2: '₹12,000 per session' },
-      { col1: 'Dermal fillers', col2: '₹30,000–₹1,50,000' },
-      { col1: 'Thread lift', col2: '₹30,000–₹1,80,000' },
-      { col1: 'Skin boosters', col2: '₹50,000' },
-      { col1: 'Baby Glow', col2: '₹60,000' },
-      { col1: 'Profhilo', col2: '₹70,000' }
+      { col1: 'RF skin tightening', col2: '₹5,000/- per session' },
+      { col1: 'Anti-wrinkle injections', col2: '₹5,000/- – ₹1,00,000/-' },
+      { col1: 'PDRN', col2: '₹10,000/- per session' },
+      { col1: 'Exosomes (skin)', col2: '₹12,000/- per session' },
+      { col1: 'Dermal fillers', col2: '₹30,000/- – ₹1,50,000/-' },
+      { col1: 'Thread lift', col2: '₹30,000/- – ₹1,80,000/-' },
+      { col1: 'Skin boosters', col2: '₹50,000/-' },
+      { col1: 'Baby Glow', col2: '₹60,000/-' },
+      { col1: 'Profhilo', col2: '₹70,000/-' }
     ],
     note: 'No festive discounts on injectables. Book a doctor consultation; your plan and its full cost come in writing before any treatment.'
   }
