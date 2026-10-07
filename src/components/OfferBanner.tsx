@@ -17,8 +17,15 @@ export const OfferBanner: React.FC = () => {
     }, 400);
   };
 
+  const handleExploreOffers = () => {
+    const el = document.getElementById('featured-packages') || document.getElementById('popular-treatments');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleWhatsApp = () => {
-    handleScrollToForm();
+    window.open('https://wa.me/919845263041?text=Hi%20Skintonik%2C%20I%20would%20like%20to%20know%20more%20about%20your%20treatments', '_blank');
   };
 
   return (
@@ -80,10 +87,10 @@ export const OfferBanner: React.FC = () => {
         <Gift className="w-4 h-4" />
       </div>
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 relative z-10">
+      <div className="max-w-7xl mx-auto flex flex-col xl:flex-row items-center justify-between gap-6 xl:gap-8 relative z-10">
 
         {/* ── LEFT: CREATIVE BADGE & MOVING GLOW HEADING ── */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-xl shrink-0">
+        <div className="flex flex-col items-center xl:items-start text-center xl:text-left max-w-xl shrink-0">
 
           {/* Animated Glowing Festive Pill */}
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-gradient-to-r from-[#F8DB66]/20 via-[#F8DB66]/30 to-[#F8DB66]/20 border-2 border-[#F8DB66] text-[#F8DB66] text-xs font-black tracking-widest uppercase mb-2 animate-pulse-glow shadow-[0_0_15px_rgba(248,219,102,0.4)]">
@@ -94,17 +101,17 @@ export const OfferBanner: React.FC = () => {
 
           {/* Moving Glow Heading */}
           <h2 className="font-serif leading-tight tracking-tight drop-shadow-[0_2px_15px_rgba(0,0,0,0.8)]">
-            <span className="animate-moving-shimmer block font-black text-2xl sm:text-3xl lg:text-[34px] whitespace-nowrap drop-shadow-[0_0_20px_rgba(248,219,102,0.6)]">
+            <span className="animate-moving-shimmer block font-black text-2xl sm:text-3xl xl:text-[34px] whitespace-nowrap drop-shadow-[0_0_20px_rgba(248,219,102,0.6)]">
               October Treatment Offers
             </span>
-            <span className="block text-white font-bold text-lg sm:text-xl lg:text-2xl mt-0.5 tracking-normal whitespace-nowrap">
+            <span className="block text-white font-bold text-lg sm:text-xl xl:text-2xl mt-0.5 tracking-normal whitespace-nowrap">
               at Skintonik
             </span>
           </h2>
         </div>
 
         {/* ── CENTER: HIGH-IMPACT OFFER CARDS ── */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 lg:gap-5 lg:border-x-2 border-[#F8DB66]/30 lg:px-6 py-2 lg:py-0 w-full lg:w-auto">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 xl:gap-5 xl:border-x-2 border-[#F8DB66]/30 xl:px-6 py-2 xl:py-0 w-full xl:w-auto">
 
           {/* Main 10-15% Discount Card */}
           <div className="flex items-center gap-3 bg-gradient-to-br from-white/15 via-white/10 to-white/5 border-2 border-[#F8DB66] hover:border-[#FFF3C0] px-4 sm:px-5 py-3 rounded-2xl backdrop-blur-md transition-all duration-300 animate-pulse-glow group relative overflow-hidden shrink-0">
@@ -147,7 +154,7 @@ export const OfferBanner: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full sm:w-auto">
           {/* Primary Glowing CTA */}
           <button
-            onClick={handleScrollToForm}
+            onClick={handleExploreOffers}
             className="group relative inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#F8DB66] via-[#FFF3B0] to-[#F8DB66] hover:from-[#FFF3B0] hover:to-[#F8DB66] text-[#271446] font-black text-xs sm:text-sm px-7 py-4 rounded-full shadow-[0_0_25px_rgba(248,219,102,0.6)] hover:shadow-[0_0_35px_rgba(248,219,102,0.9)] hover:scale-105 transition-all duration-300 cursor-pointer overflow-hidden w-full sm:w-auto"
           >
             <div className="absolute inset-0 w-1/2 h-full bg-white/40 skew-x-12 animate-light-sweep pointer-events-none" />

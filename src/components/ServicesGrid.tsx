@@ -38,9 +38,9 @@ export const ServicesGrid: React.FC = () => {
             return (
               <div 
                 key={service.id}
-                className={isLastSingle ? "md:col-span-2 lg:col-span-3 flex justify-center" : "flex"}
+                className={isLastSingle ? "lg:col-span-3 flex justify-center" : "flex"}
               >
-                <div className={isLastSingle ? "w-full md:max-w-md lg:max-w-sm" : "w-full"}>
+                <div className={isLastSingle ? "w-full max-w-md lg:max-w-sm" : "w-full"}>
                   <ServiceCard
                     service={service}
                     onClick={handleServiceClick}

@@ -7,11 +7,13 @@ export const ConsultationForm: React.FC = () => {
     mobileNumber: '',
     concern: '',
     location: 'Bangalore',
+    bestTimeToCall: 'Morning',
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const concernsList = [
     'Skin Concern',
@@ -58,36 +60,56 @@ export const ConsultationForm: React.FC = () => {
     }
 
     setIsSubmitting(true);
+    setSubmitError(null);
+
+    const now = new Date();
+    const formattedDateTime = now.toLocaleString('en-US', {
+      month: '2-digit',
+      day: '2-digit',
+      year: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+    });
+
+    const crmPayload = {
+      name: formData.fullName.trim(),
+      phone: formData.mobileNumber.trim(),
+      opportunity: 'Skintonik Landing Page Consultation Lead',
+      salesperson_id: 54,
+      company_id: 112,
+      email_from: '',
+      contact_name: formData.fullName.trim(),
+      city: formData.location.trim(),
+      description: `Concern: ${formData.concern.trim()}\nPreferred Call Time: ${formData.bestTimeToCall.trim()}\nLocation: ${formData.location.trim()}\nSource: Skintonik Landing Page\nSubmission Time: ${formattedDateTime}`,
+    };
 
     try {
-      const response = await fetch('https://formsubmit.co/ajax/ahmadsufiyan470@gmail.com', {
+      const response = await fetch('https://mysamplewebsite.in/api/crm_leads/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json'
         },
-        body: JSON.stringify({
-          _subject: 'New Skintonik Consultation Lead',
-          _captcha: 'false',
-          _template: 'table',
-          name: formData.fullName,
-          phone: formData.mobileNumber,
-          concern: formData.concern,
-          location: formData.location,
-        })
+        body: JSON.stringify(crmPayload),
       });
 
       if (response.ok) {
         setIsSubmitted(true);
+        setFormData({
+          fullName: '',
+          mobileNumber: '',
+          concern: '',
+          location: 'Bangalore',
+          bestTimeToCall: 'Morning',
+        });
       } else {
-        // Fallback to submitting standard HTML form if AJAX is restricted
-        const form = e.target as HTMLFormElement;
-        form.submit();
+        console.error('CRM API submission error:', response.status, response.statusText);
+        setSubmitError('Something went wrong. Please try again.');
       }
     } catch (err) {
-      // In case of network error or CORS issue, submit traditional form
-      const form = e.target as HTMLFormElement;
-      form.submit();
+      console.error('Network failure or CRM fetch error:', err);
+      setSubmitError('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -106,14 +128,13 @@ export const ConsultationForm: React.FC = () => {
         {isSubmitted ? (
           <div className="py-6 text-center space-y-3 bg-[#FBF8F3] rounded-xl p-4 border border-[#EAD7C5]">
             <CheckCircle2 className="w-10 h-10 text-[#271446] mx-auto" />
-            <h4 className="font-serif text-lg font-semibold text-[#271446]">Thank You, {formData.fullName}!</h4>
-            <p className="text-[11px] text-[#52413E]">
-              Your consultation request for <span className="font-semibold text-[#271446]">{formData.concern}</span> in Bangalore has been received. Our expert care team will contact you shortly at {formData.mobileNumber}.
-            </p>
+            <h4 className="font-serif text-base sm:text-lg font-bold text-[#271446]">
+              Thank you! Your consultation request has been submitted successfully.
+            </h4>
             <button
               onClick={() => {
                 setIsSubmitted(false);
-                setFormData({ fullName: '', mobileNumber: '', concern: '', location: 'Bangalore' });
+                setSubmitError(null);
               }}
               className="mt-1 text-[11px] font-semibold text-[#271446] underline hover:text-[#341b5c]"
             >
@@ -122,15 +143,14 @@ export const ConsultationForm: React.FC = () => {
           </div>
         ) : (
           <form 
-            action="https://formsubmit.co/ahmadsufiyan470@gmail.com" 
-            method="POST" 
             onSubmit={handleSubmit} 
             className="space-y-3"
           >
-            {/* FormSubmit Configuration Hidden Inputs */}
-            <input type="hidden" name="_subject" value="New Skintonik Consultation Lead" />
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_template" value="table" />
+            {submitError && (
+              <div className="p-2.5 bg-red-50 border border-red-200 rounded-lg text-red-600 text-[11px] font-semibold text-center">
+                {submitError}
+              </div>
+            )}
 
             <div>
               <input
@@ -188,6 +208,20 @@ export const ConsultationForm: React.FC = () => {
                 ))}
               </select>
               {errors.concern && <span className="text-[10px] text-red-500 mt-0.5 block">{errors.concern}</span>}
+            </div>
+
+            <div>
+              <select
+                name="best_time_to_call"
+                value={formData.bestTimeToCall}
+                onChange={(e) => setFormData({ ...formData, bestTimeToCall: e.target.value })}
+                required
+                className="w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] focus:outline-none text-[#271446] font-medium"
+              >
+                <option value="Morning" className="bg-white text-[#271446]">Best time to call: Morning</option>
+                <option value="Afternoon" className="bg-white text-[#271446]">Best time to call: Afternoon</option>
+                <option value="Evening" className="bg-white text-[#271446]">Best time to call: Evening</option>
+              </select>
             </div>
 
             <div>

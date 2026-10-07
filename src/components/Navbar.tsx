@@ -62,7 +62,7 @@ export const Navbar: React.FC = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-6 text-[11px] font-semibold text-[#271446]">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-6 text-[10.5px] lg:text-[11px] xl:text-xs font-semibold text-[#271446]">
           {navItems.map((item) => (
             <button
               key={item.label}
@@ -78,10 +78,10 @@ export const Navbar: React.FC = () => {
         <div className="hidden lg:flex items-center shrink-0">
           <button
             onClick={handleScrollToForm}
-            className="h-8 lg:h-10 inline-flex items-center gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] text-xs lg:text-sm font-semibold px-5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
+            className="h-8 lg:h-9 xl:h-10 inline-flex items-center gap-1.5 lg:gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] text-xs lg:text-sm font-semibold px-4 lg:px-5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
           >
             <span>Book a Consultation</span>
-            <ArrowRight className="w-4 h-4 text-[#F8DB66]" />
+            <ArrowRight className="w-3.5 h-3.5 lg:w-4 lg:h-4 text-[#F8DB66]" />
           </button>
         </div>
 

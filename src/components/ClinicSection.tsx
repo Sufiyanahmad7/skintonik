@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Navigation } from 'lucide-react';
+import { MapPin, Navigation, MessageCircle } from 'lucide-react';
 import { IMAGES } from '../data/images';
 
 export const ClinicSection: React.FC = () => {
@@ -32,10 +32,14 @@ export const ClinicSection: React.FC = () => {
               <h3 className="font-serif text-lg lg:text-xl font-bold text-[#271446] mb-2">
                 Skintonik, Bangalore
               </h3>
-              <p className="text-xs text-[#271446] leading-relaxed mb-6 font-normal">
+              <p className="text-xs text-[#271446] leading-relaxed mb-4 font-normal">
                 Skintonik Dermamatic Private Limited,<br />
                 Indiranagar, Bangalore – 560038
               </p>
+              <div className="flex items-center gap-2 text-xs font-semibold text-[#271446] mb-6">
+                <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                <span>WhatsApp: <a href="https://wa.me/919845263041" target="_blank" rel="noreferrer" className="text-emerald-700 font-bold hover:underline">+91 98452 63041</a></span>
+              </div>
             </div>
 
             <button

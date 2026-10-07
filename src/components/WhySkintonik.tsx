@@ -67,15 +67,15 @@ export const WhySkintonik: React.FC = () => {
 
   return (
     <section id="why-skintonik" className="bg-[#FBF8F3] py-14 px-4 lg:px-10 border-b border-[#EAD7C5]/40 overflow-hidden">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-12 items-center">
 
         {/* Left Clinic Image with SKINTONIK watermark */}
-        <div className="lg:col-span-5 flex items-stretch h-full">
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-full min-h-[460px] lg:min-h-[520px] flex flex-col justify-end bg-[#F3EDE2]">
+        <div className="xl:col-span-5 flex items-stretch h-full">
+          <div className="relative rounded-2xl overflow-hidden shadow-md w-full min-h-[360px] sm:min-h-[420px] xl:min-h-[490px] flex flex-col justify-end bg-[#F3EDE2]">
             <img
               src={IMAGES.clinic.reception}
               alt="Skintonik Bangalore Clinic Interior"
-              className="w-full h-full object-cover object-[80%_center] absolute inset-0"
+              className="w-full h-full object-cover object-top absolute inset-0"
             />
             {/* Skintonik brand overlay */}
             <div className="relative z-10 bg-gradient-to-t from-[#271446]/90 via-[#271446]/50 to-transparent p-6 pt-16">
@@ -86,7 +86,7 @@ export const WhySkintonik: React.FC = () => {
         </div>
 
         {/* Right Content */}
-        <div className="lg:col-span-7 space-y-6">
+        <div className="xl:col-span-7 space-y-6">
           <div>
             <span className="text-xs font-bold tracking-[0.2em] text-[#271446] uppercase block mb-1">
               WHY SKINTONIK
@@ -117,7 +117,7 @@ export const WhySkintonik: React.FC = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="pt-2 flex justify-center lg:justify-start">
+          <div className="pt-2 flex justify-center xl:justify-start">
             <button
               onClick={handleScrollToFormInput}
               className="inline-flex items-center justify-center gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] text-xs sm:text-sm font-semibold px-8 py-3.5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"

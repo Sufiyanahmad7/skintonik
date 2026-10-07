@@ -180,7 +180,7 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
       'laser hair removal near me'
     ],
     image: IMAGES.treatments.laser,
-    imagePosition: 'object-left-bottom',
+    imagePosition: 'object-center',
     packages: [
       {
         code: 'O6 · Underarm laser hair removal',
@@ -223,7 +223,7 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
       'hair fall treatment near me'
     ],
     image: IMAGES.treatments.hair,
-    imagePosition: 'object-left-bottom',
+    imagePosition: 'object-center',
     packages: [
       {
         code: 'O8 · GFC hair treatment',
@@ -407,11 +407,11 @@ export const PopularTreatments: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center bg-transparent pt-2">
           {/* LEFT IMAGE CONTAINER */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden shadow-md h-64 sm:h-72 lg:h-80 w-full bg-[#F3EDE2] border border-[#EAD7C5]">
+            <div className="relative rounded-2xl overflow-hidden shadow-md w-full aspect-[16/9] bg-[#F3EDE2] border border-[#EAD7C5] flex items-center justify-center">
               <img
                 src={currentSec.image}
                 alt={currentSec.mainTitle}
-                className={`w-full h-full object-cover ${currentSec.imagePosition || 'object-[center_15%]'}`}
+                className="w-full h-full object-cover object-center"
               />
             </div>
           </div>
@@ -444,7 +444,7 @@ export const PopularTreatments: React.FC = () => {
 
         {/* ── FEATURED PACKAGES SECTION ── */}
         {currentSec.packages.length > 0 && (
-          <div className="pt-6 space-y-4">
+          <div id="featured-packages" className="pt-6 space-y-4">
             <h4 className="text-xs font-black tracking-widest text-[#271446] uppercase block">
               FEATURED PACKAGES
             </h4>

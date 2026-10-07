@@ -18,7 +18,7 @@ export const PriceComparisonCTA: React.FC = () => {
   };
 
   const handleWhatsAppClick = () => {
-    handleScrollToForm();
+    window.open('https://wa.me/919845263041?text=Hi%20Skintonik%2C%20I%20would%20like%20to%20know%20more%20about%20your%20treatments', '_blank');
   };
 
   return (
@@ -44,66 +44,72 @@ export const PriceComparisonCTA: React.FC = () => {
               Start with consultation or analysis instead of selecting a treatment based only on price.
             </p>
 
-            {/* 3 Column Comparison Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-left pt-2">
+            {/* 3 Column Highlighted Comparison Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-left pt-3">
 
               {/* Box 1: Entry Options */}
-              <div className="bg-[#271446]/80 backdrop-blur-xs border border-[#F8DB66]/30 rounded-xl p-4 sm:p-5 flex flex-col justify-between hover:bg-[#271446] transition-all">
+              <div className="bg-[#341B5C]/90 backdrop-blur-md border-2 border-[#F8DB66]/60 rounded-xl p-5 flex flex-col justify-between hover:bg-[#3B1F69] hover:border-[#F8DB66] transition-all duration-300 shadow-[0_8px_25px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_30px_rgba(248,219,102,0.25)] hover:-translate-y-1 group">
                 <div>
-                  <div className="flex items-center space-x-2 mb-3 text-[#F8DB66]">
-                    <Shield className="w-4 h-4 text-[#F8DB66]" />
-                    <h4 className="font-serif font-semibold text-sm tracking-wide uppercase text-[#F8DB66]">
+                  <div className="flex items-center space-x-2.5 mb-3.5 pb-2 border-b border-[#F8DB66]/30">
+                    <div className="p-1.5 rounded-lg bg-[#F8DB66]/20 border border-[#F8DB66]/40 text-[#F8DB66]">
+                      <Shield className="w-4 h-4 text-[#F8DB66]" />
+                    </div>
+                    <h4 className="font-serif font-bold text-sm tracking-wider uppercase text-[#F8DB66]">
                       Entry Options
                     </h4>
                   </div>
-                  <ul className="space-y-2 text-xs text-white/90">
-                    <li className="flex justify-between items-center pb-1 border-b border-white/10">
-                      <span>AI Skin Analysis</span>
-                      <strong className="text-[#F8DB66]">₹700</strong>
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-white/95">
+                    <li className="flex justify-between items-center pb-1.5 border-b border-white/10">
+                      <span className="font-medium">AI Skin Analysis</span>
+                      <strong className="text-[#F8DB66] font-bold text-sm">₹700</strong>
                     </li>
-                    <li className="flex justify-between items-center pb-1 border-b border-white/10">
-                      <span>Party Peel</span>
-                      <strong className="text-[#F8DB66]">₹2,000</strong>
+                    <li className="flex justify-between items-center pb-1.5 border-b border-white/10">
+                      <span className="font-medium">Party Peel</span>
+                      <strong className="text-[#F8DB66] font-bold text-sm">₹2,000</strong>
                     </li>
                     <li className="flex justify-between items-center">
-                      <span>Hydra Facial</span>
-                      <strong className="text-[#F8DB66]">₹3,000</strong>
+                      <span className="font-medium">Hydra Facial</span>
+                      <strong className="text-[#F8DB66] font-bold text-sm">₹3,000</strong>
                     </li>
                   </ul>
                 </div>
               </div>
 
               {/* Box 2: Packages */}
-              <div className="bg-[#271446]/80 backdrop-blur-xs border border-[#F8DB66]/30 rounded-xl p-4 sm:p-5 flex flex-col justify-between hover:bg-[#271446] transition-all">
+              <div className="bg-[#341B5C]/90 backdrop-blur-md border-2 border-[#F8DB66]/60 rounded-xl p-5 flex flex-col justify-between hover:bg-[#3B1F69] hover:border-[#F8DB66] transition-all duration-300 shadow-[0_8px_25px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_30px_rgba(248,219,102,0.25)] hover:-translate-y-1 group">
                 <div>
-                  <div className="flex items-center space-x-2 mb-3 text-[#F8DB66]">
-                    <Percent className="w-4 h-4 text-[#F8DB66]" />
-                    <h4 className="font-serif font-semibold text-sm tracking-wide uppercase text-[#F8DB66]">
+                  <div className="flex items-center space-x-2.5 mb-3.5 pb-2 border-b border-[#F8DB66]/30">
+                    <div className="p-1.5 rounded-lg bg-[#F8DB66]/20 border border-[#F8DB66]/40 text-[#F8DB66]">
+                      <Percent className="w-4 h-4 text-[#F8DB66]" />
+                    </div>
+                    <h4 className="font-serif font-bold text-sm tracking-wider uppercase text-[#F8DB66]">
                       Packages
                     </h4>
                   </div>
-                  <div className="space-y-2 text-xs text-white/90 leading-relaxed">
-                    <div className="flex items-start gap-2">
+                  <div className="space-y-3 text-xs sm:text-sm text-white/95 leading-relaxed">
+                    <div className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-[#F8DB66] shrink-0 mt-0.5" />
-                      <span>Save 10–15% on Selected Treatment Packages</span>
+                      <span className="font-semibold text-white/95">Save 10–15% on Selected Treatment Packages</span>
                     </div>
                   </div>
                 </div>
               </div>
 
               {/* Box 3: Premium Treatments */}
-              <div className="bg-[#271446]/80 backdrop-blur-xs border border-[#F8DB66]/30 rounded-xl p-4 sm:p-5 flex flex-col justify-between hover:bg-[#271446] transition-all">
+              <div className="bg-[#341B5C]/90 backdrop-blur-md border-2 border-[#F8DB66]/60 rounded-xl p-5 flex flex-col justify-between hover:bg-[#3B1F69] hover:border-[#F8DB66] transition-all duration-300 shadow-[0_8px_25px_rgba(0,0,0,0.3)] hover:shadow-[0_12px_30px_rgba(248,219,102,0.25)] hover:-translate-y-1 group">
                 <div>
-                  <div className="flex items-center space-x-2 mb-3 text-[#F8DB66]">
-                    <CreditCard className="w-4 h-4 text-[#F8DB66]" />
-                    <h4 className="font-serif font-semibold text-sm tracking-wide uppercase text-[#F8DB66]">
+                  <div className="flex items-center space-x-2.5 mb-3.5 pb-2 border-b border-[#F8DB66]/30">
+                    <div className="p-1.5 rounded-lg bg-[#F8DB66]/20 border border-[#F8DB66]/40 text-[#F8DB66]">
+                      <CreditCard className="w-4 h-4 text-[#F8DB66]" />
+                    </div>
+                    <h4 className="font-serif font-bold text-sm tracking-wider uppercase text-[#F8DB66]">
                       Premium Treatments
                     </h4>
                   </div>
-                  <div className="space-y-2 text-xs text-white/90 leading-relaxed">
-                    <div className="flex items-start gap-2">
+                  <div className="space-y-3 text-xs sm:text-sm text-white/95 leading-relaxed">
+                    <div className="flex items-start gap-2.5">
                       <CheckCircle2 className="w-4 h-4 text-[#F8DB66] shrink-0 mt-0.5" />
-                      <span>No-Cost EMI Available on Eligible Treatments*</span>
+                      <span className="font-semibold text-white/95">No-Cost EMI Available on Eligible Treatments*</span>
                     </div>
                   </div>
                 </div>
