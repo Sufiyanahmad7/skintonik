@@ -40,8 +40,8 @@ export const Navbar: React.FC = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 bg-[#FBF8F3]/97 backdrop-blur-sm border-b border-[#EAD7C5]/60 transition-all duration-300">
-      <div className="max-w-7xl mx-auto px-4 lg:px-10 py-2.5 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-[#FAF7F2]/97 backdrop-blur-sm border-b border-[#EAD7C5]/60 transition-all duration-300 px-3 md:px-4 lg:px-10">
+      <div className="max-w-7xl mx-auto py-2.5 flex items-center justify-between">
         {/* Logo & Tagline */}
         <a href="#" className="flex items-center gap-2.5 group shrink-0">
           <img 
@@ -51,8 +51,7 @@ export const Navbar: React.FC = () => {
           />
           <div className="flex flex-col items-start">
             <span 
-              className="font-serif text-xl lg:text-2xl tracking-[0.18em] font-bold text-[#F8DB66] leading-tight"
-              style={{ textShadow: '0 1px 2px rgba(39,20,70,0.6)' }}
+              className="font-serif text-xl lg:text-2xl tracking-[0.18em] font-bold text-[#271446] leading-tight"
             >
               SKINTONIK
             </span>

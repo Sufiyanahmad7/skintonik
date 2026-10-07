@@ -1,5 +1,5 @@
 export const IMAGES = {
-  heroModel: '/images/hero_model.jpg',
+  heroModel: '/images/hero_model_burgundy_light.jpg',
   treatments: {
     hydra: '/images/treatment_hydra.jpg',
     peels: '/images/treatment_peels.jpg',
