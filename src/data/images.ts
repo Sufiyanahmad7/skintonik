@@ -31,4 +31,5 @@ export const IMAGES = {
     rejuvenation: '/images/result_rejuvenation.jpg',
   },
   ctaModel: '/images/cta_model.jpg',
+  bridalModel: '/images/bridal_glow_model.jpg',
 };

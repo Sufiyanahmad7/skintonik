@@ -258,7 +258,7 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
       'pre wedding skin care',
       'couple facial Bangalore'
     ],
-    image: IMAGES.ctaModel,
+    image: IMAGES.bridalModel,
     packages: [
       {
         code: "O9 · Groom skin package",
@@ -356,25 +356,21 @@ export const PopularTreatments: React.FC = () => {
   };
 
   return (
-    <section id="popular-treatments" className="bg-[#FBF8F3] py-7 px-3 sm:px-6 lg:px-10 border-b border-[#EAD7C5]/40">
-      <div className="max-w-6xl mx-auto">
+    <section id="popular-treatments" className="bg-[#FAF7F2] py-10 lg:py-14 px-4 sm:px-6 lg:px-10 border-b border-[#EAD7C5]/40 relative overflow-hidden">
+      <div className="max-w-6xl mx-auto space-y-8">
+        
         {/* CENTERED SECTION HEADER */}
-        <div className="text-center max-w-3xl mx-auto mb-6 relative">
-          <span className="text-xs font-bold tracking-[0.2em] text-[#271446] uppercase block mb-1.5">
-            POPULAR TREATMENTS IN BANGALORE
-          </span>
-          <h2 
-            className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#271446] leading-tight"
-          >
+        <div className="text-center max-w-3xl mx-auto space-y-2">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#271446] leading-tight">
             Our Most Popular Treatment Options
           </h2>
 
           {/* ARROW NAV BUTTONS & COUNTER */}
-          <div className="flex items-center justify-center space-x-3 mt-3">
+          <div className="flex items-center justify-center space-x-3 pt-2">
             <button
               onClick={handlePrev}
               aria-label="Previous treatment"
-              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-[#F8DB66] transition-all cursor-pointer"
+              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-white transition-all cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -384,7 +380,7 @@ export const PopularTreatments: React.FC = () => {
             <button
               onClick={handleNext}
               aria-label="Next treatment"
-              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-[#F8DB66] transition-all cursor-pointer"
+              className="w-8 h-8 rounded-full bg-white border border-[#EAD7C5] shadow-xs flex items-center justify-center text-[#271446] hover:bg-[#271446] hover:text-white transition-all cursor-pointer"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
@@ -392,14 +388,14 @@ export const PopularTreatments: React.FC = () => {
         </div>
 
         {/* CATEGORY TABS BAR */}
-        <div className="flex items-center overflow-x-auto no-scrollbar gap-1.5 pb-2 mb-4">
+        <div className="flex items-center justify-start lg:justify-center overflow-x-auto no-scrollbar gap-2 pb-2">
           {POPULAR_SECTIONS_DATA.map((sec, idx) => (
             <button
               key={sec.id}
               onClick={() => handleSelectTab(idx)}
-              className={`flex-shrink-0 px-3 py-1 rounded-full text-xs transition-all cursor-pointer ${activeSlideIndex === idx
-                ? 'bg-[#271446] text-[#F8DB66] font-bold shadow-xs'
-                : 'bg-white text-[#271446] border border-[#EAD7C5]/60 hover:bg-[#271446] hover:text-[#F8DB66]'
+              className={`flex-shrink-0 px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${activeSlideIndex === idx
+                ? 'bg-[#271446] text-white shadow-sm'
+                : 'bg-white text-[#271446] border border-[#EAD7C5] hover:bg-[#271446] hover:text-white'
                 }`}
             >
               {sec.categoryTag}
@@ -407,171 +403,186 @@ export const PopularTreatments: React.FC = () => {
           ))}
         </div>
 
-        {/* COMPACT CARD CONTAINER */}
-        <div className="bg-white rounded-xl border border-[#EAD7C5]/80 shadow-md p-4 sm:p-5 lg:p-6 transition-all duration-300">
-          {/* TOP GRID: LEFT CONTENT + RIGHT IMAGE & PACKAGES */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 items-start">
-            {/* LEFT DETAILS (7 COLS) */}
-            <div className="lg:col-span-7 space-y-3">
-              <div>
-                <span className="inline-block px-2.5 py-0.5 rounded-md bg-[#271446] text-[#F8DB66] text-[10px] font-bold tracking-wider uppercase mb-1.5">
-                  {currentSec.categoryTag}
-                </span>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#271446] leading-tight">
-                  {currentSec.mainTitle}
-                </h3>
-              </div>
-
-              <p className="text-xs text-[#271446] leading-relaxed font-normal">
-                {currentSec.description}
-              </p>
-
-              {/* SEO KEYWORDS CHIPS */}
-              <div className="flex flex-wrap gap-1">
-                {currentSec.keywords.map((kw, i) => (
-                  <span
-                    key={i}
-                    className="bg-[#FBF8F3] border border-[#EAD7C5] text-[#271446] text-[10px] px-2 py-0.5 rounded font-medium"
-                  >
-                    {kw}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* RIGHT COMPACT IMAGE (5 COLS) */}
-            <div className="lg:col-span-5">
-              <div className="relative rounded-lg overflow-hidden border border-[#EAD7C5] shadow-2xs h-48 sm:h-56 lg:h-52 w-full bg-[#F3EDE2] flex items-center justify-center p-1">
-                <img
-                  src={currentSec.image}
-                  alt={currentSec.mainTitle}
-                  className={`w-full h-full object-cover rounded ${currentSec.imagePosition || 'object-center'}`}
-                />
-              </div>
+        {/* ── TOP HIGHLIGHT CARD: IMAGE LEFT, CONTENT RIGHT ── */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center bg-transparent pt-2">
+          {/* LEFT IMAGE CONTAINER */}
+          <div className="lg:col-span-6">
+            <div className="relative rounded-2xl overflow-hidden shadow-md h-64 sm:h-72 lg:h-80 w-full bg-[#F3EDE2] border border-[#EAD7C5]">
+              <img
+                src={currentSec.image}
+                alt={currentSec.mainTitle}
+                className={`w-full h-full object-cover ${currentSec.imagePosition || 'object-[center_15%]'}`}
+              />
             </div>
           </div>
 
-          {/* COMPACT FEATURED PACKAGES GRID */}
-          {currentSec.packages.length > 0 && (
-            <div className="mt-4 pt-4 border-t border-[#EAD7C5]/60">
-              <span className="text-[10px] font-bold tracking-wider text-[#271446] uppercase mb-2 block">
-                Featured Packages
-              </span>
-              <div
-                className={`grid grid-cols-1 ${currentSec.packages.length === 1
-                    ? 'max-w-md mx-auto'
-                    : currentSec.packages.length === 2
-                      ? 'sm:grid-cols-2 max-w-2xl mx-auto'
-                      : 'sm:grid-cols-2 lg:grid-cols-3'
-                  } gap-3`}
-              >
-                {currentSec.packages.map((pkg, idx) => (
-                  <div
-                    key={idx}
-                    className="bg-[#FBF8F3] border border-[#EAD7C5] rounded-lg p-3 flex flex-col justify-between"
-                  >
-                    <div>
-                      <div className="flex justify-between items-center mb-1">
-                        <span className="text-[9px] font-bold text-[#271446]/80 tracking-wider uppercase">
-                          {pkg.code}
-                        </span>
-                        {pkg.badge && (
-                          <span className="bg-[#271446] text-[#F8DB66] text-[9px] font-bold px-1.5 py-0.2 rounded">
-                            {pkg.badge}
-                          </span>
-                        )}
-                      </div>
-                      <h5 className="font-serif text-sm font-bold text-[#271446] leading-tight">
-                        {pkg.name}
-                      </h5>
-                      <p className="text-[11px] text-[#52413E] mb-2 line-clamp-1">
-                        {pkg.details}
-                      </p>
+          {/* RIGHT HIGHLIGHT DETAILS */}
+          <div className="lg:col-span-6 space-y-3 pl-0 lg:pl-4">
+            <span className="text-xs font-bold tracking-widest uppercase text-[#66534E] block">
+              Treatment Highlight
+            </span>
+            <h3 className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#271446] leading-tight">
+              {currentSec.mainTitle}
+            </h3>
+            <p className="text-sm text-[#271446]/85 leading-relaxed font-normal">
+              {currentSec.description}
+            </p>
 
-                      <div className="flex items-baseline justify-between bg-white px-2 py-1.5 rounded border border-[#EAD7C5] mb-2 text-xs">
-                        {pkg.listPrice && (
-                          <span className="line-through text-[10px] text-[#52413E]/70">{pkg.listPrice}</span>
-                        )}
-                        {pkg.festivePrice && (
-                          <span className="font-bold text-[#271446] text-sm">{pkg.festivePrice}</span>
-                        )}
-                        {pkg.save && (
-                          <span className="text-[10px] text-emerald-700 font-semibold">Save {pkg.save}</span>
-                        )}
-                      </div>
-                    </div>
-
-                    <button
-                      onClick={handleBookClick}
-                      className="w-full inline-flex items-center justify-center space-x-1 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] font-semibold text-[11px] py-1.5 px-3 rounded transition-colors cursor-pointer"
-                    >
-                      <span>Choose Package</span>
-                      <ArrowRight className="w-3 h-3 text-[#F8DB66]" />
-                    </button>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* COMPACT PRICE TABLE TOGGLE */}
-          <div className="mt-4 pt-3 border-t border-[#EAD7C5]/60">
-            <button
-              onClick={() => setExpandedTable(!expandedTable)}
-              className="w-full flex items-center justify-between text-left group cursor-pointer py-1"
-            >
-              <div className="flex items-center space-x-1.5">
-                <Sparkles className="w-3.5 h-3.5 text-[#271446]" />
-                <span className="font-serif text-sm font-bold text-[#271446] group-hover:text-[#271446] transition-colors">
-                  {currentSec.tableHeading}
+            {/* KEYWORDS TAGS */}
+            <div className="flex flex-wrap gap-1.5 pt-1">
+              {currentSec.keywords.map((kw, i) => (
+                <span
+                  key={i}
+                  className="bg-white border border-[#EAD7C5] text-[#271446] text-[11px] px-2.5 py-0.5 rounded-full font-medium shadow-2xs"
+                >
+                  {kw}
                 </span>
-              </div>
-              <div className="flex items-center space-x-1 text-xs font-semibold text-[#271446]">
-                <span>{expandedTable ? 'Hide Prices' : 'View Full Price List'}</span>
-                <ChevronDown
-                  className={`w-3.5 h-3.5 transition-transform duration-200 ${expandedTable ? 'rotate-180' : ''
-                    }`}
-                />
-              </div>
-            </button>
-
-            {expandedTable && (
-              <div className="mt-3 pt-2 border-t border-[#EAD7C5]/40">
-                <div className="overflow-x-auto rounded-lg border border-[#EAD7C5]">
-                  <table className="w-full text-left text-xs">
-                    <thead className="bg-[#271446] text-[#F8DB66] font-serif font-bold border-b border-[#EAD7C5]">
-                      <tr>
-                        <th className="py-2 px-3">{currentSec.tableHeaders[0]}</th>
-                        <th className="py-2 px-3">{currentSec.tableHeaders[1]}</th>
-                        {currentSec.tableHeaders[2] && <th className="py-2 px-3">{currentSec.tableHeaders[2]}</th>}
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-[#EAD7C5] bg-white">
-                      {currentSec.tableRows.map((row, idx) => (
-                        <tr key={idx} className="hover:bg-[#FBF8F3]">
-                          <td className="py-2 px-3 font-semibold text-[#271446]">{row.col1}</td>
-                          <td className="py-2 px-3 text-[#52413E]">{row.col2}</td>
-                          {row.col3 && (
-                            <td className="py-2 px-3 font-bold text-[#271446] whitespace-nowrap">
-                              {row.col3}
-                            </td>
-                          )}
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {currentSec.note && (
-                  <div className="mt-2 flex items-start space-x-1.5 text-[11px] text-[#52413E] bg-[#FBF8F3] p-2 rounded border border-[#EAD7C5]">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#271446] flex-shrink-0 mt-0.5" />
-                    <span>{currentSec.note}</span>
-                  </div>
-                )}
-              </div>
-            )}
+              ))}
+            </div>
           </div>
         </div>
+
+        {/* ── FEATURED PACKAGES SECTION ── */}
+        {currentSec.packages.length > 0 && (
+          <div className="pt-6 space-y-4">
+            <h4 className="text-xs font-black tracking-widest text-[#271446] uppercase block">
+              FEATURED PACKAGES
+            </h4>
+
+            {/* 3 PACKAGE CARDS GRID MATCHING REFERENCE PHOTO */}
+            <div
+              className={`grid grid-cols-1 ${currentSec.packages.length === 1
+                  ? 'max-w-md mx-auto'
+                  : currentSec.packages.length === 2
+                    ? 'sm:grid-cols-2 max-w-3xl mx-auto'
+                    : 'sm:grid-cols-2 lg:grid-cols-3'
+                } gap-5`}
+            >
+              {currentSec.packages.map((pkg, idx) => (
+                <div
+                  key={idx}
+                  className="bg-white border-2 border-[#EAD7C5] rounded-2xl p-5 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between relative group overflow-visible"
+                >
+                  {/* Top Right Golden Ribbon Badge matching photo */}
+                  <div className="absolute -top-3 -right-2 z-20 pointer-events-none">
+                    <div className="bg-gradient-to-r from-[#D4AF37] via-[#F3D167] to-[#C59B27] text-[#271446] px-3.5 py-1.5 rounded-l-full rounded-r-lg shadow-md border border-[#B8860B] flex flex-col items-center text-center leading-tight transform rotate-2">
+                      <span className="uppercase text-[9px] font-black tracking-widest text-[#271446]">FESTIVE OFFER</span>
+                      {pkg.save && (
+                        <span className="text-[10px] font-black text-[#271446] drop-shadow-xs">
+                          ~ Save {pkg.save}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Top Row: Large Number Badge & Left Pill Badge */}
+                  <div>
+                    <div className="flex items-center gap-2 mb-3 relative pr-20">
+                      {/* Large Watermark Number 1, 2, 3 */}
+                      <span className="font-serif text-5xl sm:text-6xl font-light text-[#C59B27]/40 leading-none select-none shrink-0">
+                        {idx + 1}
+                      </span>
+
+                      {/* Pill Badge on Left */}
+                      {pkg.badge && (
+                        <span className="bg-[#1A1A1A] text-white text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs shrink-0">
+                          {pkg.badge}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Package Name - BOLDER */}
+                    <h5 className="font-serif text-xl sm:text-[22px] font-extrabold text-[#271446] leading-tight mb-1.5">
+                      {pkg.name}
+                    </h5>
+
+                    {/* Details - BOLDER */}
+                    <p className="text-xs sm:text-[13px] font-semibold text-[#4A3B37] mb-4 min-h-[36px] line-clamp-2 leading-snug">
+                      {pkg.details}
+                    </p>
+
+                    {/* Price Row - BOLDER */}
+                    <div className="flex items-baseline gap-2.5 mb-4 pt-2.5 border-t border-[#EAD7C5]/60">
+                      {pkg.listPrice && (
+                        <span className="line-through text-xs sm:text-sm text-[#8C7A75] font-semibold">{pkg.listPrice}</span>
+                      )}
+                      {pkg.festivePrice && (
+                        <span className="text-2xl sm:text-3xl font-black text-[#271446]">{pkg.festivePrice}</span>
+                      )}
+                      {pkg.save && (
+                        <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-md border border-emerald-300 ml-auto shadow-2xs">
+                          Save {pkg.save}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Choose Package Button */}
+                  <button
+                    onClick={handleBookClick}
+                    className={`w-full inline-flex items-center justify-center gap-2 font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all duration-200 cursor-pointer ${
+                      idx === 0
+                        ? 'bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#D4AF37] hover:from-[#E8C547] hover:to-[#D4AF37] text-[#271446] border border-[#B8860B] shadow-sm'
+                        : 'bg-[#271446] hover:bg-[#341b5c] text-white shadow-sm'
+                    }`}
+                  >
+                    <span>Choose Package</span>
+                    <ArrowRight className="w-4 h-4 stroke-[3]" />
+                  </button>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── BOTTOM BUTTON: VIEW FULL TREATMENT MENU AND PRICES ── */}
+        <div className="pt-4 text-center">
+          <button
+            onClick={() => setExpandedTable(!expandedTable)}
+            className="inline-flex items-center justify-center gap-2 bg-white hover:bg-[#FAF4ED] text-[#271446] border border-[#D4AF37]/80 font-bold text-xs sm:text-sm px-7 py-3 rounded-xl shadow-xs transition-all duration-200 cursor-pointer"
+          >
+            <span>{expandedTable ? 'Hide Full Price List' : 'View Full Treatment Menu and Prices'}</span>
+            <ChevronDown className={`w-4 h-4 text-[#271446] transition-transform duration-200 ${expandedTable ? 'rotate-180' : ''}`} />
+          </button>
+
+          {/* EXPANDABLE PRICE TABLE */}
+          {expandedTable && (
+            <div className="mt-5 text-left max-w-4xl mx-auto">
+              <div className="overflow-x-auto rounded-xl border border-[#EAD7C5] bg-white shadow-sm">
+                <table className="w-full text-left text-xs">
+                  <thead className="bg-[#271446] text-white font-serif font-bold border-b border-[#EAD7C5]">
+                    <tr>
+                      <th className="py-3 px-4">{currentSec.tableHeaders[0]}</th>
+                      <th className="py-3 px-4">{currentSec.tableHeaders[1]}</th>
+                      {currentSec.tableHeaders[2] && <th className="py-3 px-4">{currentSec.tableHeaders[2]}</th>}
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-[#EAD7C5] bg-white">
+                    {currentSec.tableRows.map((row, idx) => (
+                      <tr key={idx} className="hover:bg-[#FAF7F2]">
+                        <td className="py-2.5 px-4 font-semibold text-[#271446]">{row.col1}</td>
+                        <td className="py-2.5 px-4 text-[#66534E]">{row.col2}</td>
+                        {row.col3 && (
+                          <td className="py-2.5 px-4 font-bold text-[#271446] whitespace-nowrap">
+                            {row.col3}
+                          </td>
+                        )}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {currentSec.note && (
+                <div className="mt-3 flex items-start space-x-2 text-xs text-[#66534E] bg-white p-3 rounded-lg border border-[#EAD7C5]">
+                  <CheckCircle2 className="w-4 h-4 text-[#271446] flex-shrink-0 mt-0.5" />
+                  <span>{currentSec.note}</span>
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
       </div>
     </section>
   );
