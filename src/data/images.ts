@@ -32,4 +32,8 @@ export const IMAGES = {
   },
   ctaModel: '/images/cta_model.jpg',
   bridalModel: '/images/bridal_glow_model.jpg',
+  concerns: {
+    hairfall: '/images/concern_hairfall_fresh.jpg',
+    dandruff: '/images/concern_dandruff_scalp.jpg',
+  },
 };

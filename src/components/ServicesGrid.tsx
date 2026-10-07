@@ -24,14 +24,23 @@ export const ServicesGrid: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6">
-          {SERVICES.map((service) => (
-            <ServiceCard
-              key={service.id}
-              service={service}
-              onClick={handleServiceClick}
-            />
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-6 justify-center">
+          {SERVICES.map((service, index) => {
+            const isLastSingle = index === SERVICES.length - 1 && SERVICES.length % 3 === 1;
+            return (
+              <div 
+                key={service.id}
+                className={isLastSingle ? "sm:col-span-2 lg:col-span-3 flex justify-center" : ""}
+              >
+                <div className={isLastSingle ? "w-full sm:max-w-md lg:max-w-sm" : "w-full h-full"}>
+                  <ServiceCard
+                    service={service}
+                    onClick={handleServiceClick}
+                  />
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
