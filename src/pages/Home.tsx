@@ -37,7 +37,7 @@ export const Home: React.FC = () => {
         {/* 6. EXPLORE ALL SERVICES */}
         <ServicesGrid />
 
-        {/* 7. WHY SKINTONIK BANGALORE */}
+        {/* 7. WHY SKINTONIK bengaluru */}
         <WhySkintonik />
 
         {/* 8. REAL PEOPLE. REAL RESULTS. */}
@@ -52,7 +52,7 @@ export const Home: React.FC = () => {
         {/* 11. OFFER / PRICE COMPARISON CTA */}
         <PriceComparisonCTA />
 
-        {/* 12. BANGALORE CLINIC */}
+        {/* 12. bengaluru CLINIC */}
         <ClinicSection />
 
         {/* 13. FREQUENTLY ASKED QUESTIONS */}

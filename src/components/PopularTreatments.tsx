@@ -39,10 +39,10 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'hydrafacial',
     categoryTag: 'Facials',
-    mainTitle: 'HydraFacial in Bangalore: Festive Glow Duo ₹4,250',
+    mainTitle: 'HydraFacial in bengaluru: Festive Glow Duo ₹4,250',
     description: 'A HydraFacial at Skintonik is ₹3,000. This festive season the Glow Duo adds a Party Peel for ₹4,250 in total, couples can book side-by-side HydraFacials, and the 3-session Deepavali Radiance series builds glow over 2–3 weeks. Book 3–5 days before a function so skin has time to settle.',
     keywords: [
-      'HydraFacial price Bangalore',
+      'HydraFacial price bengaluru',
       'medi facial',
       'bridal facial',
       'couple facial',
@@ -92,10 +92,10 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'acne',
     categoryTag: 'Acne and acne scars',
-    mainTitle: 'Acne Treatment in Bangalore: Clear-Skin Reset ₹8,500',
+    mainTitle: 'Acne Treatment in bengaluru: Clear-Skin Reset ₹8,500',
     description: "Active acne and acne marks are two different jobs. Salicylic peels calm oily, breakout-prone skin first. Then MNRF, Dermapen microneedling or a TCA peel work on the scars left behind. Your AI skin analysis decides the order, so you don't pay twice.",
     keywords: [
-      'acne scar treatment Bangalore',
+      'acne scar treatment bengaluru',
       'pimple treatment',
       'MNRF treatment price',
       'microneedling',
@@ -129,10 +129,10 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'pigmentation',
     categoryTag: 'Even tone, never "fairness"',
-    mainTitle: 'Pigmentation Treatment in Bangalore: 4-Peel Even-Tone Series ₹13,600',
+    mainTitle: 'Pigmentation Treatment in bengaluru: 4-Peel Even-Tone Series ₹13,600',
     description: "Tan, post-acne marks, melasma and dark underarms or neck look alike but respond to different chemical peels. Skintonik's pigmentation treatment starts with an AI skin analysis, then a peel plan spaced by how your skin responds, with the total price in writing.",
     keywords: [
-      'chemical peel price Bangalore',
+      'chemical peel price bengaluru',
       'melasma treatment',
       'tan removal treatment',
       'dark underarms treatment',
@@ -170,10 +170,10 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'laser',
     categoryTag: 'Laser hair reduction',
-    mainTitle: 'Laser Hair Removal in Bangalore: 6-Session Packages from ₹15,299',
-    description: "Looking for laser hair removal in Bangalore with the price shown up front? Skintonik's laser hair reduction packages on Sarjapur Road include 6 sessions, a patch test before your first session and a free AI skin analysis. Fewer waxing appointments, fewer ingrown hairs, and one price you know on day one.",
+    mainTitle: 'Laser Hair Removal in bengaluru: 6-Session Packages from ₹15,299',
+    description: "Looking for laser hair removal in bengaluru with the price shown up front? Skintonik's laser hair reduction packages on Sarjapur Road include 6 sessions, a patch test before your first session and a free AI skin analysis. Fewer waxing appointments, fewer ingrown hairs, and one price you know on day one.",
     keywords: [
-      'laser hair removal price Bangalore',
+      'laser hair removal price bengaluru',
       'full body laser hair removal price',
       'underarm laser hair removal',
       'laser hair removal for men',
@@ -213,11 +213,11 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'hair',
     categoryTag: 'Hair fall and thinning',
-    mainTitle: 'Hair Fall Treatment in Bangalore: 4 GFC Sessions ₹27,200',
+    mainTitle: 'Hair Fall Treatment in bengaluru: 4 GFC Sessions ₹27,200',
     description: "Start with data, not guesswork. An AI hair analysis reads scalp condition and density, then your doctor recommends GFC, PRP, QR678 or exosomes, with every option priced side by side. Results vary from person to person, and you'll hear a realistic timeline before you pay.",
     keywords: [
       'GFC hair treatment cost',
-      'PRP hair treatment Bangalore',
+      'PRP hair treatment bengaluru',
       'QR678 treatment',
       'hair thinning treatment for women',
       'hair fall treatment near me'
@@ -250,13 +250,13 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'bridal',
     categoryTag: 'Weddings',
-    mainTitle: 'Pre Bridal Skin Treatment in Bangalore: Plan by Your Wedding Date',
+    mainTitle: 'Pre Bridal Skin Treatment in bengaluru: Plan by Your Wedding Date',
     description: 'Count back from the date. Twelve weeks out, start laser, because 6 sessions need time. Six to eight weeks out, peels for tan and even tone. Two to three weeks out, the Radiance facial series. Three to five days before, a final HydraFacial. Nothing new in the last 72 hours. Grooms and family members can join the same plan.',
     keywords: [
       'bridal skin package price',
       'groom facial',
       'pre wedding skin care',
-      'couple facial Bangalore'
+      'couple facial bengaluru'
     ],
     image: IMAGES.bridalModel,
     packages: [
@@ -291,11 +291,11 @@ const POPULAR_SECTIONS_DATA: TreatmentSectionData[] = [
   {
     id: 'antiageing',
     categoryTag: 'Doctor-assessed',
-    mainTitle: 'Anti Ageing Treatment in Bangalore, Planned by a Doctor',
+    mainTitle: 'Anti Ageing Treatment in bengaluru, Planned by a Doctor',
     description: 'Anti-wrinkle treatment, dermal fillers, thread lift, skin boosters and RF skin tightening are medical decisions. The product, dose and placement depend on your face, not the calendar, so these are priced in writing after a doctor\'s assessment. No-cost EMI is available.',
     keywords: [
       'anti wrinkle treatment',
-      'skin boosters Bangalore',
+      'skin boosters bengaluru',
       'Profhilo price',
       'thread lift cost',
       'RF skin tightening'
@@ -328,11 +328,11 @@ export const PopularTreatments: React.FC = () => {
   const handleBookClick = () => {
     const inputEl = document.getElementById('hero-full-name-input');
     const formContainer = document.getElementById('consultation-form');
-    
+
     if (formContainer) {
       formContainer.scrollIntoView({ behavior: 'smooth' });
     }
-    
+
     setTimeout(() => {
       if (inputEl) {
         inputEl.focus();
@@ -358,7 +358,7 @@ export const PopularTreatments: React.FC = () => {
   return (
     <section id="popular-treatments" className="bg-[#FAF7F2] py-10 lg:py-14 px-4 sm:px-6 lg:px-10 border-b border-[#EAD7C5]/40 relative overflow-hidden">
       <div className="max-w-6xl mx-auto space-y-8">
-        
+
         {/* CENTERED SECTION HEADER */}
         <div className="text-center max-w-3xl mx-auto space-y-2">
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#271446] leading-tight">
@@ -452,10 +452,10 @@ export const PopularTreatments: React.FC = () => {
             {/* 3 PACKAGE CARDS GRID MATCHING REFERENCE PHOTO */}
             <div
               className={`grid grid-cols-1 ${currentSec.packages.length === 1
-                  ? 'max-w-md mx-auto'
-                  : currentSec.packages.length === 2
-                    ? 'sm:grid-cols-2 max-w-3xl mx-auto'
-                    : 'sm:grid-cols-2 lg:grid-cols-3'
+                ? 'max-w-md mx-auto'
+                : currentSec.packages.length === 2
+                  ? 'sm:grid-cols-2 max-w-3xl mx-auto'
+                  : 'sm:grid-cols-2 lg:grid-cols-3'
                 } gap-5`}
             >
               {currentSec.packages.map((pkg, idx) => (
@@ -527,11 +527,10 @@ export const PopularTreatments: React.FC = () => {
                   {/* Choose Package Button */}
                   <button
                     onClick={handleBookClick}
-                    className={`w-full inline-flex items-center justify-center gap-2 font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all duration-200 cursor-pointer ${
-                      idx === 0
+                    className={`w-full inline-flex items-center justify-center gap-2 font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all duration-200 cursor-pointer ${idx === 0
                         ? 'bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#D4AF37] hover:from-[#E8C547] hover:to-[#D4AF37] text-[#271446] border border-[#B8860B] shadow-sm'
                         : 'bg-[#271446] hover:bg-[#341b5c] text-white shadow-sm'
-                    }`}
+                      }`}
                   >
                     <span>Choose Package</span>
                     <ArrowRight className="w-4 h-4 stroke-[3]" />

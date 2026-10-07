@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, ShieldCheck, CreditCard } from 'lucide-react';
+import { ArrowRight, CheckCircle2, ShieldCheck, CreditCard, MapPin } from 'lucide-react';
 
 export const ConsultationForm: React.FC = () => {
   const [formData, setFormData] = useState({
     fullName: '',
     mobileNumber: '',
     concern: '',
-    location: 'Bangalore',
+    location: 'Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru',
     bestTimeToCall: 'Morning',
   });
 
@@ -77,8 +77,8 @@ export const ConsultationForm: React.FC = () => {
       name: formData.fullName.trim(),
       phone: formData.mobileNumber.trim(),
       opportunity: 'Skintonik Landing Page Consultation Lead',
-      salesperson_id: 54,
-      company_id: 112,
+      // salesperson_id: 54,
+      company_id: 119,
       email_from: '',
       contact_name: formData.fullName.trim(),
       city: formData.location.trim(),
@@ -100,7 +100,7 @@ export const ConsultationForm: React.FC = () => {
           fullName: '',
           mobileNumber: '',
           concern: '',
-          location: 'Bangalore',
+          location: 'Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru',
           bestTimeToCall: 'Morning',
         });
       } else {
@@ -142,8 +142,8 @@ export const ConsultationForm: React.FC = () => {
             </button>
           </div>
         ) : (
-          <form 
-            onSubmit={handleSubmit} 
+          <form
+            onSubmit={handleSubmit}
             className="space-y-3"
           >
             {submitError && (
@@ -225,15 +225,10 @@ export const ConsultationForm: React.FC = () => {
             </div>
 
             <div>
-              <select
-                name="location"
-                value={formData.location}
-                onChange={(e) => setFormData({ ...formData, location: e.target.value })}
-                required
-                className="w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] focus:outline-none text-[#271446] font-medium"
-              >
-                <option value="Bangalore" className="bg-white text-[#271446]">Bangalore</option>
-              </select>
+              <div className="w-full px-3.5 py-2.5 text-[11px] sm:text-[11.5px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] text-[#271446] font-medium flex items-center gap-1.5 select-none shadow-xs">
+                <MapPin className="w-3.5 h-3.5 text-[#C59B27] shrink-0" />
+                <span className="truncate">Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru</span>
+              </div>
             </div>
 
             <button

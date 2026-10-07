@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Scan, Cpu, Layers, Tag, CreditCard } from 'lucide-react';
+import { Sparkles, Scan, Cpu, Layers, Tag, CreditCard, MapPin } from 'lucide-react';
 import { ConsultationForm } from './ConsultationForm';
 import { IMAGES } from '../data/images';
 
@@ -23,7 +23,7 @@ export const Hero: React.FC = () => {
           {/* Location Badge */}
           <div className="flex flex-col items-center md:items-start gap-1">
             <span className="inline-flex items-center gap-1 border border-[#271446]/30 bg-[#271446] text-white px-2.5 sm:px-3.5 py-1 rounded-full text-[9.5px] md:text-[9px] lg:text-[10.5px] tracking-wider font-bold uppercase shadow-xs">
-              <span className="text-[#F8DB66] font-extrabold">BANGALORE</span>
+              <span className="text-[#F8DB66] font-extrabold">bengaluru</span>
               <span className="text-white/60">•</span>
               <span className="text-white/90 font-medium">THE FESTIVE GLOW EDIT</span>
             </span>
@@ -38,17 +38,39 @@ export const Hero: React.FC = () => {
           </h1>
 
           {/* Supporting Text */}
-          <div className="space-y-2 lg:space-y-3 flex flex-col items-center md:items-start">
+          <div className="space-y-2 lg:space-y-2.5 flex flex-col items-center md:items-start w-full">
             <p className="text-[12.5px] sm:text-[14px] md:text-[12px] lg:text-[14px] xl:text-[15.5px] font-bold text-[#C59B27] leading-snug">
-              Skin. Hair. Body. Wellness. All Under One Roof at Skintonik, Bangalore.
+              Skin. Hair. Body. Wellness. All Under One Roof at Skintonik, Bengaluru.
             </p>
             <p className="text-[11px] sm:text-xs md:text-[11px] lg:text-[12px] xl:text-sm text-[#271446]/90 leading-relaxed font-normal">
-              Laser hair removal, HydraFacial, pigmentation, acne and hair fall treatment on Sarjapur Road. Every price shown in full:{' '}
+              Laser hair removal, HydraFacial, pigmentation, acne and hair fall treatment on Sarjapur Road. Every price shown in full:
             </p>
-            <div className="w-full flex justify-center md:justify-start pt-0.5">
-              <span className="inline-flex items-center gap-1 font-extrabold text-[#271446] bg-[#FFF9E6] border border-[#D4AF37] px-2.5 sm:px-3 py-1.5 rounded-lg shadow-[0_0_14px_rgba(212,175,55,0.6)] animate-pulse text-[10.5px] sm:text-xs md:text-[10px] lg:text-[11.5px] xl:text-[12.5px] text-center">
-                ✨ up to 15% off list price, plus a free AI skin analysis worth ₹700.
-              </span>
+
+            {/* Main Visual Offer Card */}
+            <div className="w-full flex justify-center md:justify-start pt-1">
+              <div className="w-full bg-gradient-to-r from-[#140628] via-[#2A114D] to-[#170730] border-2 border-[#F8DB66]/80 rounded-xl p-3 sm:p-4 shadow-[0_0_20px_rgba(248,219,102,0.4)] transition-all duration-300 hover:shadow-[0_0_28px_rgba(248,219,102,0.6)] relative overflow-hidden flex items-stretch justify-between gap-3">
+                <div className="flex items-start gap-2.5 relative z-10 flex-1">
+                  <span className="text-lg sm:text-xl shrink-0 select-none animate-pulse text-[#F8DB66] mt-0.5">✨</span>
+                  <div className="text-left space-y-1 w-full">
+                    <div className="font-black text-white text-sm sm:text-lg md:text-sm lg:text-base xl:text-lg tracking-wide leading-tight uppercase">
+                      UP TO <span className="text-[#F8DB66] text-base sm:text-xl md:text-base lg:text-lg xl:text-xl font-black drop-shadow-[0_0_10px_rgba(248,219,102,0.7)]">15% OFF</span>
+                    </div>
+                    <div className="font-extrabold text-[#F8DB66] text-xs sm:text-sm md:text-xs lg:text-sm xl:text-base leading-tight">
+                      + FREE AI SKIN ANALYSIS
+                    </div>
+                    {/* Location at bottom of card */}
+                    <div className="flex items-center gap-1 text-[10px] sm:text-[11px] md:text-[10px] lg:text-[11px] text-white font-medium opacity-90 leading-tight pt-1">
+                      <MapPin className="w-3 h-3 text-[#ffff] shrink-0" />
+                      <span>Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru – 560035</span>
+                    </div>
+                  </div>
+                </div>
+                {/* Full-Height Glowing Worth Badge */}
+                <div className="relative z-10 flex flex-col justify-center items-center bg-[#F8DB66] text-[#271446] px-3.5 py-2 rounded-lg font-black text-xs sm:text-sm shadow-[0_0_16px_rgba(248,219,102,0.95)] border border-white/70 tracking-tight shrink-0 self-stretch text-center leading-tight">
+                  <span className="text-[10px] uppercase tracking-wider font-bold opacity-90 block">WORTH</span>
+                  <span className="text-base sm:text-lg font-black tracking-tighter">₹299/-</span>
+                </div>
+              </div>
             </div>
           </div>
 

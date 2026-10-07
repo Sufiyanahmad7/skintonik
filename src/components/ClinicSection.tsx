@@ -11,10 +11,10 @@ export const ClinicSection: React.FC = () => {
     <section id="clinic-location" className="bg-[#FBF8F3] py-10 px-4 lg:px-10 border-b border-[#EAD7C5]/40">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-2xl mx-auto mb-7">
-          <h2 
+          <h2
             className="font-serif text-[26px] lg:text-[32px] font-bold text-[#271446] mb-1.5"
           >
-            Our Bangalore Clinic
+            Our bengaluru Clinic
           </h2>
           <p className="text-[11px] sm:text-xs text-[#271446] font-medium">
             Centrally located and easily accessible.
@@ -30,11 +30,11 @@ export const ClinicSection: React.FC = () => {
                 <MapPin className="w-5 h-5 text-[#271446]" />
               </div>
               <h3 className="font-serif text-lg lg:text-xl font-bold text-[#271446] mb-2">
-                Skintonik, Bangalore
+                Skintonik, bengaluru
               </h3>
               <p className="text-xs text-[#271446] leading-relaxed mb-4 font-normal">
                 Skintonik Dermamatic Private Limited,<br />
-                Indiranagar, Bangalore – 560038
+                Indiranagar, bengaluru – 560038
               </p>
               <div className="flex items-center gap-2 text-xs font-semibold text-[#271446] mb-6">
                 <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
@@ -55,7 +55,7 @@ export const ClinicSection: React.FC = () => {
           <div className="rounded-2xl overflow-hidden border border-[#EAD7C5] shadow-xs bg-white h-full min-h-[240px] relative group">
             <img
               src={IMAGES.clinic.interior}
-              alt="Skintonik Bangalore Clinic Interior"
+              alt="Skintonik bengaluru Clinic Interior"
               className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
             />
           </div>
@@ -68,7 +68,7 @@ export const ClinicSection: React.FC = () => {
               allowFullScreen
               loading="eager"
               referrerPolicy="strict-origin-when-cross-origin"
-              title="Skintonik Dermamatic Bangalore Map"
+              title="Skintonik Dermamatic bengaluru Map"
             />
           </div>
 

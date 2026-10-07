@@ -2,10 +2,10 @@ import React from 'react';
 
 export const PopularSearches: React.FC = () => {
   const tags = [
-    'Hydra Facial in Bangalore',
+    'Hydra Facial in bengaluru',
     'Chemical Peel Price',
-    'Laser Hair Reduction Bangalore',
-    'Best Dermatologist Bangalore',
+    'Laser Hair Reduction bengaluru',
+    'Best Dermatologist bengaluru',
     'PRP for Hair Fall',
     'Skin Tightening Treatment',
     'Body Whitening Treatment',
@@ -27,7 +27,7 @@ export const PopularSearches: React.FC = () => {
   return (
     <footer id="popular-searches" className="bg-[#FBF8F3] py-8 px-4 lg:px-10 border-t border-[#EAD7C5]/60">
       <div className="max-w-7xl mx-auto">
-        <h4 
+        <h4
           className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#271446] mb-3"
         >
           Popular Searches
@@ -47,7 +47,7 @@ export const PopularSearches: React.FC = () => {
 
         {/* FOOTER DISCLAIMER */}
         <div className="mt-8 pt-5 border-t border-[#EAD7C5]/60">
-          <h5 
+          <h5
             className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#271446] mb-1.5"
           >
             FOOTER DISCLAIMER
@@ -58,7 +58,7 @@ export const PopularSearches: React.FC = () => {
         </div>
 
         <div className="mt-6 pt-5 border-t border-[#EAD7C5]/50 flex flex-col sm:flex-row items-center justify-between text-[10px] text-[#271446] gap-3">
-          <p>© {new Date().getFullYear()} SKINTONIK Bangalore. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} SKINTONIK bengaluru. All rights reserved.</p>
           <div className="flex gap-4">
             <a href="#consultation-form" className="hover:text-[#271446] font-semibold transition-colors">Privacy Policy</a>
             <a href="#consultation-form" className="hover:text-[#271446] font-semibold transition-colors">Terms of Service</a>

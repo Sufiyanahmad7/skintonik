@@ -1,11 +1,11 @@
 import React from 'react';
-import { 
-  Building2, 
-  Sparkles, 
-  Scan, 
-  Tag, 
-  Percent, 
-  CreditCard, 
+import {
+  Building2,
+  Sparkles,
+  Scan,
+  Tag,
+  Percent,
+  CreditCard,
   Layers,
   ArrowRight
 } from 'lucide-react';
@@ -53,11 +53,11 @@ export const WhySkintonik: React.FC = () => {
   const handleScrollToFormInput = () => {
     const inputEl = document.getElementById('hero-full-name-input');
     const formContainer = document.getElementById('consultation-form');
-    
+
     if (formContainer) {
       formContainer.scrollIntoView({ behavior: 'smooth' });
     }
-    
+
     setTimeout(() => {
       if (inputEl) {
         inputEl.focus();
@@ -74,7 +74,7 @@ export const WhySkintonik: React.FC = () => {
           <div className="relative rounded-2xl overflow-hidden shadow-md w-full min-h-[360px] sm:min-h-[420px] xl:min-h-[490px] flex flex-col justify-end bg-[#F3EDE2]">
             <img
               src={IMAGES.clinic.reception}
-              alt="Skintonik Bangalore Clinic Interior"
+              alt="Skintonik bengaluru Clinic Interior"
               className="w-full h-full object-cover object-top absolute inset-0"
             />
             {/* Skintonik brand overlay */}
@@ -91,10 +91,10 @@ export const WhySkintonik: React.FC = () => {
             <span className="text-xs font-bold tracking-[0.2em] text-[#271446] uppercase block mb-1">
               WHY SKINTONIK
             </span>
-            <h2 
+            <h2
               className="font-serif text-2xl sm:text-3xl lg:text-4xl font-bold text-[#271446] leading-tight"
             >
-              Why Choose Skintonik, Bangalore?
+              Why Choose Skintonik, bengaluru?
             </h2>
           </div>
 
