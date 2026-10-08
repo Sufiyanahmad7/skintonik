@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
+import { Menu, X, ArrowRight, Phone } from 'lucide-react';
+import { reportCallConversion } from '../utils/googleAds';
 
 export const Navbar: React.FC = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -75,7 +76,16 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Right CTA */}
-        <div className="hidden lg:flex items-center shrink-0">
+        <div className="hidden lg:flex items-center gap-2.5 shrink-0">
+          <a
+            href="tel:7387125717"
+            onClick={reportCallConversion}
+            className="h-8 lg:h-9 xl:h-10 inline-flex items-center gap-1.5 bg-white hover:bg-[#F3EDE2] text-[#271446] border border-[#EAD7C5] text-xs lg:text-sm font-semibold px-3 lg:px-4 rounded-full transition-all duration-200 shadow-2xs"
+            title="Call Us"
+          >
+            <Phone className="w-3.5 h-3.5 text-[#271446]" />
+            <span>Call</span>
+          </a>
           <button
             onClick={handleScrollToForm}
             className="h-8 lg:h-9 xl:h-10 inline-flex items-center gap-1.5 lg:gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] text-xs lg:text-sm font-semibold px-4 lg:px-5 rounded-full transition-all duration-200 shadow-sm hover:shadow cursor-pointer"
@@ -107,7 +117,18 @@ export const Navbar: React.FC = () => {
               {item.label}
             </button>
           ))}
-          <div className="pt-2">
+          <div className="pt-2 flex flex-col gap-2">
+            <a
+              href="tel:7387125717"
+              onClick={() => {
+                reportCallConversion();
+                setMobileMenuOpen(false);
+              }}
+              className="w-full flex items-center justify-center gap-2 bg-white text-[#271446] border border-[#EAD7C5] text-sm font-semibold py-2.5 rounded-full shadow-2xs"
+            >
+              <Phone className="w-4 h-4 text-[#271446]" />
+              <span>Call Us: +91 73871 25717</span>
+            </a>
             <button
               onClick={handleScrollToForm}
               className="w-full flex items-center justify-center gap-2 bg-[#271446] text-[#F8DB66] text-sm font-semibold py-3 rounded-full shadow"

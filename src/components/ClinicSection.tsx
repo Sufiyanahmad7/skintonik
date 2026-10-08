@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Navigation, MessageCircle } from 'lucide-react';
+import { MapPin, Navigation, MessageCircle, Phone } from 'lucide-react';
 import { IMAGES } from '../data/images';
+import { reportCallConversion } from '../utils/googleAds';
 
 export const ClinicSection: React.FC = () => {
   const handleGetDirections = () => {
@@ -23,7 +24,7 @@ export const ClinicSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
 
-          {/* Card 1: Address */}
+          {/* Card 1: Address & Contact */}
           <div className="bg-white p-6 rounded-2xl border border-[#EAD7C5] flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow">
             <div>
               <div className="w-10 h-10 rounded-full bg-[#F3EDE2] text-[#271446] flex items-center justify-center mb-4 border border-[#EAD7C5]">
@@ -36,9 +37,16 @@ export const ClinicSection: React.FC = () => {
                 Skintonik Dermamatic Private Limited,<br />
                 Indiranagar, bengaluru – 560038
               </p>
-              <div className="flex items-center gap-2 text-xs font-semibold text-[#271446] mb-6">
-                <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>WhatsApp: <a href="https://wa.me/917387125717" target="_blank" rel="noreferrer" className="text-emerald-700 font-bold hover:underline">+91 73871 25717</a></span>
+              
+              <div className="space-y-2 text-xs font-semibold text-[#271446] mb-6">
+                <div className="flex items-center gap-2">
+                  <Phone className="w-4 h-4 text-[#271446] shrink-0" />
+                  <span>Call: <a href="tel:7387125717" onClick={reportCallConversion} className="text-[#271446] font-bold hover:underline">+91 73871 25717</a></span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>WhatsApp: <a href="https://wa.me/917387125717" target="_blank" rel="noreferrer" className="text-emerald-700 font-bold hover:underline">+91 73871 25717</a></span>
+                </div>
               </div>
             </div>
 
