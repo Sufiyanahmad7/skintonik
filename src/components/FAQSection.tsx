@@ -34,16 +34,16 @@ export const FAQSection: React.FC = () => {
         <span>
           The supplied Skintonik packages are:
           <br />
-          <strong>3 small areas</strong> — ₹17,999 for 6 sessions
+          <strong>3 small areas</strong> — ₹17,999/- for 6 sessions
           <br />
           and
           <br />
-          <strong>Full body</strong> — ₹60,000 for 6 sessions.
+          <strong>Full body</strong> — ₹60,000/- for 6 sessions.
         </span>
       ),
     },
     {
-      question: 'Which areas are included in the ₹17,999 LHR package?',
+      question: 'Which areas are included in the ₹17,999/- LHR package?',
       answer: 'The supplied package covers: Underarms + Upper Lip + Chin for 6 sessions.',
     },
     {
