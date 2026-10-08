@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@400;500;600;700;800;900&family=Sacramento&display=optional');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Inter:wght@400;500;600;700;800;900&family=Sacramento&display=block');
 
 @import "tailwindcss";
 
@@ -21,8 +21,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-    font-weight: 700 !important;
+    font-family: 'Cormorant Garamond', serif;
     color: #271446;
     letter-spacing: -0.01em;
   }
