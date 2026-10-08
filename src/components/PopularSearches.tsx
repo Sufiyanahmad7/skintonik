@@ -81,7 +81,7 @@ export const PopularSearches: React.FC = () => {
 
             {/* Developed by Right Brain Infotech */}
             <div className="flex items-center gap-1.5 text-xs text-[#52413E]">
-              <span>Developed by</span>
+              <span>Developed & Designed by</span>
               <a
                 href="https://rightbraininfotech.in/"
                 target="_blank"
