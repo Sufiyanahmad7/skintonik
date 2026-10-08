@@ -14,10 +14,11 @@ import { ClinicSection } from '../components/ClinicSection';
 import { FAQSection } from '../components/FAQSection';
 import { FinalCTA } from '../components/FinalCTA';
 import { PopularSearches } from '../components/PopularSearches';
+import { FloatingActions } from '../components/FloatingActions';
 
 export const Home: React.FC = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-[#FBF8F3] overflow-x-hidden">
+    <div className="min-h-screen flex flex-col bg-[#FBF8F3] overflow-x-hidden pb-14 md:pb-0">
       {/* 1. TOP NAVBAR */}
       <Navbar />
 
@@ -64,6 +65,9 @@ export const Home: React.FC = () => {
 
       {/* 15. POPULAR SEARCHES */}
       <PopularSearches />
+
+      {/* 16. FLOATING ACTIONS (WhatsApp for Desktop/iPad, Fixed Bottom Bar for Mobile) */}
+      <FloatingActions />
     </div>
   );
 };
