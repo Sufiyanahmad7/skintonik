@@ -64,10 +64,10 @@ export const TreatmentCategories: React.FC = () => {
           ))}
         </div>
 
-        {/* CTA Button – scrolls to Hero Consultation Form */}
+        {/* CTA Button – scrolls to Explore All Our Services */}
         <div className="text-center mt-8">
           <button
-            onClick={() => handleScroll('#consultation-form')}
+            onClick={() => handleScroll('#services')}
             className="inline-flex items-center justify-center gap-2 bg-[#271446] hover:bg-[#341b5c] text-[#F8DB66] px-8 py-3.5 rounded-full text-sm font-semibold tracking-wide shadow-sm hover:shadow transition-all duration-200 cursor-pointer"
           >
             <span>Explore All Treatments</span>

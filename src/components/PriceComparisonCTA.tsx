@@ -18,7 +18,7 @@ export const PriceComparisonCTA: React.FC = () => {
   };
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/919845263041?text=Hi%20Skintonik%2C%20I%20would%20like%20to%20know%20more%20about%20your%20treatments', '_blank');
+    window.open('https://wa.me/917387125717?text=Hi%20Skintonik%2C%20I%20would%20like%20to%20know%20more%20about%20your%20treatments', '_blank');
   };
 
   return (

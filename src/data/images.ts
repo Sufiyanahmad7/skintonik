@@ -20,8 +20,8 @@ export const IMAGES = {
     analysis: '/images/treatment_hydra.jpg',
   },
   clinic: {
-    reception: '/images/clinic_reception_skintonik.jpg',
-    interior: '/images/clinic_interior_skintonik.jpg',
+    reception: '/images/skintonik_reception.png',
+    interior: '/images/skintonik_reception.png',
     map: '/images/clinic_map.jpg',
   },
   results: {

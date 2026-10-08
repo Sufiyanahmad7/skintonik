@@ -69,16 +69,23 @@ export const WhySkintonik: React.FC = () => {
     <section id="why-skintonik" className="bg-[#FBF8F3] py-14 px-4 lg:px-10 border-b border-[#EAD7C5]/40 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-12 items-center">
 
-        {/* Left Clinic Image with SKINTONIK watermark */}
+        {/* Left Clinic Image with location badge & branding overlay */}
         <div className="xl:col-span-5 flex items-stretch h-full">
-          <div className="relative rounded-2xl overflow-hidden shadow-md w-full min-h-[360px] sm:min-h-[420px] xl:min-h-[490px] flex flex-col justify-end bg-[#F3EDE2]">
+          <div className="relative rounded-2xl overflow-hidden shadow-lg border border-[#EAD7C5] w-full min-h-[360px] sm:min-h-[420px] xl:min-h-[490px] flex flex-col justify-between bg-[#F3EDE2] group">
             <img
               src={IMAGES.clinic.reception}
-              alt="Skintonik bengaluru Clinic Interior"
-              className="w-full h-full object-cover object-top absolute inset-0"
+              alt="Skintonik Bengaluru Clinic Reception"
+              className="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-105 transition-transform duration-500"
             />
+            {/* Location Badge */}
+            <div className="relative z-10 p-4">
+              <span className="inline-flex items-center gap-1.5 bg-[#271446]/90 backdrop-blur-sm text-[#F8DB66] text-xs font-bold px-3 py-1.5 rounded-full border border-[#F8DB66]/30 shadow-md">
+                <span>📍 Our Bengaluru Clinic</span>
+              </span>
+            </div>
+
             {/* Skintonik brand overlay */}
-            <div className="relative z-10 bg-gradient-to-t from-[#271446]/90 via-[#271446]/50 to-transparent p-6 pt-16">
+            <div className="relative z-10 bg-gradient-to-t from-[#271446]/95 via-[#271446]/60 to-transparent p-6 pt-16">
               <span className="font-serif text-2xl lg:text-3xl tracking-[0.2em] font-bold text-[#F8DB66] block">SKINTONIK</span>
               <span className="text-[10px] tracking-[0.2em] text-white/90 font-medium uppercase">SKIN | HAIR | BODY | WELLNESS</span>
             </div>
