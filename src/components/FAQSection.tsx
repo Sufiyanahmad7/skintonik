@@ -26,7 +26,7 @@ export const FAQSection: React.FC = () => {
     },
     {
       question: 'What is the price of AI Skin Analysis?',
-      answer: 'AI-Based Skin Analysis is ₹299.',
+      answer: 'AI-Based Skin Analysis is ₹299/-',
     },
     {
       question: 'What is the price of laser hair reduction?',
