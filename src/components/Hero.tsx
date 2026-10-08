@@ -40,7 +40,7 @@ export const Hero: React.FC = () => {
           {/* Supporting Text */}
           <div className="space-y-2 md:space-y-2 lg:space-y-2.5 flex flex-col items-center md:items-start w-full">
             <p className="text-[12.5px] sm:text-[14px] md:text-[12px] lg:text-[13.5px] xl:text-[15px] font-bold text-[#C59B27] leading-snug">
-              Skin. Hair. Body. Wellness. All Under One Roof at Skintonik, Bengaluru.
+              Skin. Hair. Body. Wellness. All Under One Roof at Skintonik, Bengaluru-560035
             </p>
             <p className="text-[11px] sm:text-xs md:text-[11px] lg:text-[12px] xl:text-sm text-[#271446]/90 leading-relaxed font-normal">
               Laser hair removal, HydraFacial, pigmentation, acne and hair fall treatment on Sarjapur Road. Every price shown in full:
@@ -61,7 +61,7 @@ export const Hero: React.FC = () => {
                     {/* Location at bottom of card */}
                     <div className="flex items-center gap-1 text-[9.5px] sm:text-[11px] md:text-[8.5px] lg:text-[10px] text-white font-medium opacity-90 leading-tight pt-0.5 truncate">
                       <MapPin className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-[#ffff] shrink-0" />
-                      <span className="truncate">Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru – 560035</span>
+                      <span className="truncate">Kasavanahalli, Bengaluru</span>
                     </div>
                   </div>
                 </div>

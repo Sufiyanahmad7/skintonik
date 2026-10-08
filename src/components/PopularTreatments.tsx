@@ -445,7 +445,7 @@ export const PopularTreatments: React.FC = () => {
         {/* ── FEATURED PACKAGES SECTION ── */}
         {currentSec.packages.length > 0 && (
           <div id="featured-packages" className="pt-6 space-y-4">
-            <h4 className="text-xs font-black tracking-widest text-[#271446] uppercase block">
+            <h4 className="text-lg font-bold bg-[#F3D167]/50 py-1 px-2 w-fit border rounded-r-full tracking-widest text-[#271446] uppercase block">
               FEATURED PACKAGES
             </h4>
 
@@ -528,8 +528,8 @@ export const PopularTreatments: React.FC = () => {
                   <button
                     onClick={handleBookClick}
                     className={`w-full inline-flex items-center justify-center gap-2 font-black text-xs sm:text-sm py-3 px-4 rounded-xl transition-all duration-200 cursor-pointer ${idx === 0
-                        ? 'bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#D4AF37] hover:from-[#E8C547] hover:to-[#D4AF37] text-[#271446] border border-[#B8860B] shadow-sm'
-                        : 'bg-[#271446] hover:bg-[#341b5c] text-white shadow-sm'
+                      ? 'bg-gradient-to-r from-[#D4AF37] via-[#E8C547] to-[#D4AF37] hover:from-[#E8C547] hover:to-[#D4AF37] text-[#271446] border border-[#B8860B] shadow-sm'
+                      : 'bg-[#271446] hover:bg-[#341b5c] text-white shadow-sm'
                       }`}
                   >
                     <span>Choose Package</span>

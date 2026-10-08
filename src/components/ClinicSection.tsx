@@ -38,7 +38,7 @@ export const ClinicSection: React.FC = () => {
               </p>
               <div className="flex items-center gap-2 text-xs font-semibold text-[#271446] mb-6">
                 <MessageCircle className="w-4 h-4 text-emerald-600 shrink-0" />
-                <span>WhatsApp: <a href="https://wa.me/919845263041" target="_blank" rel="noreferrer" className="text-emerald-700 font-bold hover:underline">+91 98452 63041</a></span>
+                <span>WhatsApp: <a href="https://wa.me/917387125717" target="_blank" rel="noreferrer" className="text-emerald-700 font-bold hover:underline">+91 73871 25717</a></span>
               </div>
             </div>
 

@@ -6,8 +6,8 @@ export const ConsultationForm: React.FC = () => {
     fullName: '',
     mobileNumber: '',
     concern: '',
-    location: 'Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru',
-    bestTimeToCall: 'Morning',
+    location: 'Kasavanahalli, Bengaluru',
+    bestTimeToCall: '',
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -100,7 +100,7 @@ export const ConsultationForm: React.FC = () => {
           fullName: '',
           mobileNumber: '',
           concern: '',
-          location: 'Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru',
+          location: 'Kasavanahalli, Bengaluru',
           bestTimeToCall: 'Morning',
         });
       } else {
@@ -200,7 +200,7 @@ export const ConsultationForm: React.FC = () => {
                   } focus:outline-none focus:border-[#271446] transition-colors ${!formData.concern ? 'text-[#52413E]/70' : 'text-[#271446]'
                   }`}
               >
-                <option value="" className="bg-white text-[#271446]">Select Your Concern</option>
+                <option value="" className="bg-white text-[#271446]">Select Your Concern*</option>
                 {concernsList.map((item) => (
                   <option key={item} value={item} className="bg-white text-[#271446]">
                     {item}
@@ -215,19 +215,19 @@ export const ConsultationForm: React.FC = () => {
                 name="best_time_to_call"
                 value={formData.bestTimeToCall}
                 onChange={(e) => setFormData({ ...formData, bestTimeToCall: e.target.value })}
-                required
-                className="w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] focus:outline-none text-[#271446] font-medium"
+                className={`w-full px-3.5 py-2.5 text-[12px] sm:text-[13px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] focus:outline-none focus:border-[#271446] transition-colors ${!formData.bestTimeToCall ? 'text-[#52413E]/70' : 'text-[#271446]'}`}
               >
-                <option value="Morning" className="bg-white text-[#271446]">Best time to call: Morning</option>
-                <option value="Afternoon" className="bg-white text-[#271446]">Best time to call: Afternoon</option>
-                <option value="Evening" className="bg-white text-[#271446]">Best time to call: Evening</option>
+                <option value="" className="bg-white text-[#271446]">Best Time to Call</option>
+                <option value="Morning" className="bg-white text-[#271446]">Morning</option>
+                <option value="Afternoon" className="bg-white text-[#271446]">Afternoon</option>
+                <option value="Evening" className="bg-white text-[#271446]">Evening</option>
               </select>
             </div>
 
             <div>
               <div className="w-full px-3.5 py-2.5 text-[11px] sm:text-[11.5px] rounded-lg border border-[#EAD7C5] bg-[#FBF8F3] text-[#271446] font-medium flex items-center gap-1.5 select-none shadow-xs">
                 <MapPin className="w-3.5 h-3.5 text-[#C59B27] shrink-0" />
-                <span className="truncate">Kasavanahalli, Rajiv Nagar, Carmelaram, Bengaluru</span>
+                <span className="truncate">Kasavanahalli, Bengaluru</span>
               </div>
             </div>
 
