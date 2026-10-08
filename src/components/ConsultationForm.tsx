@@ -42,14 +42,20 @@ export const ConsultationForm: React.FC = () => {
     e.preventDefault();
     const newErrors: Record<string, string> = {};
 
-    if (!formData.fullName.trim()) {
+    const trimmedName = formData.fullName.trim();
+    if (!trimmedName) {
       newErrors.fullName = 'Full Name is required';
+    } else if (!/^[A-Za-z\s]{2,50}$/.test(trimmedName)) {
+      newErrors.fullName = 'Please enter a valid full name (letters only)';
     }
-    if (!formData.mobileNumber.trim()) {
+
+    const trimmedMobile = formData.mobileNumber.trim();
+    if (!trimmedMobile) {
       newErrors.mobileNumber = 'Mobile Number is required';
-    } else if (!/^\d{10}$/.test(formData.mobileNumber.trim())) {
-      newErrors.mobileNumber = 'Enter a valid 10-digit mobile number';
+    } else if (!/^[6-9]\d{9}$/.test(trimmedMobile)) {
+      newErrors.mobileNumber = 'Enter a valid 10-digit mobile number starting with 6, 7, 8, or 9';
     }
+
     if (!formData.concern) {
       newErrors.concern = 'Please select your concern';
     }
@@ -101,8 +107,9 @@ export const ConsultationForm: React.FC = () => {
           mobileNumber: '',
           concern: '',
           location: 'Kasavanahalli, Bengaluru',
-          bestTimeToCall: 'Morning',
+          bestTimeToCall: '',
         });
+        window.location.href = '/thank-you';
       } else {
         console.error('CRM API submission error:', response.status, response.statusText);
         setSubmitError('Something went wrong. Please try again.');
@@ -160,7 +167,8 @@ export const ConsultationForm: React.FC = () => {
                 placeholder="Full Name*"
                 value={formData.fullName}
                 onChange={(e) => {
-                  setFormData({ ...formData, fullName: e.target.value });
+                  const val = e.target.value.replace(/[^A-Za-z\s]/g, '');
+                  setFormData({ ...formData, fullName: val });
                   if (errors.fullName) setErrors({ ...errors, fullName: '' });
                 }}
                 required
@@ -175,9 +183,11 @@ export const ConsultationForm: React.FC = () => {
                 type="tel"
                 name="phone"
                 placeholder="Mobile Number*"
+                maxLength={10}
                 value={formData.mobileNumber}
                 onChange={(e) => {
-                  setFormData({ ...formData, mobileNumber: e.target.value });
+                  const val = e.target.value.replace(/\D/g, '').slice(0, 10);
+                  setFormData({ ...formData, mobileNumber: val });
                   if (errors.mobileNumber) setErrors({ ...errors, mobileNumber: '' });
                 }}
                 required
