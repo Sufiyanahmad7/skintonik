@@ -99,9 +99,42 @@ export const ThankYou: React.FC = () => {
         </div>
       </main>
 
-      {/* Simple Footer */}
-      <footer className="w-full bg-[#FAF7F2] border-t border-[#EAD7C5]/60 py-4 px-4 text-center text-xs text-[#52413E]/80">
-        © {new Date().getFullYear()} Skintonik Bengaluru. All Rights Reserved.
+      {/* Footer with credits */}
+      <footer className="w-full bg-[#FAF7F2] border-t border-[#EAD7C5]/60 py-4 px-4 text-center text-xs text-[#52413E]">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px]">
+          <p>© {new Date().getFullYear()} Skintonik Bengaluru. All Rights Reserved.</p>
+
+          <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-[#52413E]">Marketing Partner</span>
+              <a
+                href="https://dumosh.in/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center bg-white px-2 py-1 rounded-md border border-[#E2CFB8] hover:opacity-90 shadow-2xs transition-all"
+                title="Dumosh - Marketing Partner"
+              >
+                <img
+                  src="/images/dlogowhite.png"
+                  alt="Dumosh"
+                  className="h-5 sm:h-6 w-auto object-contain"
+                />
+              </a>
+            </div>
+
+            <div className="flex items-center gap-1">
+              <span>Developed by</span>
+              <a
+                href="https://rightbraininfotech.in/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold text-[#271446] hover:text-[#C59B27] underline"
+              >
+                Right Brain Infotech
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   );

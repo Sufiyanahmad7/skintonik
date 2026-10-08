@@ -57,12 +57,40 @@ export const PopularSearches: React.FC = () => {
           </p>
         </div>
 
-        <div className="mt-6 pt-5 border-t border-[#EAD7C5]/50 flex flex-col sm:flex-row items-center justify-between text-[10px] text-[#271446] gap-3">
-          <p>© {new Date().getFullYear()} SKINTONIK bengaluru. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="#consultation-form" className="hover:text-[#271446] font-semibold transition-colors">Privacy Policy</a>
-            <a href="#consultation-form" className="hover:text-[#271446] font-semibold transition-colors">Terms of Service</a>
-            <a href="#consultation-form" className="hover:text-[#271446] font-semibold transition-colors">Contact Us</a>
+        <div className="mt-6 pt-5 border-t border-[#EAD7C5]/50 flex flex-col md:flex-row items-center justify-between text-[#271446] gap-4">
+          <p className="text-xs sm:text-sm font-semibold">© {new Date().getFullYear()} SKINTONIK Bengaluru. All rights reserved.</p>
+
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 font-medium text-[#271446]">
+            {/* Marketed by DUMOSH */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-[#52413E]">Marketing Partner</span>
+              <a
+                href="https://dumosh.in/"
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center bg-white px-2 py-1 rounded-md border border-[#E2CFB8] hover:opacity-90 shadow-2xs transition-all"
+                title="Dumosh - Marketing Partner"
+              >
+                <img
+                  src="/images/dlogowhite.png"
+                  alt="Dumosh"
+                  className="h-5 sm:h-6 w-auto object-contain"
+                />
+              </a>
+            </div>
+
+            {/* Developed by Right Brain Infotech */}
+            <div className="flex items-center gap-1.5 text-xs text-[#52413E]">
+              <span>Developed by</span>
+              <a
+                href="https://rightbraininfotech.in/"
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold text-[#271446] hover:text-[#C59B27] underline transition-colors"
+              >
+                Right Brain Infotech
+              </a>
+            </div>
           </div>
         </div>
       </div>
