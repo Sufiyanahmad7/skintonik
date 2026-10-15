@@ -30,7 +30,7 @@ export const QuickServiceNavigation: React.FC = () => {
     },
     {
       title: 'Anti-Ageing',
-      description: 'Botox, fillers & RF care',
+      description: 'Fillers & RF care',
       image: '/images/service_anti_ageing.jpg',
       targetId: '#services'
     },

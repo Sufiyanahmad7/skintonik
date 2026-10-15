@@ -29,7 +29,7 @@ export const SERVICES: Service[] = [
   {
     id: 'tightening-antiageing',
     name: 'Skin Tightening & Anti-Ageing',
-    description: 'Explore treatment options including Botox, fillers, threads and RF based on suitability.',
+    description: 'Explore treatment options including fillers, threads and RF based on suitability.',
     image: IMAGES.services.tightening
   },
   {

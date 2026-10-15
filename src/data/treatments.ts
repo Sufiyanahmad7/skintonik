@@ -27,7 +27,7 @@ export const POPULAR_TREATMENTS: Treatment[] = [
     id: 'skin-tightening',
     title: 'Skin Tightening & Anti-Ageing',
     price: 'From ₹30,000',
-    description: 'Fillers, Botox, Threads and more',
+    description: 'Fillers, Threads and more',
     image: IMAGES.treatments.tightening,
   },
   {

@@ -11,11 +11,11 @@ export const SpecificConcernSection: React.FC = () => {
   const handleScrollToForm = () => {
     const inputEl = document.getElementById('hero-full-name-input');
     const formContainer = document.getElementById('consultation-form');
-    
+
     if (formContainer) {
       formContainer.scrollIntoView({ behavior: 'smooth' });
     }
-    
+
     setTimeout(() => {
       if (inputEl) {
         inputEl.focus();
@@ -46,7 +46,7 @@ export const SpecificConcernSection: React.FC = () => {
     },
     {
       title: 'Anti-Ageing',
-      desc: 'Explore RF, Botox, fillers, threads, skin boosters, Profhilo and other suitable treatments.',
+      desc: 'Explore RF, fillers, threads, skin boosters, Profhilo and other suitable treatments.',
       image: '/images/service_anti_ageing.jpg',
     },
     {
@@ -80,7 +80,7 @@ export const SpecificConcernSection: React.FC = () => {
           <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-[#F3EDE2] text-[#271446] text-[10px] font-semibold tracking-wider uppercase mb-2 border border-[#EAD7C5]">
             <Sparkles className="w-3.5 h-3.5 text-[#271446]" />
           </div>
-          <h2 
+          <h2
             className="font-serif text-[28px] lg:text-[36px] font-extrabold text-[#271446] mb-2 tracking-tight"
           >
             Looking for a Treatment for a Specific Concern?
